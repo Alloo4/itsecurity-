@@ -62,15 +62,30 @@ menuBtn.addEventListener('click',()=>{
   menuBtn.setAttribute('aria-expanded',open?'true':'false');
 });
 
-// ---------- forms (prototype: no real submission) ----------
+// ---------- forms (submits to Formspree) ----------
 document.querySelectorAll('[data-form]').forEach(f=>{
-  f.addEventListener('submit',e=>{
+  const note=f.querySelector('.form-note');
+  const noteText=note?note.textContent:'';
+  const btn=f.querySelector('button[type="submit"]');
+  const btnText=btn?btn.textContent:'';
+  f.addEventListener('submit',async e=>{
     e.preventDefault();
-    const note=f.querySelector('.form-note');
-    if(note)note.classList.add('show');
-    f.querySelectorAll('input,textarea,select').forEach(i=>i.value='');
+    if(note){note.classList.remove('show','error');}
+    if(btn){btn.disabled=true;btn.textContent='Sending…';}
+    try{
+      const res=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      if(!res.ok)throw new Error('submission failed');
+      f.querySelectorAll('input,textarea').forEach(i=>{if(i.type!=='hidden')i.value='';});
+      f.querySelectorAll('select').forEach(s=>s.selectedIndex=0);
+      if(note){note.textContent=noteText;note.classList.add('show');}
+    }catch(err){
+      if(note){note.textContent='Something went wrong — please try again or email us directly.';note.classList.add('show','error');}
+    }finally{
+      if(btn){btn.disabled=false;btn.textContent=btnText;}
+    }
   });
 });
 
 // ---------- initial route ----------
 go((location.hash||'#home').slice(1));
+window.addEventListener('hashchange',()=>go((location.hash||'#home').slice(1)));
