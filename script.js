@@ -41,11 +41,21 @@ document.querySelectorAll('[data-faq]').forEach(box=>{
 const pages=document.querySelectorAll('.page');
 const navLinks=document.querySelectorAll('.nav a');
 const titles={home:'IT Security Now (ITSN)',consulting:'Consulting Service — ITSN',staffaug:'Staff Augmentation — ITSN',security:'Security Service — ITSN',voicedata:'Voice & Data — ITSN',contact:'Contact — ITSN'};
+const descriptions={
+  home:'ITSN empowers healthcare, health tech, and manufacturing organizations with AI-guided decisions, a zero-risk partnership model, and end-to-end transformation.',
+  consulting:'Vendor-neutral, AI-guided IT consulting with a zero-risk partnership model — strategy that’s accountable to your outcomes, not your vendors.',
+  staffaug:'Vetted IT, cloud, and security specialists who plug into your workflows and standards from day one — an extension of your team, without the hiring risk.',
+  security:'End-to-end security and compliance for regulated environments: assessment, zero-trust architecture, continuous monitoring, and incident response.',
+  voicedata:'Unified network, voice, and patient-engagement connectivity — one reliable, optimized layer from the network up to the conversation.',
+  contact:'Request a free, no-obligation IT assessment from ITSN — serving healthcare, health tech, and manufacturing organizations.'
+};
+const metaDescription=document.querySelector('meta[name="description"]');
 function go(id){
   if(!document.getElementById('page-'+id))id='home';
   pages.forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
   navLinks.forEach(a=>a.classList.toggle('active',a.dataset.go===id));
   document.title=titles[id]||'IT Security Now (ITSN)';
+  if(metaDescription)metaDescription.setAttribute('content',descriptions[id]||descriptions.home);
   if(history.replaceState)history.replaceState(null,'','#'+id);
   window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
   closeMenu();
@@ -62,29 +72,31 @@ menuBtn.addEventListener('click',()=>{
   menuBtn.setAttribute('aria-expanded',open?'true':'false');
 });
 
-// ---------- forms (submits to Formspree) ----------
+// ---------- forms (prototype: no real submission) ----------
 document.querySelectorAll('[data-form]').forEach(f=>{
-  const note=f.querySelector('.form-note');
-  const noteText=note?note.textContent:'';
-  const btn=f.querySelector('button[type="submit"]');
-  const btnText=btn?btn.textContent:'';
-  f.addEventListener('submit',async e=>{
+  f.addEventListener('submit',e=>{
     e.preventDefault();
-    if(note){note.classList.remove('show','error');}
-    if(btn){btn.disabled=true;btn.textContent='Sending…';}
-    try{
-      const res=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
-      if(!res.ok)throw new Error('submission failed');
-      f.querySelectorAll('input,textarea').forEach(i=>{if(i.type!=='hidden')i.value='';});
-      f.querySelectorAll('select').forEach(s=>s.selectedIndex=0);
-      if(note){note.textContent=noteText;note.classList.add('show');}
-    }catch(err){
-      if(note){note.textContent='Something went wrong — please try again or email us directly.';note.classList.add('show','error');}
-    }finally{
-      if(btn){btn.disabled=false;btn.textContent=btnText;}
-    }
+    const note=f.querySelector('.form-note');
+    if(note)note.classList.add('show');
+    f.querySelectorAll('input,textarea,select').forEach(i=>i.value='');
   });
 });
+
+// ---------- scroll reveal ----------
+document.querySelectorAll('section').forEach(s=>{
+  if(s.classList.contains('hero')||s.classList.contains('page-hero'))return;
+  s.classList.add('reveal');
+});
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('section.reveal').forEach(s=>io.observe(s));
+}else{
+  document.querySelectorAll('section.reveal').forEach(s=>s.classList.add('in-view'));
+}
 
 // ---------- initial route ----------
 go((location.hash||'#home').slice(1));
