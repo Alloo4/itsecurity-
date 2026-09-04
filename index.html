@@ -17,7 +17,9 @@
 <meta name="twitter:description" content="ITSN empowers healthcare, health tech, and manufacturing organizations with AI-guided decisions, a zero-risk partnership model, and end-to-end transformation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a1526'/%3E%3Cpath d='M12 30h40v18a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4z' fill='none' stroke='%2349a3c7' stroke-width='4'/%3E%3Cpath d='M22 42c0-3.3 2.7-6 6-6 .6-2.6 3-4.5 5.7-4.5 3 0 5.5 2.2 5.9 5.1' fill='none' stroke='%2349a3c7' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <script type="application/ld+json">
@@ -32,8 +34,16 @@
   "knowsAbout": ["IT Consulting", "Staff Augmentation", "IT Security & Compliance", "Voice & Data Connectivity"]
 }
 </script>
+<!-- Google Tag Manager: replace GTM-XXXXXXX with your real container ID -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
@@ -54,11 +64,11 @@
     </div>
 
     <nav class="nav" id="nav" aria-label="Primary">
-      <a data-go="consulting">Consulting</a>
-      <a data-go="staffaug">Staff Augmentation</a>
-      <a data-go="security">Security</a>
-      <a data-go="voicedata">Voice &amp; Data</a>
-      <a data-go="contact">Contact</a>
+      <a data-go="consulting" href="#consulting">Consulting</a>
+      <a data-go="staffaug" href="#staffaug">Staff Augmentation</a>
+      <a data-go="security" href="#security">Security</a>
+      <a data-go="voicedata" href="#voicedata">Voice &amp; Data</a>
+      <a data-go="contact" href="#contact">Contact</a>
       <button class="btn btn--primary nav-cta" data-go="contact">Start Assessment</button>
     </nav>
 
@@ -465,20 +475,20 @@
         <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
       </div>
       <div>
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
-          <li><a data-go="consulting">Consulting Service</a></li>
-          <li><a data-go="staffaug">Staff Augmentation</a></li>
-          <li><a data-go="security">Security Service</a></li>
-          <li><a data-go="voicedata">Voice &amp; Data</a></li>
+          <li><a data-go="consulting" href="#consulting">Consulting Service</a></li>
+          <li><a data-go="staffaug" href="#staffaug">Staff Augmentation</a></li>
+          <li><a data-go="security" href="#security">Security Service</a></li>
+          <li><a data-go="voicedata" href="#voicedata">Voice &amp; Data</a></li>
         </ul>
       </div>
       <div>
-        <h4>Company</h4>
+        <h3>Company</h3>
         <ul>
-          <li><a data-go="contact">Contact</a></li>
-          <li><a data-go="contact">Start Assessment</a></li>
-          <li><a data-go="contact">Talk to an Expert</a></li>
+          <li><a data-go="contact" href="#contact">Contact</a></li>
+          <li><a data-go="contact" href="#contact">Start Assessment</a></li>
+          <li><a data-go="contact" href="#contact">Talk to an Expert</a></li>
         </ul>
       </div>
     </div>
@@ -489,6 +499,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -50,6 +50,8 @@ const descriptions={
   contact:'Request a free, no-obligation IT assessment from ITSN — serving healthcare, health tech, and manufacturing organizations.'
 };
 const metaDescription=document.querySelector('meta[name="description"]');
+window.dataLayer=window.dataLayer||[];
+let isInitialRoute=true;
 function go(id){
   if(!document.getElementById('page-'+id))id='home';
   pages.forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
@@ -57,11 +59,19 @@ function go(id){
   document.title=titles[id]||'IT Security Now (ITSN)';
   if(metaDescription)metaDescription.setAttribute('content',descriptions[id]||descriptions.home);
   if(history.replaceState)history.replaceState(null,'','#'+id);
-  window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+  if(!isInitialRoute){
+    requestAnimationFrame(()=>window.scrollTo(0,0));
+    window.dataLayer.push({event:'virtual_pageview',page_path:'/#'+id,page_title:titles[id]||'IT Security Now (ITSN)'});
+  }
+  isInitialRoute=false;
   closeMenu();
 }
 document.querySelectorAll('[data-go]').forEach(el=>{
-  el.addEventListener('click',e=>{e.preventDefault();go(el.dataset.go);});
+  el.addEventListener('click',e=>{
+    e.preventDefault();
+    if(el.tagName==='BUTTON')window.dataLayer.push({event:'cta_click',cta_label:el.textContent.trim(),cta_target:el.dataset.go});
+    go(el.dataset.go);
+  });
 });
 
 // ---------- mobile menu ----------
@@ -78,6 +88,7 @@ document.querySelectorAll('[data-form]').forEach(f=>{
     e.preventDefault();
     const note=f.querySelector('.form-note');
     if(note)note.classList.add('show');
+    window.dataLayer.push({event:'generate_lead',form_id:f.closest('.page')?.id||'unknown'});
     f.querySelectorAll('input,textarea,select').forEach(i=>i.value='');
   });
 });
