@@ -1,7 +1,7 @@
 // ---------- FAQ data ----------
 const FAQS = {
   consulting:[
-    ["How is ITSN different from a reseller or a vendor's own consultants?","We hold no reseller quotas and take no vendor commissions, so our recommendation is based only on what fits your stack, budget, and compliance needs."],
+    ["How is ITSN different from a reseller or a vendor’s own consultants?","We hold no reseller quotas and take no vendor commissions, so our recommendation is based only on what fits your stack, budget, and compliance needs."],
     ["Do you work with our existing vendors and contracts?","Yes. We assess what you already have and keep what serves you — we only recommend changes where they improve cost, performance, or risk."],
     ["What does \u201Czero-risk partnership\u201D actually mean?","We tie our engagement to your outcomes and stay accountable for results, rather than handing over a deliverable and walking away."],
     ["How quickly do we see a recommendation?","Most clients receive a prioritized roadmap within weeks of the initial assessment."]
@@ -14,7 +14,7 @@ const FAQS = {
   ],
   security:[
     ["Which compliance frameworks and regulations do you cover?","We design around the frameworks you answer to, including patient-data privacy, sector regulation, and local data-protection law."],
-    ["Can you work with the security tools we already own?","Yes. We're vendor-neutral and build around your existing investments wherever they're effective."],
+    ["Can you work with the security tools we already own?","Yes. We’re vendor-neutral and build around your existing investments wherever they’re effective."],
     ["Do you provide ongoing monitoring or just one-time assessments?","Both. We can run a point-in-time assessment or provide continuous monitoring and improvement."],
     ["How do you balance strong security with clinical or production workflows?","We design controls that protect what matters without slowing the people who keep operations running."]
   ],
