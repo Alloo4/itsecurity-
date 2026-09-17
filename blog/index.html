@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — IT Security Now (ITSN)</title>
+<meta name="description" content="Practical guidance on IT strategy, security, compliance, and connectivity for healthcare, health tech, and manufacturing organizations — updated weekly.">
+<link rel="canonical" href="https://itsecurity-five.vercel.app/blog/">
+<meta name="theme-color" content="#0a1526">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IT Security Now (ITSN)">
+<meta property="og:title" content="Blog — IT Security Now (ITSN)">
+<meta property="og:description" content="Practical guidance on IT strategy, security, compliance, and connectivity for healthcare, health tech, and manufacturing organizations — updated weekly.">
+<meta property="og:url" content="https://itsecurity-five.vercel.app/blog/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Blog — IT Security Now (ITSN)">
+<meta name="twitter:description" content="Practical guidance on IT strategy, security, compliance, and connectivity for healthcare, health tech, and manufacturing organizations — updated weekly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a1526'/%3E%3Cpath d='M12 30h40v18a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4z' fill='none' stroke='%2349a3c7' stroke-width='4'/%3E%3Cpath d='M22 42c0-3.3 2.7-6 6-6 .6-2.6 3-4.5 5.7-4.5 3 0 5.5 2.2 5.9 5.1' fill='none' stroke='%2349a3c7' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "IT Security Now (ITSN) Blog",
+  "url": "https://itsecurity-five.vercel.app/blog/",
+  "publisher": { "@type": "Organization", "name": "IT Security Now (ITSN)" }
+}
+</script>
+<!-- Google Tag Manager: replace GTM-XXXXXXX with your real container ID -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="IT Security Now home">
+      <svg class="brand-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="9" y="11" width="46" height="13" rx="3"/>
+        <circle cx="16" cy="17.5" r="1.4" fill="currentColor" stroke="none"/>
+        <circle cx="21.5" cy="17.5" r="1.4" fill="currentColor" stroke="none"/>
+        <circle cx="27" cy="17.5" r="1.4" fill="currentColor" stroke="none"/>
+        <path d="M9 28h36v18a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3z"/>
+        <path d="M19 41c0-3.3 2.7-6 6-6 .6-2.6 3-4.5 5.7-4.5 3 0 5.5 2.2 5.9 5.1 2.4.2 4.3 2.2 4.3 4.7"/>
+        <rect x="40" y="40" width="18" height="13" rx="2.4" fill="var(--bg)"/>
+        <path d="M43.5 40v-3.2a5.5 5.5 0 0 1 11 0V40"/>
+        <text x="49" y="50.4" font-family="Space Grotesk" font-size="9" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">R</text>
+      </svg>
+      <div class="brand-text">IT SECURITY<small>N O W</small></div>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/#consulting">Consulting</a>
+      <a href="/#staffaug">Staff Augmentation</a>
+      <a href="/#security">Security</a>
+      <a href="/#voicedata">Voice &amp; Data</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/#contact">Start Assessment</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn--primary btn--sm" href="/#contact">Start Assessment</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--blog"><div class="wrap">
+    <span class="eyebrow">◆ Blog</span>
+    <p class="hero-tagline">Read &middot; Learn &middot; Apply</p>
+    <h1>Insights on IT, security, and connectivity — for teams who can't afford downtime.</h1>
+    <p>Practical guidance for healthcare, health tech, and manufacturing organizations, published weekly.</p>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="blog-grid">
+      <a class="blog-card" href="/blog/cybersecurity-services-for-healthcare/">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1774901128302-e2bbd154da44?fm=jpg&amp;q=70&amp;w=800&amp;auto=format&amp;fit=crop')"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Security</span>
+          <h3>Cybersecurity Services for Healthcare: Protecting Patients Starts with Protecting Data</h3>
+          <p>Patient records, medical devices, and connected systems have transformed care delivery — and introduced cybersecurity risks that are now a patient-safety issue.</p>
+          <div class="blog-card-meta">September 17, 2026 · 7 min read</div>
+        </div>
+      </a>
+    </div>
+  </div></section>
+
+  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
+    <h2 style="font-size:clamp(28px,4vw,42px)">Have a challenge these articles didn't cover?</h2>
+    <p class="muted" style="margin:14px 0 28px">Talk to an ITSN expert about your specific environment.</p>
+    <a class="btn btn--primary" href="/#contact">Start Assessment</a>
+  </div></section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <svg class="brand-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="11" width="46" height="13" rx="3"/><circle cx="16" cy="17.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="21.5" cy="17.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="27" cy="17.5" r="1.4" fill="currentColor" stroke="none"/>
+            <path d="M9 28h36v18a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3z"/><path d="M19 41c0-3.3 2.7-6 6-6 .6-2.6 3-4.5 5.7-4.5 3 0 5.5 2.2 5.9 5.1 2.4.2 4.3 2.2 4.3 4.7"/>
+            <rect x="40" y="40" width="18" height="13" rx="2.4" fill="var(--bg-2)"/><path d="M43.5 40v-3.2a5.5 5.5 0 0 1 11 0V40"/>
+            <text x="49" y="50.4" font-family="Space Grotesk" font-size="9" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">R</text>
+          </svg>
+          <div class="brand-text">IT SECURITY<small>N O W</small></div>
+        </a>
+        <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/#consulting">Consulting Service</a></li>
+          <li><a href="/#staffaug">Staff Augmentation</a></li>
+          <li><a href="/#security">Security Service</a></li>
+          <li><a href="/#voicedata">Voice &amp; Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#contact">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ITSN — IT Security Now. All rights reserved.</span>
+      <span>Zero-risk · Shared success · Vendor-neutral</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>
