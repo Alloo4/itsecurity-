@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOC 2 Compliance vs HIPAA Compliance: What Healthcare Organizations Need to Know — ITSN Blog</title>
+<meta name="description" content="A SOC 2 report is strong evidence of a vendor's security controls — but it isn't proof of HIPAA compliance. Here's where SOC 2 and HIPAA overlap, where they don't, and how to use both in a vendor review.">
+<link rel="canonical" href="https://itsecurity-five.vercel.app/blog/soc-2-vs-hipaa-compliance/">
+<meta name="theme-color" content="#0a1526">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="IT Security Now (ITSN)">
+<meta property="og:title" content="SOC 2 Compliance vs HIPAA Compliance: What Healthcare Organizations Need to Know">
+<meta property="og:description" content="A SOC 2 report is strong evidence of a vendor's security controls — but it isn't proof of HIPAA compliance. Here's how to use both in a vendor review.">
+<meta property="og:url" content="https://itsecurity-five.vercel.app/blog/soc-2-vs-hipaa-compliance/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?fm=jpg&amp;q=70&amp;w=1200&amp;auto=format&amp;fit=crop">
+<meta property="article:published_time" content="2026-10-09">
+<meta property="article:section" content="Compliance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SOC 2 Compliance vs HIPAA Compliance: What Healthcare Organizations Need to Know">
+<meta name="twitter:description" content="A SOC 2 report is strong evidence of a vendor's security controls — but it isn't proof of HIPAA compliance. Here's how to use both in a vendor review.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?fm=jpg&amp;q=70&amp;w=1200&amp;auto=format&amp;fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/svg+xml" href="../../assets/logos/svg/itsn-icon-teal.svg">
+<link rel="apple-touch-icon" href="../../assets/logos/png/itsn-icon-square-teal-bg.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "SOC 2 Compliance vs HIPAA Compliance: What Healthcare Organizations Need to Know",
+  "description": "A SOC 2 report is strong evidence of a vendor's security controls — but it isn't proof of HIPAA compliance. Here's where SOC 2 and HIPAA overlap, where they don't, and how to use both in a vendor review.",
+  "image": "https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?fm=jpg&q=70&w=1200&auto=format&fit=crop",
+  "datePublished": "2026-10-09",
+  "dateModified": "2026-10-09",
+  "author": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "publisher": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "mainEntityOfPage": "https://itsecurity-five.vercel.app/blog/soc-2-vs-hipaa-compliance/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is SOC 2 required for HIPAA compliance?","acceptedAnswer":{"@type":"Answer","text":"No. HIPAA doesn't require SOC 2. Many healthcare organizations ask vendors for a SOC 2 report as evidence of security controls, but it doesn't satisfy HIPAA on its own."}},
+    {"@type":"Question","name":"Is there an official HIPAA certification?","acceptedAnswer":{"@type":"Answer","text":"No. HHS does not endorse or recognize private \"HIPAA certifications,\" and they don't remove an organization's legal obligations."}},
+    {"@type":"Question","name":"What's the difference between SOC 2 Type 1 and Type 2?","acceptedAnswer":{"@type":"Answer","text":"Type 1 assesses whether controls are designed appropriately at a single point in time. Type 2 tests whether they worked over a period, usually several months to a year."}},
+    {"@type":"Question","name":"Does a SOC 2 report replace a BAA?","acceptedAnswer":{"@type":"Answer","text":"No. A BAA is a legal contract HIPAA requires when a vendor handles ePHI on your behalf. A SOC 2 report is evidence about the vendor's controls."}},
+    {"@type":"Question","name":"Is the new HIPAA Security Rule final?","acceptedAnswer":{"@type":"Answer","text":"Not as of October 2026. It was proposed in January 2025, and projected final action has moved to July 2027. The current Security Rule remains in effect."}}
+  ]
+}
+</script>
+<!-- Google Tag Manager: replace GTM-XXXXXXX with your real container ID -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="IT Security Now home">
+      <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-teal.svg" alt="IT Security Now" width="792" height="151">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/#consulting">Consulting</a>
+      <a href="/#staffaug">Staff Augmentation</a>
+      <a href="/#security">Security</a>
+      <a href="/#voicedata">Voice &amp; Data</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/#contact">Start Assessment</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn--primary btn--sm" href="/#contact">Start Assessment</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--consulting"><div class="wrap">
+    <span class="eyebrow">◆ Compliance</span>
+    <h1 style="max-width:22ch">SOC 2 Compliance vs HIPAA Compliance: What Healthcare Organizations Need to Know</h1>
+    <div class="article-meta"><span>October 9, 2026</span><span>7 min read</span></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="article-body">
+      <a class="back-link" href="/blog/">&larr; Back to all articles</a>
+
+      <p>If you work in healthcare IT, you've probably had this conversation.</p>
+      <p>A new vendor is in the final stage of review. Someone asks, "Are they HIPAA compliant?" The vendor's answer arrives as a PDF: their SOC 2 report. Everyone relaxes a little. The box gets checked.</p>
+      <p>Here's the problem. SOC 2 and HIPAA answer different questions. A SOC 2 report can be excellent evidence that a vendor runs a disciplined security program. It is not proof that the vendor meets its HIPAA obligations to you, and it doesn't replace your own risk analysis.</p>
+      <p>This guide explains what each one is, where they overlap, where they don't, and how to use both in a vendor review that holds up.</p>
+
+      <h2>Why This Question Keeps Coming Up</h2>
+      <p>Healthcare runs on vendors. Billing, scheduling, telehealth, cloud hosting, transcription, analytics, IT support — each one may create, receive, store or transmit patient data on your behalf.</p>
+      <p>That dependence shows up in breach data.</p>
+      <div class="article-callout">According to HIPAA Journal's analysis of the HHS Office for Civil Rights (OCR) breach portal, business associates were involved in an average of 20% of large healthcare breaches from 2009 to 2017. That rose to 34% from 2018 to 2026, and reached 43% in the first half of 2026.</div>
+      <p>When a vendor holds data for hundreds of healthcare organizations, one incident at that vendor reaches all of them. That's why how you evaluate vendors matters as much as how you secure your own environment.</p>
+
+      <h2>What HIPAA Actually Requires</h2>
+      <p>HIPAA is a federal law. Its Security Rule requires covered entities — providers, health plans and clearinghouses — and their business associates to protect electronic protected health information (ePHI) through administrative, physical and technical safeguards.</p>
+      <p>Three points matter for vendor reviews:</p>
+      <ul>
+        <li><strong>It's a legal obligation, not a voluntary standard.</strong> A vendor that handles your ePHI is a business associate and must sign a business associate agreement (BAA).</li>
+        <li><strong>It's risk-based.</strong> HIPAA requires each organization to analyze its own risks and manage them. There's no single checklist that equals "compliant."</li>
+        <li><strong>There is no official HIPAA certification.</strong> HHS states that it does not endorse or recognize private organizations' "certifications" under the Security Rule, and that such certifications do not absolve an organization of its legal obligations.</li>
+      </ul>
+      <p>That last point surprises people. Any vendor marketing itself as "HIPAA certified" is describing a private assessment, not a government credential.</p>
+
+      <h2>What SOC 2 Actually Is</h2>
+      <p>SOC 2 is an attestation framework from the AICPA. An independent CPA firm examines a service organization's controls against the Trust Services Criteria: security, availability, processing integrity, confidentiality and privacy. Security is always in scope; the others are included based on the services offered.</p>
+      <p>There are two report types:</p>
+      <ul>
+        <li><strong>Type 1</strong> evaluates whether controls are suitably designed at a single point in time.</li>
+        <li><strong>Type 2</strong> tests whether those controls operated effectively over a period, typically several months up to a year.</li>
+      </ul>
+      <p>SOC 2 produces a report with an auditor's opinion, not a certificate. When a vendor says "SOC 2 certified," they usually mean they hold a SOC 2 report.</p>
+
+      <h2>Where They Overlap — and Where They Don't</h2>
+      <p>The overlap is real. Both care about access control, encryption, monitoring, incident response, change management and vendor oversight. A vendor with a clean SOC 2 Type 2 report has shown an auditor that a defined set of controls worked over time. That counts for a lot.</p>
+      <p>The gaps are just as real:</p>
+      <div class="article-table-wrap">
+        <table class="article-table">
+          <thead>
+            <tr><th scope="col">Question</th><th scope="col">SOC 2</th><th scope="col">HIPAA</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">What is it?</th><td>A CPA firm's attestation report</td><td>A federal law with enforceable rules</td></tr>
+            <tr><th scope="row">Who decides the scope?</th><td>The service organization, with its auditor</td><td>The law: all ePHI the organization handles</td></tr>
+            <tr><th scope="row">Is it required?</th><td>No — driven by customer demand</td><td>Yes, for covered entities and business associates</td></tr>
+            <tr><th scope="row">Does it address BAAs, breach notification, or minimum necessary use?</th><td>Not specifically</td><td>Yes</td></tr>
+            <tr><th scope="row">Is there an official certificate?</th><td>No — a report</td><td>No — HHS recognizes no certification</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Analysis:</strong> The scope question is where most problems hide. A vendor's SOC 2 may cover its core platform but not the support tool where your staff upload files, or a newly acquired product. If the system holding your data isn't in scope, the report tells you little about it.</p>
+
+      <h2>What's Changing: The Proposed HIPAA Security Rule</h2>
+      <p>In January 2025, HHS published a proposed update to the HIPAA Security Rule. Among other changes, it would require business associates to provide covered entities with written verification, at least every 12 months, that they have deployed the Security Rule's required technical safeguards — backed by a written analysis by a subject matter expert.</p>
+      <p>The status matters: this rule is still proposed, not final. In July 2026 the federal regulatory agenda moved projected final action to July 2027. The current Security Rule remains fully in effect.</p>
+      <p><strong>Our view:</strong> whatever the final text says, the direction is clear. Regulators expect vendor oversight to rest on evidence, not on a signed BAA alone. Organizations that build an evidence-based review process now won't have to scramble later.</p>
+
+      <h2>Practical Recommendations</h2>
+      <h3>If you're a healthcare organization evaluating vendors</h3>
+      <ol>
+        <li><strong>Ask for SOC 2 Type 2 where it exists.</strong> It tells you more than a Type 1. If a vendor only has a Type 1, ask when their Type 2 observation period ends.</li>
+        <li><strong>Read the scope section first.</strong> Confirm the systems, locations and services that will hold your data are covered.</li>
+        <li><strong>Read the exceptions.</strong> Auditor-noted exceptions are where the real story often sits. Ask how each was resolved.</li>
+        <li><strong>Find your homework.</strong> Most SOC 2 reports list "complementary user entity controls" — controls the vendor assumes you'll run, such as managing your own users' access. Assign an owner for each.</li>
+        <li><strong>Ask the HIPAA questions separately.</strong> BAA terms, breach notification timelines, encryption of ePHI at rest and in transit, use of subcontractors, and where data is stored.</li>
+        <li><strong>Check the dates.</strong> A report covering a period that ended over a year ago is stale. Ask for a bridge letter covering the gap.</li>
+        <li><strong>Feed it into your own risk analysis.</strong> Vendor evidence informs your HIPAA risk analysis; it doesn't replace it.</li>
+      </ol>
+      <h3>If you're a health-tech company selling to providers</h3>
+      <ul>
+        <li>Treat SOC 2 as table stakes for enterprise sales, not as your HIPAA story.</li>
+        <li>Keep a short, plain-language HIPAA summary ready: your BAA position, safeguards for ePHI, and how your SOC 2 scope maps to the systems that hold customer data.</li>
+        <li>Expect the verification requests to grow if the proposed rule is finalized.</li>
+      </ul>
+
+      <h2>The IT Leadership Perspective</h2>
+      <p>The hard part here isn't technical. It's ownership.</p>
+      <p>Vendor reviews often sit between procurement, compliance, legal and IT, and no single team reads the SOC 2 report end to end. The PDF gets filed, the BAA gets signed, and the scoping gaps go unnoticed until something happens.</p>
+      <p>IT leaders can fix that with a simple rule: every vendor that touches ePHI gets a named reviewer, a documented scope check, and a date for the next review. That's not a large program. It's a habit.</p>
+
+      <h2>Where ITSN Fits</h2>
+      <p>IT Security Now helps healthcare organizations simplify IT and reduce risk. As a vendor-neutral advisor, we help teams evaluate technology vendors — including working through security questionnaires, risk assessments and HIPAA alignment during procurement — and we conduct HIPAA Security Assessments that show where vendor risk fits within your wider environment.</p>
+
+      <h2>The Bottom Line</h2>
+      <p>SOC 2 and HIPAA aren't competitors. SOC 2 tells you how well a vendor's controls were designed and operated. HIPAA tells you what you and that vendor are legally obligated to do with patient data.</p>
+      <p>Use the SOC 2 report as strong evidence. Then ask the questions it doesn't answer.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details><summary>Is SOC 2 required for HIPAA compliance?<span class="pm"></span></summary><p>No. HIPAA doesn't require SOC 2. Many healthcare organizations ask vendors for a SOC 2 report as evidence of security controls, but it doesn't satisfy HIPAA on its own.</p></details>
+        <details><summary>Is there an official HIPAA certification?<span class="pm"></span></summary><p>No. HHS does not endorse or recognize private "HIPAA certifications," and they don't remove an organization's legal obligations.</p></details>
+        <details><summary>What's the difference between SOC 2 Type 1 and Type 2?<span class="pm"></span></summary><p>Type 1 assesses whether controls are designed appropriately at a single point in time. Type 2 tests whether they worked over a period, usually several months to a year.</p></details>
+        <details><summary>Does a SOC 2 report replace a BAA?<span class="pm"></span></summary><p>No. A BAA is a legal contract HIPAA requires when a vendor handles ePHI on your behalf. A SOC 2 report is evidence about the vendor's controls.</p></details>
+        <details><summary>Is the new HIPAA Security Rule final?<span class="pm"></span></summary><p>Not as of October 2026. It was proposed in January 2025, and projected final action has moved to July 2027. The current Security Rule remains in effect.</p></details>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
+    <h2 style="font-size:clamp(28px,4vw,42px)">Talk to an ITSN advisor about your vendor review process.</h2>
+    <p class="muted" style="margin:14px auto 28px;max-width:60ch">We'll help you see which vendors hold your patient data, what evidence you have for each, and where the gaps are.</p>
+    <a class="btn btn--primary" href="/#contact">Talk to an Advisor</a>
+  </div></section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-white.svg" alt="IT Security Now" width="792" height="151">
+        </a>
+        <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/#consulting">Consulting Service</a></li>
+          <li><a href="/#staffaug">Staff Augmentation</a></li>
+          <li><a href="/#security">Security Service</a></li>
+          <li><a href="/#voicedata">Voice &amp; Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#contact">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ITSN — IT Security Now. All rights reserved.</span>
+      <span>Zero-risk · Shared success · Vendor-neutral</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>
