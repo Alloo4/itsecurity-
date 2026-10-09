@@ -82,14 +82,34 @@ menuBtn.addEventListener('click',()=>{
   menuBtn.setAttribute('aria-expanded',open?'true':'false');
 });
 
-// ---------- forms (prototype: no real submission) ----------
+// ---------- forms (emailed to info@itsecuritynow.com via FormSubmit) ----------
+const FORM_ENDPOINT='https://formsubmit.co/ajax/info@itsecuritynow.com';
 document.querySelectorAll('[data-form]').forEach(f=>{
-  f.addEventListener('submit',e=>{
+  f.addEventListener('submit',async e=>{
     e.preventDefault();
     const note=f.querySelector('.form-note');
-    if(note)note.classList.add('show');
-    window.dataLayer.push({event:'generate_lead',form_id:f.closest('.page')?.id||'unknown'});
-    f.querySelectorAll('input,textarea,select').forEach(i=>i.value='');
+    const btn=f.querySelector('button[type="submit"]');
+    const label=btn.textContent;
+    const data=Object.fromEntries(new FormData(f));
+    data._subject='New website enquiry: '+(f.dataset.form||'Contact form')+' — '+(data.name||'');
+    data._template='table';
+    data._replyto=data.email;
+    btn.disabled=true;btn.textContent='Sending…';
+    note.classList.remove('show','error');
+    try{
+      const res=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+      const out=await res.json().catch(()=>({}));
+      if(!res.ok||out.success===false||out.success==='false')throw new Error(out.message||res.status);
+      note.textContent='Thanks — an ITSN expert will be in touch shortly.';
+      note.classList.add('show');
+      window.dataLayer.push({event:'generate_lead',form_id:f.dataset.form||'unknown'});
+      f.reset();
+    }catch(err){
+      note.textContent='Sorry, your message didn’t send. Please try again or email info@itsecuritynow.com.';
+      note.classList.add('show','error');
+    }finally{
+      btn.disabled=false;btn.textContent=label;
+    }
   });
 });
 

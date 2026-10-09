@@ -287,6 +287,7 @@ section{padding:var(--space) 0}
 .form-card .btn{width:100%;justify-content:center;margin-top:6px}
 .form-note{text-align:center;color:var(--green-soft);font-size:15px;margin-top:18px;display:none}
 .form-note.show{display:block}
+.form-note.error{color:#f87171}
 .reassure{display:flex;gap:8px 22px;justify-content:center;flex-wrap:wrap;margin-top:30px;
   font-size:13px;color:var(--muted-2)}
 .reassure span{display:inline-flex;align-items:center;gap:8px}
