@@ -166,6 +166,11 @@ section{padding:var(--space) 0}
     linear-gradient(180deg,rgba(10,21,38,.68) 0%,rgba(10,21,38,.92) 62%,var(--bg) 100%),
     url("https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?fm=jpg&q=70&w=1920&auto=format&fit=crop")}
 
+.page-hero--manufacturing::before{background-image:
+    radial-gradient(560px 300px at 50% -10%,rgba(73,163,199,.24),transparent 70%),
+    linear-gradient(180deg,rgba(10,21,38,.74) 0%,rgba(10,21,38,.94) 62%,var(--bg) 100%),
+    url("https://images.unsplash.com/photo-1647427060118-4911c9821b82?fm=jpg&q=70&w=1920&auto=format&fit=crop")}
+
 /* ---------- partners ---------- */
 .partners{padding-top:0}
 .partners p{text-align:center;color:var(--muted-2);font-size:13px;letter-spacing:.16em;

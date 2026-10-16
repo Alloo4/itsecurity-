@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing Cybersecurity: Why Production Downtime Usually Starts in IT — ITSN Blog</title>
+<meta name="description" content="Most cyberattacks don't stop a plant by taking over machines — they take down the IT systems production depends on. What 2026's medtech incidents show, and how IT and operations leaders can shorten a bad day.">
+<link rel="canonical" href="https://itsecurity-five.vercel.app/blog/manufacturing-cybersecurity-production-downtime/">
+<meta name="theme-color" content="#0a1526">
+<meta name="google-site-verification" content="ad7PQXWMNEEGkjTGOML4ZclIOk3AJ6ymcZn1l1d2bYY">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="IT Security Now (ITSN)">
+<meta property="og:title" content="Manufacturing Cybersecurity: Why Production Downtime Usually Starts in IT">
+<meta property="og:description" content="Most cyberattacks don't stop a plant by taking over machines — they take down the IT systems production depends on. Here's what to do about it.">
+<meta property="og:url" content="https://itsecurity-five.vercel.app/blog/manufacturing-cybersecurity-production-downtime/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1647427060118-4911c9821b82?fm=jpg&amp;q=70&amp;w=1200&amp;auto=format&amp;fit=crop">
+<meta property="article:published_time" content="2026-10-16">
+<meta property="article:section" content="Security">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manufacturing Cybersecurity: Why Production Downtime Usually Starts in IT">
+<meta name="twitter:description" content="Most cyberattacks don't stop a plant by taking over machines — they take down the IT systems production depends on. Here's what to do about it.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1647427060118-4911c9821b82?fm=jpg&amp;q=70&amp;w=1200&amp;auto=format&amp;fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/svg+xml" href="../../assets/logos/svg/itsn-icon-teal.svg">
+<link rel="apple-touch-icon" href="../../assets/logos/png/itsn-icon-square-teal-bg.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Manufacturing Cybersecurity: Why Production Downtime Usually Starts in IT",
+  "description": "Most cyberattacks don't stop a plant by taking over machines — they take down the IT systems production depends on. What 2026's medtech incidents show, and how IT and operations leaders can shorten a bad day.",
+  "image": "https://images.unsplash.com/photo-1647427060118-4911c9821b82?fm=jpg&q=70&w=1200&auto=format&fit=crop",
+  "datePublished": "2026-10-16",
+  "dateModified": "2026-10-16",
+  "author": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "publisher": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "mainEntityOfPage": "https://itsecurity-five.vercel.app/blog/manufacturing-cybersecurity-production-downtime/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is manufacturing cybersecurity?","acceptedAnswer":{"@type":"Answer","text":"It's the protection of a manufacturer's IT systems (ERP, email, identity) and operational technology (the controllers, workstations and networks that run production). It also covers the connections between them."}},
+    {"@type":"Question","name":"What is the difference between IT and OT security?","acceptedAnswer":{"@type":"Answer","text":"IT security protects business systems and data. OT security protects the systems that control physical processes, where availability and safety come first. Modern plants depend on both, so the two need one plan."}},
+    {"@type":"Question","name":"Why are manufacturers targeted so often?","acceptedAnswer":{"@type":"Answer","text":"Manufacturers can't afford downtime, which gives extortion-focused attackers leverage. IBM X-Force has ranked manufacturing the most-attacked industry for five consecutive years."}},
+    {"@type":"Question","name":"How can a manufacturer reduce downtime from a cyberattack?","acceptedAnswer":{"@type":"Answer","text":"Map which IT systems production depends on, lock down admin tools, segment plant networks, keep attacker-resistant backups, and plan manual operations in advance."}},
+    {"@type":"Question","name":"Is NIST SP 800-82 required?","acceptedAnswer":{"@type":"Answer","text":"It's guidance, not a regulation, for most private manufacturers. It's widely used as the reference for securing OT systems."}}
+  ]
+}
+</script>
+<!-- Google Tag Manager: replace GTM-XXXXXXX with your real container ID -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="IT Security Now home">
+      <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-teal.svg" alt="IT Security Now" width="792" height="151">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/#consulting">Consulting</a>
+      <a href="/#staffaug">Staff Augmentation</a>
+      <a href="/#security">Security</a>
+      <a href="/#voicedata">Voice &amp; Data</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/#contact">Start Assessment</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn--primary btn--sm" href="/#contact">Start Assessment</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--manufacturing"><div class="wrap">
+    <span class="eyebrow">◆ Security</span>
+    <h1 style="max-width:22ch">Manufacturing Cybersecurity: Why Production Downtime Usually Starts in IT</h1>
+    <div class="article-meta"><span>October 16, 2026</span><span>7 min read</span></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="article-body">
+      <a class="back-link" href="/blog/">&larr; Back to all articles</a>
+
+      <p>When people picture a cyberattack on a manufacturer, they usually imagine someone taking control of a machine on the plant floor. That does happen. It isn't how most production stops.</p>
+      <p>More often, the line stops because the systems around it go dark. The ERP that releases work orders. The quality system that signs off a batch. The label printer that won't print without a server. The identity platform every engineer logs in through. The machines may be fine. The plant still can't run.</p>
+      <p>This year has given two clear examples, both from medical technology manufacturers. This article looks at what they show, why manufacturing stays the most-targeted industry, and what IT and operations leaders can do now to shorten a bad day.</p>
+
+      <h2>The Problem: Manufacturing Is the Most-Targeted Industry, and Downtime Is the Point</h2>
+      <p>Manufacturing has topped IBM X-Force's ranking of most-attacked industries for five consecutive years.</p>
+      <div class="article-callout">In IBM's latest data, covering 2025, manufacturing accounted for 27.7% of the attacks X-Force observed. Malware aimed at disrupting operations or extorting the victim appeared in 45% of them (Manufacturing Dive, Feb 26, 2026).</div>
+      <p>Industrial cybersecurity firm Dragos sees the same pattern. It tracked 119 ransomware groups targeting industrial organizations in 2025, up from 80 in 2024. Those groups affected about 3,300 organizations, and manufacturers made up more than two-thirds of the victims (Dragos, Feb 17, 2026).</p>
+      <p>The reason isn't complicated. Manufacturers have very little tolerance for downtime. Every hour a line stands still means lost output, missed shipments and unhappy customers. Attackers know that pressure makes a fast payment more likely.</p>
+
+      <h2>What 2026's Medtech Incidents Show</h2>
+      <h3>Stryker, March 2026</h3>
+      <p>On March 11, Stryker identified an attack that caused a global disruption of its Microsoft environment. Order processing, manufacturing and shipping were disrupted. The company said it found no ransomware and did not believe its connected products or patient services were affected (MedTech Dive, Mar 13, 2026).</p>
+      <p>Reporting since then says the attackers compromised an administrator account, created a new global administrator, and used Microsoft Intune's built-in wipe command against employee devices. A week later, CISA urged organizations to harden their endpoint management systems (BleepingComputer, Mar 19, 2026).</p>
+      <h3>Boston Scientific, August 2026</h3>
+      <p>An attack on August 25 disrupted manufacturing, order processing and shipping. The company announced full restoration about two weeks later. Its CEO said it likely lost orders while plants and distribution centers were shut down, and that some hospitals ordered from competitors in that period. The company expects to miss its third-quarter and full-year guidance (MedTech Dive, Sep 11, 2026). Activating remote monitoring for some newly implanted cardiac devices was also affected during the outage (MedTech Dive, Aug 28, 2026).</p>
+      <h3>Not just medtech</h3>
+      <p>Jaguar Land Rover shut down its systems after a cyberattack in late summer 2025 and halted production for more than five weeks. The UK's Cyber Monitoring Centre estimated the cost to the UK economy at £1.9 billion, with up to 5,000 organizations affected, mostly in JLR's supply chain (Prolific North, Oct 23, 2025).</p>
+      <p><strong>Our analysis:</strong> public reporting on the Stryker and Boston Scientific incidents describes disruption to business and IT systems, not to machine controllers. That's the lesson. The quickest way to stop a plant is to take away what it depends on.</p>
+
+      <h2>Why This Happens: The Plant Floor Runs on IT</h2>
+      <p>Ten years ago, many plants could run for days with corporate IT offline. That's rarely true now. Production depends on a chain of IT systems:</p>
+      <ul>
+        <li><strong>Planning and execution:</strong> ERP, MES and scheduling release the work and track it.</li>
+        <li><strong>Quality and compliance:</strong> quality systems, batch records and traceability, which regulated manufacturers like medtech cannot skip.</li>
+        <li><strong>Shipping:</strong> order management, warehouse systems and label printing.</li>
+        <li><strong>Identity and management:</strong> the directory everyone logs in through, and the tools that manage every laptop and phone.</li>
+        <li><strong>Engineering access:</strong> Windows workstations that program and monitor the line.</li>
+      </ul>
+      <p>That last group is easy to misclassify. Dragos notes that organizations often treat OT incidents as "IT only" because engineering workstations and operator screens run Windows.</p>
+      <p>The identity and management layer deserves special attention. Whoever controls the device-management console controls every device it manages. The Stryker incident showed what that means when an attacker holds administrator rights. A legitimate admin tool did the damage.</p>
+
+      <h2>Practical Recommendations</h2>
+      <p>None of these require a new platform. Most are decisions and discipline.</p>
+      <ol>
+        <li><strong>Map production dependencies.</strong> For each site or line, list the IT systems it needs to produce, ship and stay compliant. Then note how long it can run without each one. Most manufacturers don't have this document, and it's the most useful one in an incident. CISA's OT asset inventory guidance, written with US and allied agencies, is a structured place to start.</li>
+        <li><strong>Treat admin tools as crown jewels.</strong> Device management, identity, backup consoles and virtualization platforms can each take down everything at once. Apply CISA's post-Stryker advice broadly: least-privilege admin roles, MFA and Conditional Access on privileged actions, and a second approver for destructive changes such as device wipes. Alert on any new global administrator.</li>
+        <li><strong>Separate the plant from the corporate network.</strong> Segment plant systems from office systems, and control the few paths between them. Where practical, avoid having plant access depend on the same accounts used for email. NIST SP 800-82 Rev. 3 is the standard reference for OT security architecture.</li>
+        <li><strong>Make recovery attacker-resistant.</strong> Keep immutable or offline copies of identity, ERP and MES configurations, and machine programs. Test restores on a schedule. A backup an attacker with admin rights can delete is not a recovery plan.</li>
+        <li><strong>Plan for manual operations.</strong> Decide in advance what the plant can do without IT, for how long, and who decides. Print the documents a shift would need. Run a tabletop exercise with operations, not just IT.</li>
+        <li><strong>Get visibility into the plant network.</strong> Dragos reports that organizations with comprehensive OT visibility contained OT ransomware in an average of 5 days, against an industry average of 42.</li>
+        <li><strong>Bring suppliers into the plan.</strong> The JLR case showed that one manufacturer's outage becomes its suppliers' outage. Know which vendors have remote access to your plant, and what you would do if a key supplier went down.</li>
+      </ol>
+
+      <h2>The IT Leadership Perspective</h2>
+      <p><strong>Our view:</strong> in manufacturing, cyber risk is operations risk. It should be owned jointly by the COO and the CIO, and measured in hours of lost production, not in the number of tools deployed.</p>
+      <p>That changes the questions leadership asks. "Are we secure?" can't really be answered. "How long until we ship again if identity goes down?" can. So can "Which three systems would stop every line?"</p>
+      <p>It also changes where the next dollar goes. For many mid-market manufacturers, hardening identity and admin tools and proving recovery will reduce more downtime than another detection product.</p>
+      <p>For medtech and health-tech manufacturers, the stakes reach further. When Boston Scientific's plants stopped, hospitals felt it. When a supplier to healthcare can't ship, care teams have to find another way.</p>
+
+      <h2>Where ITSN Fits</h2>
+      <p>ITSN works with manufacturing, healthcare and health-tech organizations as a vendor-neutral partner. Our security and compliance practice covers security assessments and gap analysis, zero-trust and network security, identity and access management, continuous monitoring and threat detection, and incident response planning. The aim is protection that fits production reality rather than slowing it down.</p>
+      <p>A practical first step is a dependency and resilience review. We map what your lines rely on, test how recoverable those systems are, and give you a prioritized list of fixes. When you need extra hands, our staff augmentation team provides network and security specialists who work inside your processes.</p>
+
+      <h2>Conclusion</h2>
+      <p>The 2026 medtech incidents weren't stories about sophisticated attacks on machines. They were stories about how much a plant depends on ordinary IT systems, and how long it takes to restore them.</p>
+      <p>You can't promise your board that an attacker will never get in. You can know which systems your production depends on, protect the tools that control them, and prove you can bring them back.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details><summary>What is manufacturing cybersecurity?<span class="pm"></span></summary><p>It's the protection of a manufacturer's IT systems (ERP, email, identity) and operational technology (the controllers, workstations and networks that run production). It also covers the connections between them.</p></details>
+        <details><summary>What is the difference between IT and OT security?<span class="pm"></span></summary><p>IT security protects business systems and data. OT security protects the systems that control physical processes, where availability and safety come first. Modern plants depend on both, so the two need one plan.</p></details>
+        <details><summary>Why are manufacturers targeted so often?<span class="pm"></span></summary><p>Manufacturers can't afford downtime, which gives extortion-focused attackers leverage. IBM X-Force has ranked manufacturing the most-attacked industry for five consecutive years.</p></details>
+        <details><summary>How can a manufacturer reduce downtime from a cyberattack?<span class="pm"></span></summary><p>Map which IT systems production depends on, lock down admin tools, segment plant networks, keep attacker-resistant backups, and plan manual operations in advance.</p></details>
+        <details><summary>Is NIST SP 800-82 required?<span class="pm"></span></summary><p>It's guidance, not a regulation, for most private manufacturers. It's widely used as the reference for securing OT systems.</p></details>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
+    <h2 style="font-size:clamp(28px,4vw,42px)">Want to know how long your plant could keep shipping if IT went down?</h2>
+    <p class="muted" style="margin:14px auto 28px;max-width:60ch">Talk to an IT expert about a production dependency and resilience review.</p>
+    <a class="btn btn--primary" href="/#contact">Talk to an Expert</a>
+  </div></section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-white.svg" alt="IT Security Now" width="792" height="151">
+        </a>
+        <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/#consulting">Consulting Service</a></li>
+          <li><a href="/#staffaug">Staff Augmentation</a></li>
+          <li><a href="/#security">Security Service</a></li>
+          <li><a href="/#voicedata">Voice &amp; Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#contact">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ITSN — IT Security Now. All rights reserved.</span>
+      <span>Zero-risk · Shared success · Vendor-neutral</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>
