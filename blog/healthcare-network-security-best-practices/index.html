@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Network Security Best Practices: Contain the Incident, Not the Hospital — ITSN Blog</title>
+<meta name="description" content="When an attacker gets in, a flat network forces hospitals to shut everything down. Seven healthcare network security best practices — from asset mapping to segmentation drills — that let you contain an incident to one zone.">
+<link rel="canonical" href="https://itsecurity-five.vercel.app/blog/healthcare-network-security-best-practices/">
+<meta name="theme-color" content="#0a1526">
+<meta name="google-site-verification" content="ad7PQXWMNEEGkjTGOML4ZclIOk3AJ6ymcZn1l1d2bYY">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="IT Security Now (ITSN)">
+<meta property="og:title" content="Healthcare Network Security Best Practices: Contain the Incident, Not the Hospital">
+<meta property="og:description" content="When an attacker gets in, a flat network forces hospitals to shut everything down. Seven practical steps to contain an incident to one zone instead.">
+<meta property="og:url" content="https://itsecurity-five.vercel.app/blog/healthcare-network-security-best-practices/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1766299892683-d50398e31823?fm=jpg&amp;q=70&amp;w=1200&amp;auto=format&amp;fit=crop">
+<meta property="article:published_time" content="2026-10-21">
+<meta property="article:section" content="Security">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Healthcare Network Security Best Practices: Contain the Incident, Not the Hospital">
+<meta name="twitter:description" content="When an attacker gets in, a flat network forces hospitals to shut everything down. Seven practical steps to contain an incident to one zone instead.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1766299892683-d50398e31823?fm=jpg&amp;q=70&amp;w=1200&amp;auto=format&amp;fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/svg+xml" href="../../assets/logos/svg/itsn-icon-teal.svg">
+<link rel="apple-touch-icon" href="../../assets/logos/png/itsn-icon-square-teal-bg.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Healthcare Network Security Best Practices: Contain the Incident, Not the Hospital",
+  "description": "When an attacker gets in, a flat network forces hospitals to shut everything down. Seven healthcare network security best practices — from asset mapping to segmentation drills — that let you contain an incident to one zone.",
+  "image": "https://images.unsplash.com/photo-1766299892683-d50398e31823?fm=jpg&q=70&w=1200&auto=format&fit=crop",
+  "datePublished": "2026-10-21",
+  "dateModified": "2026-10-21",
+  "author": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "publisher": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "mainEntityOfPage": "https://itsecurity-five.vercel.app/blog/healthcare-network-security-best-practices/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is healthcare network security?","acceptedAnswer":{"@type":"Answer","text":"It's the set of controls that protect a healthcare organization's network and everything connected to it, including EHR systems, medical devices, imaging, vendor connections and guest access. The goal is to prevent unauthorized access and to contain incidents when they happen."}},
+    {"@type":"Question","name":"Does HIPAA require network segmentation?","acceptedAnswer":{"@type":"Answer","text":"The current Security Rule doesn't name segmentation explicitly. It requires a risk analysis and appropriate safeguards, and segmentation is a common way to meet those requirements. HHS's proposed update, published in January 2025, would make segmentation an explicit requirement. It has not been finalized."}},
+    {"@type":"Question","name":"How do you secure medical devices that can't be patched?","acceptedAnswer":{"@type":"Answer","text":"Put them in a dedicated segment, allow only the connections they need, block internet access unless it's required, and monitor their traffic. Work with the manufacturer, using the MDS2 form, to understand each device's network needs."}},
+    {"@type":"Question","name":"What's the difference between segmentation and microsegmentation?","acceptedAnswer":{"@type":"Answer","text":"Segmentation divides a network into zones, such as clinical, guest and devices. Microsegmentation applies narrower rules to individual workloads or device groups, which further limits how far an attacker can move."}},
+    {"@type":"Question","name":"How often should healthcare network security be tested?","acceptedAnswer":{"@type":"Answer","text":"The proposed HIPAA update would require vulnerability scanning every six months and penetration testing every year. Many organizations already use that schedule as a baseline."}}
+  ]
+}
+</script>
+<!-- Google Tag Manager: replace GTM-XXXXXXX with your real container ID -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="IT Security Now home">
+      <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-teal.svg" alt="IT Security Now" width="792" height="151">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/#consulting">Consulting</a>
+      <a href="/#staffaug">Staff Augmentation</a>
+      <a href="/#security">Security</a>
+      <a href="/#voicedata">Voice &amp; Data</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/#contact">Start Assessment</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn--primary btn--sm" href="/#contact">Start Assessment</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--hospital-network"><div class="wrap">
+    <span class="eyebrow">◆ Security</span>
+    <h1 style="max-width:22ch">Healthcare Network Security Best Practices: Contain the Incident, Not the Hospital</h1>
+    <div class="article-meta"><span>October 21, 2026</span><span>8 min read</span></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="article-body">
+      <a class="back-link" href="/blog/">&larr; Back to all articles</a>
+
+      <p>When a health system detects an attacker on its network, leaders face a hard decision within minutes: how much do we shut off?</p>
+      <p>In many hospitals, the honest answer is "everything." The network was never built to be divided. Clinical applications, imaging, connected medical devices, guest Wi-Fi, vendor connections and back-office systems can all reach each other. When there's no smaller boundary to close, containment means taking down the patient portal, the EHR interfaces and the phones along with the problem.</p>
+      <p>This article covers why that happens, what current federal guidance says, and seven practical steps that let a healthcare organization contain an incident to one area instead of the whole enterprise.</p>
+
+      <h2>The Problem: A Security Incident Is Now a Care-Continuity Incident</h2>
+      <p>The pressure on healthcare networks hasn't eased this year.</p>
+      <ul>
+        <li>Comparitech counted <strong>185 ransomware attacks and unverified claims</strong> against U.S. healthcare organizations in Q3 2026, up 64% from Q2. Only 26 of those were confirmed, so the trend matters more than the exact count (Becker's Hospital Review, Oct 16, 2026).</li>
+        <li>In the 2026 Cyber Insecurity in Healthcare survey by Proofpoint and the Ponemon Institute, <strong>97% of 705 U.S. healthcare organizations</strong> reported at least one cyberattack in the past 12 months. Of those attacked, 74% said patient care was disrupted. Operational disruption was the largest cost in the costliest attack, averaging $1.39 million (Proofpoint, Oct 2026).</li>
+        <li>IBM's 2026 Cost of a Data Breach report ranked healthcare the <strong>costliest industry for the 13th consecutive year</strong>, at an average of $6.64 million per breach (HIPAA Journal, Jul 29, 2026).</li>
+      </ul>
+      <p>The operational pattern is consistent. In January 2026, AZ Monica hospital in Antwerp shut down servers at two campuses after a cyberattack. About 70 scheduled surgeries were cancelled and seven patients were transferred to other hospitals. This week, an Indiana health system disabled its network after detecting suspicious activity, which took its patient portal offline. That cause had not been confirmed at the time of writing (DysruptionHub, Oct 19, 2026).</p>
+      <div class="article-callout"><strong>Our analysis:</strong> taking systems offline fast is often the right call. The real issue is how many options a team has when it makes that call. A network that can be isolated in sections gives responders a choice between "shut down billing" and "shut down the hospital."</div>
+
+      <h2>Why So Many Healthcare Networks Are Still Flat</h2>
+      <p>Few organizations set out to build a flat network. It usually happens gradually.</p>
+      <ul>
+        <li><strong>Growth by acquisition.</strong> Practices, clinics and imaging centers get connected to the core network quickly, and the clean-up never gets scheduled.</li>
+        <li><strong>Medical devices with long lifecycles.</strong> Many devices are vendor-managed, can't run security agents, and may never receive a patch. In January 2025, CISA and the FDA warned that a widely used patient monitor contained a backdoor and that no patch was available. The FDA's advice was to unplug the Ethernet cable and disable wireless where remote monitoring wasn't needed (SecurityWeek, Jan 31, 2025). Sometimes the network around a device is the only control you have.</li>
+        <li><strong>Vendor remote access.</strong> Dozens of vendors may have persistent connections into clinical systems, often with broader reach than they need.</li>
+        <li><strong>Fear of breaking clinical workflows.</strong> Segmentation projects stall because nobody wants to block a connection that a lab analyzer or infusion system quietly depends on.</li>
+      </ul>
+      <p><strong>Our analysis:</strong> the barrier is rarely technology. It's not knowing what talks to what.</p>
+
+      <h2>What Current Guidance Says</h2>
+      <h3>HHS Healthcare and Public Health Cybersecurity Performance Goals (CPGs)</h3>
+      <p>Published in January 2024, these voluntary goals list network segmentation as one of ten "enhanced" goals, alongside asset inventory, centralized log collection and configuration management. The "essential" goals include multifactor authentication, separating user and privileged accounts, and setting cybersecurity requirements for vendors.</p>
+      <h3>The proposed HIPAA Security Rule update</h3>
+      <p>Published in the Federal Register on January 6, 2025, the proposal would require covered entities and business associates to:</p>
+      <ul>
+        <li>maintain a technology asset inventory and a network map showing how ePHI moves</li>
+        <li>segment their networks</li>
+        <li>use multifactor authentication</li>
+        <li>scan for vulnerabilities every six months and run penetration tests every year</li>
+        <li>be able to restore critical systems and data within 72 hours</li>
+      </ul>
+      <p>The rule is still a proposal. HHS's regulatory agenda now targets finalization around July 2027, and more than 100 hospital and provider groups have asked HHS to withdraw it (Pact-One, Sep 4, 2026). Under the proposed timeline, organizations would have about 240 days after publication to comply.</p>
+      <h3>CISA's zero trust microsegmentation guidance</h3>
+      <p>CISA's July 2025 guidance describes microsegmentation as a way to reduce the attack surface, limit an attacker's lateral movement and improve visibility. It was written for federal agencies, but CISA states that its principles apply to any organization.</p>
+      <p><strong>Our view:</strong> plan around the next incident, not the rule's publication date. Every step below is useful whether the final rule arrives in 2027, changes or never arrives.</p>
+
+      <h2>Seven Healthcare Network Security Best Practices</h2>
+      <ol>
+        <li><strong>Build the map before you build the walls.</strong> Start with a technology asset inventory and a data-flow map: which systems store or process ePHI, and what each one needs to communicate with. On clinical networks, use passive discovery so you don't disrupt devices. Validate what you find with clinical engineering and biomedical teams, because they know which devices are actually in use.</li>
+        <li><strong>Define isolation zones by care impact, not by org chart.</strong> A practical starting set of zones is: internet-facing and guest; corporate and back office; EHR and clinical applications; medical devices, grouped by type and criticality; imaging; vendor access; and the management network. For each zone, answer three questions. Can it be cut off on its own? What stops working when it is? Who has authority to do it at 2 a.m.?</li>
+        <li><strong>Put medical devices in their own segments with allow-listed traffic.</strong> Devices should talk only to the servers they need. Block internet access unless the vendor documents a requirement for it. Ask manufacturers for their Manufacturer Disclosure Statement for Medical Device Security (MDS2) form, which describes a device's security capabilities and network needs.</li>
+        <li><strong>Narrow vendor access.</strong> Inventory every remote connection. Replace always-on VPN tunnels with brokered access that requires MFA, is time-limited and is logged, and limit each vendor to the segment it supports. A vendor's SOC 2 report helps you judge its controls. It doesn't replace limiting what the vendor can reach (see <a href="/blog/soc-2-vs-hipaa-compliance/">SOC 2 vs HIPAA Compliance</a>).</li>
+        <li><strong>Protect the management plane.</strong> Network devices, directory services, virtualization platforms and backup consoles can affect everything at once, so they belong on a separate administrative network. Use separate privileged accounts and MFA for that network. As we noted in our <a href="/blog/manufacturing-cybersecurity-production-downtime/">manufacturing downtime article</a>, an attacker with admin rights can use legitimate tools to cause widespread damage.</li>
+        <li><strong>Monitor the traffic between zones.</strong> Segmentation without monitoring is a wall without a guard. Collect logs centrally, record traffic that crosses zone boundaries, and alert on new or unexpected connections, especially from device and vendor segments.</li>
+        <li><strong>Rehearse the isolation.</strong> Run a tabletop exercise with clinical and operations leaders, not just IT. Use a scenario like "a billing workstation is compromised overnight." Confirm who decides, which isolation rules are applied, and how long each department can work on downtime procedures. Then test restoring a segment. The proposed 72-hour restoration standard is a useful benchmark even before it becomes a requirement.</li>
+      </ol>
+      <div class="article-callout"><strong>Phase the work.</strong> Start with the highest-risk boundaries, which are usually guest and internet, vendor access, and medical devices. Run new rules in monitor-only mode before enforcing them, and schedule changes in clinically approved maintenance windows.</div>
+
+      <h2>The IT Leadership Perspective</h2>
+      <p><strong>Our view:</strong> segmentation is a care-continuity investment, not a firewall project. That means its progress should be reported in terms executives and clinical leaders recognize:</p>
+      <ul>
+        <li>How many zones can we isolate independently today?</li>
+        <li>How long does it take to isolate one?</li>
+        <li>What percentage of connected medical devices are inventoried and assigned to a segment?</li>
+        <li>How many vendor connections still have persistent, unrestricted access?</li>
+      </ul>
+      <p>These measures turn "are we secure?", which nobody can answer honestly, into questions with real answers. They also give COOs and CMIOs a reason to stay involved, because they will own the downtime decisions when an incident happens.</p>
+
+      <h2>Where ITSN Fits</h2>
+      <p>ITSN works with healthcare and health-tech organizations as a vendor-neutral partner. Our security practice covers security assessments and gap analysis, zero-trust and network security, identity and access management, continuous monitoring and threat detection, and incident response planning. Our Voice &amp; Data practice designs and optimizes the networks those controls run on. When internal teams need more capacity, our staff augmentation team provides network and security specialists who work inside your processes.</p>
+      <p>A practical first step is a network security assessment. It maps how ePHI moves through your network, identifies flat areas and unmanaged devices, and delivers a phased segmentation plan ranked by care impact. For the wider picture, see our <a href="/blog/cybersecurity-services-for-healthcare/">guide to cybersecurity services for healthcare</a>.</p>
+
+      <h2>Conclusion</h2>
+      <p>No organization can promise that an attacker will never get in. What you can decide in advance is how far an attacker can move once inside, and how much of the hospital you would need to shut off to stop them.</p>
+      <p>A network built in sections gives your team options during an incident. A flat network leaves them one option: shut everything down.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details><summary>What is healthcare network security?<span class="pm"></span></summary><p>It's the set of controls that protect a healthcare organization's network and everything connected to it, including EHR systems, medical devices, imaging, vendor connections and guest access. The goal is to prevent unauthorized access and to contain incidents when they happen.</p></details>
+        <details><summary>Does HIPAA require network segmentation?<span class="pm"></span></summary><p>The current Security Rule doesn't name segmentation explicitly. It requires a risk analysis and appropriate safeguards, and segmentation is a common way to meet those requirements. HHS's proposed update, published in January 2025, would make segmentation an explicit requirement. It has not been finalized.</p></details>
+        <details><summary>How do you secure medical devices that can't be patched?<span class="pm"></span></summary><p>Put them in a dedicated segment, allow only the connections they need, block internet access unless it's required, and monitor their traffic. Work with the manufacturer, using the MDS2 form, to understand each device's network needs.</p></details>
+        <details><summary>What's the difference between segmentation and microsegmentation?<span class="pm"></span></summary><p>Segmentation divides a network into zones, such as clinical, guest and devices. Microsegmentation applies narrower rules to individual workloads or device groups, which further limits how far an attacker can move.</p></details>
+        <details><summary>How often should healthcare network security be tested?<span class="pm"></span></summary><p>The proposed HIPAA update would require vulnerability scanning every six months and penetration testing every year. Many organizations already use that schedule as a baseline.</p></details>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
+    <h2 style="font-size:clamp(28px,4vw,42px)">How much of your hospital would you have to shut off?</h2>
+    <p class="muted" style="margin:14px auto 28px;max-width:60ch">Start with a network security assessment: we map how ePHI moves, find the flat areas and unmanaged devices, and give you a phased segmentation plan ranked by care impact.</p>
+    <a class="btn btn--primary" href="/#contact">Start Assessment</a>
+  </div></section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-white.svg" alt="IT Security Now" width="792" height="151">
+        </a>
+        <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/#consulting">Consulting Service</a></li>
+          <li><a href="/#staffaug">Staff Augmentation</a></li>
+          <li><a href="/#security">Security Service</a></li>
+          <li><a href="/#voicedata">Voice &amp; Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#contact">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ITSN — IT Security Now. All rights reserved.</span>
+      <span>Zero-risk · Shared success · Vendor-neutral</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>

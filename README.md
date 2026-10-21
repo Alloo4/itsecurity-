@@ -36,13 +36,14 @@ Current articles:
 1. `cybersecurity-services-for-healthcare/` — Sep 17, 2026 (Security)
 2. `soc-2-vs-hipaa-compliance/` — Oct 9, 2026 (Compliance)
 3. `manufacturing-cybersecurity-production-downtime/` — Oct 16, 2026 (Security)
+4. `healthcare-network-security-best-practices/` — Oct 21, 2026 (Security)
 
 ### Adding a new article
 1. Copy an existing article folder to `blog/<new-slug>/` and replace the content. Update:
    - `<title>`, meta description, canonical URL, Open Graph/Twitter tags
    - both JSON-LD blocks (`BlogPosting` and `FAQPage`)
    - the hero, date and read time
-2. Add a card to the **top** of the grid in `blog/index.html` and in the "From the Blog" section of `index.html`.
+2. Add a card to the **top** of the grid in `blog/index.html` and in the "From the Blog" section of `index.html` (the home page shows the 3 newest — remove the oldest card there).
 3. Add the URL to `sitemap.xml`.
 4. Keep the `google-site-verification` meta tag in the `<head>`.
 5. After it's live, request indexing in Google Search Console.
