@@ -1,7 +1,7 @@
 // ---------- FAQ data ----------
 const FAQS = {
   consulting:[
-    ["How is ITSN different from a reseller or a vendor’s own consultants?","We hold no reseller quotas and take no vendor commissions, so our recommendation is based only on what fits your stack, budget, and compliance needs."],
+    ["How is ITSN different from a reseller or a vendor’s own consultants?","We hold no reseller quotas and don’t provide solutions based on vendor commissions. Our recommendations are solely based on what fits your stack, budget, and compliance needs."],
     ["Do you work with our existing vendors and contracts?","Yes. We assess what you already have and keep what serves you — we only recommend changes where they improve cost, performance, or risk."],
     ["What does \u201Czero-risk partnership\u201D actually mean?","We tie our engagement to your outcomes and stay accountable for results, rather than handing over a deliverable and walking away."],
     ["How quickly do we see a recommendation?","Most clients receive a prioritized roadmap within weeks of the initial assessment."]
