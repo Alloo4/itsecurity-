@@ -1,0 +1,4 @@
+# itsecuritynow.com — send www to the main domain (one address for Google)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.itsecuritynow\.com$ [NC]
+RewriteRule ^ https://itsecuritynow.com%{REQUEST_URI} [L,R=301]

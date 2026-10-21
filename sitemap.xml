@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://itsecurity-five.vercel.app/</loc>
+    <loc>https://itsecuritynow.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://itsecurity-five.vercel.app/blog/</loc>
+    <loc>https://itsecuritynow.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itsecurity-five.vercel.app/blog/cybersecurity-services-for-healthcare/</loc>
+    <loc>https://itsecuritynow.com/blog/cybersecurity-services-for-healthcare/</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://itsecurity-five.vercel.app/blog/soc-2-vs-hipaa-compliance/</loc>
+    <loc>https://itsecuritynow.com/blog/soc-2-vs-hipaa-compliance/</loc>
     <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://itsecurity-five.vercel.app/blog/manufacturing-cybersecurity-production-downtime/</loc>
+    <loc>https://itsecuritynow.com/blog/manufacturing-cybersecurity-production-downtime/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://itsecurity-five.vercel.app/blog/healthcare-network-security-best-practices/</loc>
+    <loc>https://itsecuritynow.com/blog/healthcare-network-security-best-practices/</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

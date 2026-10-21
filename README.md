@@ -1,6 +1,8 @@
 # IT Security Now (ITSN) — Website
 
-Static marketing site for IT Security Now, live at **https://itsecurity-five.vercel.app/**.
+Static marketing site for IT Security Now, live at **https://itsecuritynow.com/**.
+
+A preview copy also runs on Vercel at https://itsecurity-five.vercel.app/. Its pages point search engines to itsecuritynow.com, so Google treats itsecuritynow.com as the real site.
 
 - **Main site:** six pages (Home, Consulting, Staff Augmentation, Security, Voice & Data, Contact) in a single `index.html`, with in-page routing via hash links (e.g. `/#contact`).
 - **Blog:** separate static pages under `/blog/`.
@@ -17,6 +19,7 @@ No build step and no dependencies (fonts load from Google Fonts).
 | `blog/<slug>/index.html` | One folder per article |
 | `assets/logos/` | Official logo files (SVG + PNG) — see [assets/logos/README.md](assets/logos/README.md) |
 | `sitemap.xml`, `robots.txt` | For search engines |
+| `.htaccess` | Redirects `www.itsecuritynow.com` to `itsecuritynow.com` (used by the live host; ignored by Vercel) |
 
 ## Branding
 - **Header:** teal linear logo (`itsn-logo-linear-teal.svg`)
@@ -55,8 +58,10 @@ Article helpers in `styles.css`:
 - `.page-hero--<name>` — hero background images
 
 ## SEO and Search Console
-- Google Search Console is verified with a URL-prefix property for `https://itsecurity-five.vercel.app/`. The verification meta tag is on every page — **don't remove it**.
-- The sitemap is submitted in Search Console. It updates automatically when you edit `sitemap.xml`.
+- Google Search Console tracks **itsecuritynow.com** (Domain property, verified by a DNS TXT record at the domain provider — don't delete that record).
+- The sitemap `https://itsecuritynow.com/sitemap.xml` is submitted in Search Console. Google re-reads it automatically after each upload.
+- All canonical URLs, Open Graph tags, structured data, `sitemap.xml` and `robots.txt` use `https://itsecuritynow.com`.
+- The old `google-site-verification` meta tag (from the earlier vercel.app property) is harmless and can stay.
 - Every page has a canonical URL, Open Graph and Twitter tags, and JSON-LD structured data.
 
 ## Preview locally in VS Code
@@ -67,17 +72,21 @@ Article helpers in `styles.css`:
 Blog links use root-relative paths (`/blog/`), so preview through Live Server rather than opening the files directly.
 
 ## Deploying
-The site deploys to Vercel **automatically on every push to `main`** on GitHub (`Alloo4/itsecurity-`). Changes are usually live within a minute; use Ctrl+F5 to bypass the browser cache.
+There are two copies of the site.
 
-No `vercel.json` is needed. For a manual deploy, use the Vercel CLI:
-```bash
-npm i -g vercel
-vercel --prod
-```
+**1. itsecuritynow.com (the real site) — manual upload.** It's on separate hosting and does **not** update when you push to GitHub. After every change:
+1. Commit and push to GitHub as usual.
+2. Build an upload zip of the current site:
+   ```bash
+   git archive --format=zip -o ../itsecuritynow-upload.zip HEAD
+   ```
+3. In the hosting control panel, open **File Manager**, go to the site's folder (usually `public_html`), upload the zip and **Extract** it, replacing existing files.
+4. Turn on **Show hidden files** in File Manager to confirm `.htaccess` is there.
+5. Check https://itsecuritynow.com with Ctrl+F5.
+
+**2. Vercel preview — automatic.** Every push to `main` on GitHub (`Alloo4/itsecurity-`) deploys to https://itsecurity-five.vercel.app/ within about a minute. No `vercel.json` is needed.
 
 ## To-do
 - Replace `GTM-XXXXXXX` (in every page's `<head>` and `<body>`) with the real Google Tag Manager container ID to turn on analytics.
 - Swap the three placeholder testimonials for real, attributed quotes.
-- If the site moves to `itsecuritynow.com`, do the following, because Search Console treats it as a separate site:
-  - Update the canonical URLs, `sitemap.xml` and `robots.txt`.
-  - Add a new Search Console property for the new domain.
+- Consider pointing itsecuritynow.com's DNS to Vercel, so every GitHub push goes live automatically and the manual upload step goes away.
