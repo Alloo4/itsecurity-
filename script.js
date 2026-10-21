@@ -13,7 +13,7 @@ const FAQS = {
     ["Can augmentation convert into a longer engagement?","Yes — staff augmentation often transitions into additional projects, which may include a bucket of hours, fractional employee, and even full-time placements."]
   ],
   security:[
-    ["Which compliance frameworks and regulations do you cover?","We design around the frameworks you answer to, including patient-data privacy, sector regulation, and local data-protection law."],
+    ["Which compliance frameworks and regulations do you cover?","We design around the frameworks you answer to, including patient-data privacy, sector regulation, and local data-protection law. Some examples: CMMC, COBIT, HIPAA, HITECH, PCI DSS, SOC 2, NIST CSF, and NIST 800-53."],
     ["Can you work with the security tools we already own?","Yes. We’re vendor-neutral and build around your existing investments wherever they’re effective."],
     ["Do you provide ongoing monitoring or just one-time assessments?","Both. We can run a point-in-time assessment or provide continuous monitoring and improvement."],
     ["How do you balance strong security with clinical or production workflows?","We design controls that protect what matters without slowing the people who keep operations running."]
