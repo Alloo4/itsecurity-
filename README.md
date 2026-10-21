@@ -48,7 +48,7 @@ Current articles:
    - the hero, date and read time
 2. Add a card to the **top** of the grid in `blog/index.html` and in the "From the Blog" section of `index.html` (the home page shows the 3 newest — remove the oldest card there).
 3. Add the URL to `sitemap.xml`.
-4. Keep the `google-site-verification` meta tag in the `<head>`.
+4. Keep both `google-site-verification` meta tags in the `<head>`.
 5. After it's live, request indexing in Google Search Console.
 
 Article helpers in `styles.css`:
@@ -58,10 +58,10 @@ Article helpers in `styles.css`:
 - `.page-hero--<name>` — hero background images
 
 ## SEO and Search Console
-- Google Search Console tracks **itsecuritynow.com** (Domain property, verified by a DNS TXT record at the domain provider — don't delete that record).
+- Google Search Console tracks **https://itsecuritynow.com/**, verified by the `google-site-verification` meta tag with content `79mfcSNk…` on every page. **Never remove it**, and make sure it's in every upload; if Google can't find it, verification is lost.
 - The sitemap `https://itsecuritynow.com/sitemap.xml` is submitted in Search Console. Google re-reads it automatically after each upload.
 - All canonical URLs, Open Graph tags, structured data, `sitemap.xml` and `robots.txt` use `https://itsecuritynow.com`.
-- The old `google-site-verification` meta tag (from the earlier vercel.app property) is harmless and can stay.
+- A second verification tag (`ad7PQXWM…`) is from the old vercel.app property. It's harmless and can be removed once that property is deleted from Search Console.
 - Every page has a canonical URL, Open Graph and Twitter tags, and JSON-LD structured data.
 
 ## Preview locally in VS Code
