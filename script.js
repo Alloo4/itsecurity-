@@ -10,7 +10,7 @@ const FAQS = {
     ["How fast can you place a specialist?","Timelines depend on the role, but our existing bench means most placements move in days to a couple of weeks, not months."],
     ["Do your people work on-site, remote, or hybrid?","All three. We match the working model to your security requirements and team setup."],
     ["How do you ensure a placement fits our tools and standards?","Specialists onboard to your processes and security standards before they start delivering, and our wider team backs them throughout."],
-    ["Can augmentation convert into a longer engagement?","Yes — augmentation often transitions into a project or managed engagement as needs evolve."]
+    ["Can augmentation convert into a longer engagement?","Yes — staff augmentation often transitions into additional projects, which may include a bucket of hours, fractional employee, and even full-time placements."]
   ],
   security:[
     ["Which compliance frameworks and regulations do you cover?","We design around the frameworks you answer to, including patient-data privacy, sector regulation, and local data-protection law."],
