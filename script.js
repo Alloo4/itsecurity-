@@ -50,7 +50,7 @@ const descriptions={
   contact:'Request a free, no-obligation IT assessment from ITSN — serving healthcare, health tech, and manufacturing organizations.'
 };
 const metaDescription=document.querySelector('meta[name="description"]');
-window.dataLayer=window.dataLayer||[];
+function track(name,params){if(window.gtag)window.gtag('event',name,params);}
 let isInitialRoute=true;
 function go(id){
   if(!document.getElementById('page-'+id))id='home';
@@ -61,7 +61,6 @@ function go(id){
   if(history.replaceState)history.replaceState(null,'','#'+id);
   if(!isInitialRoute){
     requestAnimationFrame(()=>window.scrollTo(0,0));
-    window.dataLayer.push({event:'virtual_pageview',page_path:'/#'+id,page_title:titles[id]||'IT Security Now (ITSN)'});
   }
   isInitialRoute=false;
   closeMenu();
@@ -69,7 +68,7 @@ function go(id){
 document.querySelectorAll('[data-go]').forEach(el=>{
   el.addEventListener('click',e=>{
     e.preventDefault();
-    if(el.tagName==='BUTTON')window.dataLayer.push({event:'cta_click',cta_label:el.textContent.trim(),cta_target:el.dataset.go});
+    if(el.tagName==='BUTTON')track('cta_click',{cta_label:el.textContent.trim(),cta_target:el.dataset.go});
     go(el.dataset.go);
   });
 });
@@ -102,7 +101,7 @@ document.querySelectorAll('[data-form]').forEach(f=>{
       if(!res.ok||out.success===false||out.success==='false')throw new Error(out.message||res.status);
       note.textContent='Thanks — an ITSN expert will be in touch shortly.';
       note.classList.add('show');
-      window.dataLayer.push({event:'generate_lead',form_id:f.dataset.form||'unknown'});
+      track('generate_lead',{form_name:f.dataset.form||'unknown'});
       f.reset();
     }catch(err){
       note.textContent='Sorry, your message didn’t send. Please try again or email info@itsecuritynow.com.';

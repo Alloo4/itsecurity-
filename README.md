@@ -64,6 +64,13 @@ Article helpers in `styles.css`:
 - A second verification tag (`ad7PQXWM…`) is from the old vercel.app property. It's harmless and can be removed once that property is deleted from Search Console.
 - Every page has a canonical URL, Open Graph and Twitter tags, and JSON-LD structured data.
 
+## Analytics
+Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added directly in each page's `<head>`; new articles copied from an existing one inherit it).
+
+- It only counts visits on itsecuritynow.com. The Vercel preview and local testing are switched off by the `ga-disable` line in the same snippet.
+- `script.js` sends two custom events through `track()`: `cta_click` (buttons that lead to a page section) and `generate_lead` (a contact form that sent successfully, with the form's name only). Names, emails and messages are never sent to Analytics.
+- Section changes (e.g. Home to Consulting) rely on Analytics' Enhanced Measurement setting "page changes based on browser history events".
+
 ## Preview locally in VS Code
 1. Open this folder in VS Code (**File → Open Folder**).
 2. Install the **Live Server** extension.
@@ -87,6 +94,5 @@ There are two copies of the site.
 **2. Vercel preview — automatic.** Every push to `main` on GitHub (`Alloo4/itsecurity-`) deploys to https://itsecurity-five.vercel.app/ within about a minute. No `vercel.json` is needed.
 
 ## To-do
-- Replace `GTM-XXXXXXX` (in every page's `<head>` and `<body>`) with the real Google Tag Manager container ID to turn on analytics.
 - Swap the three placeholder testimonials for real, attributed quotes.
 - Consider pointing itsecuritynow.com's DNS to Vercel, so every GitHub push goes live automatically and the manual upload step goes away.
