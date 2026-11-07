@@ -4,7 +4,7 @@ Static marketing site for IT Security Now, live at **https://itsecuritynow.com/*
 
 A preview copy also runs on Vercel at https://itsecurity-five.vercel.app/. Its pages point search engines to itsecuritynow.com, so Google treats itsecuritynow.com as the real site.
 
-- **Main site:** six pages (Home, Consulting, Staff Augmentation, Security, Voice & Data, Contact) in a single `index.html`, with in-page routing via hash links (e.g. `/#contact`).
+- **Main site:** seven pages (Home, Consulting, Value Added Reseller (VAR), Staff Augmentation, Security, Voice & Data, Contact) in a single `index.html`, with in-page routing via hash links (e.g. `/#contact`).
 - **Blog:** separate static pages under `/blog/`.
 
 No build step and no dependencies (fonts load from Google Fonts).
