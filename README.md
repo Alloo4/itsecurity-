@@ -4,7 +4,9 @@ Static marketing site for IT Security Now, live at **https://itsecuritynow.com/*
 
 A preview copy also runs on Vercel at https://itsecurity-five.vercel.app/. Its pages point search engines to itsecuritynow.com, so Google treats itsecuritynow.com as the real site.
 
-- **Main site:** seven pages (Home, Consulting, Value Added Reseller (VAR), Staff Augmentation, Security, Voice & Data, Contact) in a single `index.html`, with in-page routing via hash links (e.g. `/#contact`).
+- **Main site:** seven real pages, each with its own URL, title, description and canonical tag:
+  `/` (Home), `/consulting/`, `/healthcare-var/`, `/staff-augmentation/`, `/security/`, `/voice-data/`, `/contact/`.
+  Old one-page links such as `/#security` forward to the matching page (`ROUTES` in `script.js`).
 - **Blog:** separate static pages under `/blog/`.
 
 No build step and no dependencies (fonts load from Google Fonts).
@@ -12,9 +14,10 @@ No build step and no dependencies (fonts load from Google Fonts).
 ## Files
 | Path | What it is |
 |---|---|
-| `index.html` | Markup for all main pages, header and footer |
+| `index.html` | Home page |
+| `<service>/index.html` | One folder per service page (`consulting/`, `healthcare-var/`, `staff-augmentation/`, `security/`, `voice-data/`, `contact/`). Each repeats the header and footer, so a menu change must be made in every page, including the blog pages |
 | `styles.css` | All styling and responsive rules (shared by the blog) |
-| `script.js` | Page routing, mobile menu, FAQ accordions, contact form submission |
+| `script.js` | FAQ content and accordions, old-link forwarding, mobile menu, contact form submission, Analytics events (used by the home and service pages) |
 | `blog/index.html` | Blog listing page |
 | `blog/<slug>/index.html` | One folder per article |
 | `assets/logos/` | Official logo files (SVG + PNG) — see [assets/logos/README.md](assets/logos/README.md) |
@@ -49,7 +52,8 @@ Current articles:
 2. Add a card to the **top** of the grid in `blog/index.html` and in the "From the Blog" section of `index.html` (the home page shows the 3 newest — remove the oldest card there).
 3. Add the URL to `sitemap.xml`.
 4. Keep both `google-site-verification` meta tags in the `<head>`.
-5. After it's live, request indexing in Google Search Console.
+5. Link to the matching service page (e.g. `/security/`) in the article's "Where ITSN fits" section, and send calls to action to `/contact/`.
+6. After it's live, request indexing in Google Search Console.
 
 Article helpers in `styles.css`:
 - `.article-callout` — highlighted stat box
@@ -69,7 +73,7 @@ Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added dire
 
 - It only counts visits on itsecuritynow.com. The Vercel preview and local testing are switched off by the `ga-disable` line in the same snippet.
 - `script.js` sends two custom events through `track()`: `cta_click` (buttons that lead to a page section) and `generate_lead` (a contact form that sent successfully, with the form's name only). Names, emails and messages are never sent to Analytics.
-- Section changes (e.g. Home to Consulting) rely on Analytics' Enhanced Measurement setting "page changes based on browser history events".
+- Every service is a real page, so Analytics counts each one as its own page view with no extra setup. `cta_click` now records the button's destination URL.
 
 ## Preview locally in VS Code
 1. Open this folder in VS Code (**File → Open Folder**).

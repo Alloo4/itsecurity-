@@ -51,42 +51,13 @@ document.querySelectorAll('[data-faq]').forEach(box=>{
     `<details><summary>${q}<span class="pm"></span></summary>${a.startsWith('<')?a:`<p>${a}</p>`}</details>`).join('');
 });
 
-// ---------- routing ----------
-const pages=document.querySelectorAll('.page');
-const navLinks=document.querySelectorAll('.nav a');
-const titles={home:'IT Security Now (ITSN)',consulting:'Consulting Service — ITSN',var:'Trusted Healthcare VAR Partner for Mid-Size Healthcare IT',staffaug:'Staff Augmentation — ITSN',security:'Security Service — ITSN',voicedata:'Voice & Data — ITSN',contact:'Contact — ITSN'};
-const descriptions={
-  home:'ITSN empowers healthcare, health tech, and manufacturing organizations with AI-guided decisions, a zero-risk partnership model, and end-to-end transformation.',
-  consulting:'Vendor-neutral, AI-guided IT consulting with a zero-risk partnership model — strategy that’s accountable to your outcomes, not your vendors.',
-  var:'Discover how a trusted healthcare VAR helps IT leaders improve security, simplify vendor management, reduce risk, and maximize IT investments.',
-  staffaug:'Vetted IT, cloud, and security specialists who plug into your workflows and standards from day one — an extension of your team, without the hiring risk.',
-  security:'End-to-end security and compliance for regulated environments: assessment, zero-trust architecture, continuous monitoring, and incident response.',
-  voicedata:'Unified network, voice, and patient-engagement connectivity — one reliable, optimized layer from the network up to the conversation.',
-  contact:'Request a free, no-obligation IT assessment from ITSN — serving healthcare, health tech, and manufacturing organizations.'
-};
-const metaDescription=document.querySelector('meta[name="description"]');
+// ---------- page links ----------
+// Each service has its own page. Old one-page links (/#security etc.) forward to the new page.
+const ROUTES={"home":"/","consulting":"/consulting/","var":"/healthcare-var/","staffaug":"/staff-augmentation/","security":"/security/","voicedata":"/voice-data/","contact":"/contact/"};
+const legacy=location.hash.slice(1);
+if(legacy!=='home'&&ROUTES[legacy]&&/(^\/$|\/index\.html$)/.test(location.pathname))location.replace(ROUTES[legacy]);
 function track(name,params){if(window.gtag)window.gtag('event',name,params);}
-let isInitialRoute=true;
-function go(id){
-  if(!document.getElementById('page-'+id))id='home';
-  pages.forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
-  navLinks.forEach(a=>a.classList.toggle('active',a.dataset.go===id));
-  document.title=titles[id]||'IT Security Now (ITSN)';
-  if(metaDescription)metaDescription.setAttribute('content',descriptions[id]||descriptions.home);
-  if(history.replaceState)history.replaceState(null,'','#'+id);
-  if(!isInitialRoute){
-    requestAnimationFrame(()=>window.scrollTo(0,0));
-  }
-  isInitialRoute=false;
-  closeMenu();
-}
-document.querySelectorAll('[data-go]').forEach(el=>{
-  el.addEventListener('click',e=>{
-    e.preventDefault();
-    if(el.tagName==='BUTTON')track('cta_click',{cta_label:el.textContent.trim(),cta_target:el.dataset.go});
-    go(el.dataset.go);
-  });
-});
+document.querySelectorAll('a.btn').forEach(a=>a.addEventListener('click',()=>track('cta_click',{cta_label:a.textContent.trim(),cta_target:a.getAttribute('href')})));
 
 // ---------- mobile menu ----------
 const nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
@@ -142,7 +113,3 @@ if('IntersectionObserver' in window){
 }else{
   document.querySelectorAll('section.reveal').forEach(s=>s.classList.add('in-view'));
 }
-
-// ---------- initial route ----------
-go((location.hash||'#home').slice(1));
-window.addEventListener('hashchange',()=>go((location.hash||'#home').slice(1)));

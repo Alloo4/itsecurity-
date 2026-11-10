@@ -46,7 +46,7 @@
 }
 </script>
 <!-- Google Analytics (GA4). Only counts visits on the live domain, not the Vercel preview or local testing. -->
-<script>if(!/(^|.)itsecuritynow.com$/.test(location.hostname))window['ga-disable-G-4NRDP2X7Q0']=true;</script>
+<script>if(!/(^|\.)itsecuritynow\.com$/.test(location.hostname))window['ga-disable-G-4NRDP2X7Q0']=true;</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4NRDP2X7Q0"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -60,23 +60,23 @@ gtag('config','G-4NRDP2X7Q0');
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="wrap header-inner">
-    <div class="brand" data-go="home" aria-label="IT Security Now home">
+    <a class="brand" href="/" aria-label="IT Security Now home">
       <img class="brand-logo" src="assets/logos/svg/itsn-logo-linear-teal.svg" alt="IT Security Now" width="792" height="151">
-    </div>
+    </a>
 
     <nav class="nav" id="nav" aria-label="Primary">
-      <a data-go="consulting" href="#consulting">Consulting</a>
-      <a data-go="var" href="#var">VAR</a>
-      <a data-go="staffaug" href="#staffaug">Staff Augmentation</a>
-      <a data-go="security" href="#security">Security</a>
-      <a data-go="voicedata" href="#voicedata">Voice &amp; Data</a>
+      <a href="/consulting/">Consulting</a>
+      <a href="/healthcare-var/">VAR</a>
+      <a href="/staff-augmentation/">Staff Augmentation</a>
+      <a href="/security/">Security</a>
+      <a href="/voice-data/">Voice &amp; Data</a>
       <a href="/blog/">Blog</a>
-      <a data-go="contact" href="#contact">Contact</a>
-      <button class="btn btn--primary nav-cta" data-go="contact">Start Assessment</button>
+      <a href="/contact/">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/contact/">Start Assessment</a>
     </nav>
 
     <div class="header-cta">
-      <button class="btn btn--primary btn--sm" data-go="contact">Start Assessment</button>
+      <a class="btn btn--primary btn--sm" href="/contact/">Start Assessment</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -96,8 +96,8 @@ gtag('config','G-4NRDP2X7Q0');
       <h1>Simplify IT<span class="dot">.</span> Reduce Risk<span class="dot">.</span> Deliver Better Experiences<span class="dot">.</span></h1>
       <p class="lede">AI-guided decisions, a zero-risk partnership, and end-to-end transformation for mid-market and enterprise healthcare, health tech, and manufacturing organizations — so you focus on outcomes while we handle the complexity.</p>
       <div class="hero-cta">
-        <button class="btn btn--primary" data-go="contact">Start Assessment</button>
-        <button class="btn btn--ghost" data-go="contact">Talk to an Expert</button>
+        <a class="btn btn--primary" href="/contact/">Start Assessment</a>
+        <a class="btn btn--ghost" href="/contact/">Talk to an Expert</a>
       </div>
       <div class="value-strip">
         <span>Zero-risk model</span><span>Shared success</span><span>Vendor-neutral</span><span>Healthcare &amp; Enterprise-focused</span>
@@ -176,30 +176,30 @@ gtag('config','G-4NRDP2X7Q0');
         <p>Four connected practice areas — explore the one that fits your priority.</p>
       </div>
       <div class="cards">
-        <div class="card" data-go="consulting">
+        <a class="card" href="/consulting/">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0 0 8 3 3 0 0 0 3 3v5M12 2a4 4 0 0 1 4 4 4 4 0 0 1 0 8 3 3 0 0 1-3 3"/></svg>
           <h3>AI &amp; Automation</h3>
           <p>Drive intelligent decisions and improve efficiency.</p>
           <div class="go">Consulting Service →</div>
-        </div>
-        <div class="card" data-go="consulting">
+        </a>
+        <a class="card" href="/consulting/">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 10a4 4 0 0 0-7.8-1.3A3.5 3.5 0 1 0 7 16h11a3 3 0 0 0 0-6z"/></svg>
           <h3>Cloud &amp; Infrastructure</h3>
           <p>Modernize and scale your operations.</p>
           <div class="go">Consulting Service →</div>
-        </div>
-        <div class="card" data-go="security">
+        </a>
+        <a class="card" href="/security/">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
           <h3>Security &amp; Compliance</h3>
           <p>Protect data and reduce operational risk.</p>
           <div class="go">Security Service →</div>
-        </div>
-        <div class="card" data-go="voicedata">
+        </a>
+        <a class="card" href="/voice-data/">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 11a5 5 0 0 1 10 0v4M5 15v-3a7 7 0 0 1 14 0v3M5 15a2 2 0 0 0 2 2h0a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H5zM19 15a2 2 0 0 1-2 2h0a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h2z"/></svg>
           <h3>Experience Platforms</h3>
           <p>Transform customer and patient engagement.</p>
           <div class="go">Voice &amp; Data →</div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -266,365 +266,6 @@ gtag('config','G-4NRDP2X7Q0');
   </section>
 </div>
 
-<!-- ==================== CONSULTING ==================== -->
-<div class="page" id="page-consulting">
-  <section class="page-hero page-hero--consulting">
-    <div class="wrap">
-      <span class="eyebrow">◆ Consulting Service</span>
-      <p class="hero-tagline">Assess &middot; Model &middot; Recommend</p>
-      <h1>Strategy that’s accountable to your outcomes — not your vendors.</h1>
-      <p>AI-guided analysis and vendor-neutral recommendations, backed by a partnership model where our success is tied to yours.</p>
-      <div class="hero-cta"><button class="btn btn--primary" data-go="contact">Start Assessment</button><button class="btn btn--ghost" data-go="contact">Talk to an Expert</button></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0"><div class="wrap prose-block">
-    <p>Most IT decisions are made under pressure — too many vendors, fragmented systems, little visibility into cost or ROI. ITSN sits on your side of the table. We assess your environment, model the options against real numbers, and hand you a prioritized plan you can execute. Because we’re vendor-neutral, the recommendation is the one that’s right for you.</p>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Why ITSN consulting</span></div>
-    <div class="tiles">
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0 0 8 3 3 0 0 0 3 3M12 2a4 4 0 0 1 4 4 4 4 0 0 1 0 8 3 3 0 0 1-3 3"/></svg><h3>AI-guided decisions</h3><p>Defensible choices, reached 30%+ faster.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg><h3>Vendor-neutral</h3><p>No quotas, no hidden incentives — just best fit.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6z"/></svg><h3>Zero-risk partnership</h3><p>We share accountability for the outcome.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg><h3>Built for regulated environments</h3><p>Fluent in healthcare, health tech &amp; manufacturing.</p></div>
-    </div>
-  </div></section>
-
-  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ How an engagement works</span><h2>From assessment to optimization</h2></div>
-    <div class="steps">
-      <div class="step"><div class="n"></div><h3>Assess</h3><p>We map your systems, contracts, and cost structure.</p></div>
-      <div class="step"><div class="n"></div><h3>Model</h3><p>AI-guided analysis surfaces the highest-ROI moves.</p></div>
-      <div class="step"><div class="n"></div><h3>Recommend</h3><p>A prioritized, vendor-neutral roadmap with clear ROI.</p></div>
-      <div class="step"><div class="n"></div><h3>Optimize</h3><p>We stay engaged, tracking results and tuning over time.</p></div>
-    </div>
-  </div></section>
-
-  <section><div class="wrap"><div class="quotes" style="grid-template-columns:1fr;max-width:640px;margin:0 auto">
-    <div class="quote"><div class="mark">&ldquo;</div><p>ITSN reduced our vendor decision time by 40% and gave us clarity we didn’t have internally.</p><div class="who"><span class="avatar">VP</span>VP of IT · Regional health system</div></div>
-  </div></div></section>
-
-  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
-    <h2 style="font-size:clamp(28px,4vw,42px)">Stop managing vendors alone.</h2>
-    <p class="muted" style="margin:14px 0 28px">Get a clear, costed path forward in weeks.</p>
-    <button class="btn btn--primary" data-go="contact">Start Assessment</button>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">◆ FAQ</span></div>
-    <div class="faq" data-faq="consulting"></div></div></section>
-</div>
-
-<!-- ==================== VALUE ADDED RESELLER (VAR) ==================== -->
-<div class="page" id="page-var">
-  <section class="page-hero page-hero--var">
-    <div class="wrap">
-      <span class="eyebrow">◆ Value Added Reseller (VAR)</span>
-      <p class="hero-tagline">Reduce Risk &middot; Simplify IT &middot; Accelerate Outcomes</p>
-      <h1>Trusted Healthcare VAR Partner</h1>
-      <p>Strategic technology guidance for healthcare organizations with 500–2,000 employees.</p>
-      <div class="hero-cta"><button class="btn btn--primary" data-go="contact">Book a Strategy Consultation</button><button class="btn btn--ghost" data-go="contact">Talk to an Expert</button></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0"><div class="wrap prose-block">
-    <p>Your IT team is expected to modernize infrastructure, strengthen cybersecurity, support clinical operations, control costs, and maintain compliance, all while managing vendor complexity and limited internal resources.</p>
-    <p>A trusted Value Added Reseller (VAR) helps healthcare organizations achieve more than simply purchasing technology. The right VAR becomes an extension of your IT leadership team, delivering strategic guidance, procurement expertise, implementation support, and lifecycle management that drive measurable business outcomes.</p>
-    <p class="prose-strong">Whether you’re upgrading infrastructure, improving security posture, enabling hybrid work, or preparing for future growth, a healthcare-focused VAR helps you reduce risk and maximize technology investments.</p>
-  </div></section>
-
-  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Why choose a VAR</span><h2>Why healthcare IT leaders choose a trusted VAR</h2></div>
-    <div class="pillars">
-      <div class="pillar">
-        <h3>Strategic advisory beyond product sales</h3>
-        <p>Most technology vendors focus on selling their solution. A trusted healthcare VAR focuses on solving your business and operational challenges. Your organization gains access to:</p>
-        <ul><li>Technology roadmap planning</li><li>Infrastructure modernization strategies</li><li>Cloud adoption guidance</li><li>Security assessments</li><li>Vendor selection support</li><li>Budget optimization recommendations</li><li>Regulatory compliance expertise</li></ul>
-        <p class="result"><strong>Result:</strong> Better technology decisions aligned to organizational goals rather than vendor sales targets.</p>
-      </div>
-      <div class="pillar">
-        <h3>Simplify vendor management</h3>
-        <p>Healthcare organizations often manage dozens of technology providers across security platforms, networking infrastructure, data center environments, cloud services, endpoint management, backup and disaster recovery, and collaboration platforms. Managing multiple vendor relationships consumes valuable IT leadership time. A trusted VAR becomes your single point of accountability by:</p>
-        <ul><li>Coordinating multiple vendors</li><li>Managing renewals and licensing</li><li>Escalating support issues</li><li>Streamlining procurement</li><li>Consolidating technology strategies</li></ul>
-        <p class="result"><strong>Result:</strong> Less administrative overhead and faster issue resolution.</p>
-      </div>
-      <div class="pillar">
-        <h3>Strengthen cybersecurity and compliance</h3>
-        <p>Healthcare remains one of the most targeted industries for cyberattacks. IT leaders face increasing pressure to protect electronic health records (EHR), patient data, clinical applications, medical devices, and remote workforce environments. A healthcare-focused VAR helps organizations:</p>
-        <ul><li>Assess security gaps</li><li>Implement Zero Trust strategies</li><li>Improve endpoint protection</li><li>Enhance identity management</li><li>Deploy security monitoring solutions</li><li>Support HIPAA compliance initiatives</li><li>Develop incident response plans</li></ul>
-        <p class="result"><strong>Result:</strong> Reduced organizational risk and improved readiness for evolving threats.</p>
-      </div>
-      <div class="pillar">
-        <h3>Maximize technology investments</h3>
-        <p>Many healthcare organizations invest heavily in technology without fully utilizing available capabilities. A strategic VAR ensures:</p>
-        <ul><li>Solutions are correctly architected</li><li>Implementations follow best practices</li><li>Licensing is optimized</li><li>Technology integrates effectively</li><li>Adoption challenges are addressed</li></ul>
-        <p>Rather than purchasing point solutions that create silos, your organization gains a cohesive technology ecosystem.</p>
-        <p class="result"><strong>Result:</strong> Higher ROI from every technology investment.</p>
-      </div>
-      <div class="pillar">
-        <h3>Access specialized expertise without additional headcount</h3>
-        <p>Hiring and retaining experienced technology specialists is increasingly difficult. A trusted VAR provides access to:</p>
-        <ul><li>Solution architects</li><li>Security specialists</li><li>Cloud experts</li><li>Infrastructure engineers</li><li>Project managers</li><li>Vendor-certified consultants</li></ul>
-        <p>You gain enterprise-level expertise without expanding internal headcount.</p>
-        <p class="result"><strong>Result:</strong> Faster project delivery and reduced staffing challenges.</p>
-      </div>
-    </div>
-  </div></section>
-
-  <section><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Common challenges we help solve</span><h2>Healthcare IT leaders often ask</h2></div>
-    <div class="qa-grid">
-      <div class="qa"><h3>How can we improve security without disrupting clinical operations?</h3><p>We help design security frameworks that protect patient data while supporting care delivery.</p></div>
-      <div class="qa"><h3>How can we reduce vendor complexity?</h3><p>We streamline technology management across your infrastructure and security ecosystem.</p></div>
-      <div class="qa"><h3>How do we refresh aging infrastructure while controlling costs?</h3><p>We develop phased modernization strategies that align with budgets and business priorities.</p></div>
-      <div class="qa"><h3>How can we successfully move to the cloud?</h3><p>We create cloud strategies that balance performance, security, compliance, and cost.</p></div>
-      <div class="qa"><h3>How do we do more with limited IT resources?</h3><p>We supplement your internal team with specialized expertise and implementation services.</p></div>
-    </div>
-  </div></section>
-
-  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ What sets us apart</span><h2>What sets a trusted healthcare VAR apart?</h2></div>
-    <div class="apart">
-      <div class="pillar">
-        <h3>Healthcare industry expertise</h3>
-        <p>We understand:</p>
-        <ul><li>Clinical environments</li><li>Healthcare workflows</li><li>Regulatory requirements</li><li>Security challenges</li><li>Patient data protection</li><li>Healthcare technology ecosystems</li></ul>
-      </div>
-      <div class="pillar">
-        <h3>Consultative engagement model</h3>
-        <p>Our approach begins with understanding:</p>
-        <ul><li>Business initiatives</li><li>Technology challenges</li><li>Security concerns</li><li>Operational goals</li><li>Budget constraints</li></ul>
-        <p>Then we design solutions aligned to your outcomes.</p>
-      </div>
-      <div class="pillar">
-        <h3>Long-term partnership</h3>
-        <p>We’re not focused on a single transaction. We help clients plan, procure, implement, optimize, support, and evolve their technology environments over time.</p>
-        <ol class="lifecycle"><li>Plan</li><li>Procure</li><li>Implement</li><li>Optimize</li><li>Support</li><li>Evolve</li></ol>
-      </div>
-    </div>
-  </div></section>
-
-  <section><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ The value of a strategic technology partner</span><h2>When healthcare organizations work with the right VAR, they gain</h2></div>
-    <div class="caps">
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Reduced risk</strong>Minimize security vulnerabilities, compliance gaps, and operational disruptions.</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Greater IT efficiency</strong>Free your internal team to focus on strategic initiatives.</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Better business alignment</strong>Ensure technology investments support organizational objectives.</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Faster project execution</strong>Accelerate planning, procurement, deployment, and adoption.</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Improved budget management</strong>Optimize spending across infrastructure, cloud, and security investments.</span></div>
-    </div>
-  </div></section>
-
-  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
-    <span class="eyebrow">◆ Ready to strengthen your technology strategy?</span>
-    <h2 style="font-size:clamp(28px,4vw,42px);margin-top:14px">Book your healthcare IT strategy consultation today.</h2>
-    <p class="muted" style="margin:14px auto 0;max-width:62ch">Your healthcare organization deserves more than a technology supplier. Partner with a trusted healthcare VAR that understands your challenges, aligns technology with business outcomes, and helps your team accomplish more with less.</p>
-    <div class="consult-box">
-      <p>In a complimentary <strong>strategic technology consultation</strong>, we’ll discuss:</p>
-      <ul><li>Current infrastructure challenges</li><li>Security and compliance concerns</li><li>Upcoming initiatives</li><li>Vendor management issues</li><li>Technology modernization opportunities</li></ul>
-    </div>
-    <p class="muted" style="margin:0 auto 28px;max-width:62ch"><em>Discover how a trusted VAR can help your organization reduce complexity, improve security, and maximize every technology investment.</em></p>
-    <button class="btn btn--primary" data-go="contact">Book Your Consultation</button>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">◆ FAQ</span><h2>Frequently asked questions</h2></div>
-    <div class="faq" data-faq="var"></div>
-    <div class="center" style="margin-top:48px">
-      <h3 style="font-size:22px;margin-bottom:10px">Still have questions?</h3>
-      <p class="muted" style="max-width:60ch;margin:0 auto 24px">Every healthcare organization has unique technology challenges, priorities, and growth objectives. Let’s discuss your current environment, upcoming initiatives, cybersecurity concerns, and opportunities to improve operational efficiency.</p>
-      <button class="btn btn--ghost" data-go="contact">Schedule a Strategic Technology Consultation</button>
-    </div>
-  </div></section>
-</div>
-
-<!-- ==================== STAFF AUGMENTATION ==================== -->
-<div class="page" id="page-staffaug">
-  <section class="page-hero page-hero--staffaug"><div class="wrap">
-    <span class="eyebrow">◆ Staff Augmentation</span>
-    <p class="hero-tagline">Vet &middot; Deploy &middot; Extend</p>
-    <h1>The right expertise, exactly when you need it — as an extension of your team.</h1>
-    <p>Vetted IT, cloud, and security specialists who plug into your workflows and standards from day one.</p>
-    <div class="hero-cta"><button class="btn btn--primary" data-go="contact">Start Assessment</button><button class="btn btn--ghost" data-go="contact">Talk to an Expert</button></div>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap prose-block">
-    <p>Hiring full-time for every skill gap is slow and expensive; generic contractors rarely understand your environment. ITSN augmentation gives you specialists who work inside your processes and tools — backed by our wider strategy and engineering bench. Scale up for a migration, fill a critical role, or add capacity for a transformation, without the long-term overhead.</p>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Why ITSN augmentation</span></div>
-    <div class="tiles">
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><h3>Extension of your team</h3><p>Our people work to your goals, not a black box.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6z"/></svg><h3>Domain-fluent talent</h3><p>Less ramp-up in regulated settings.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg><h3>Flexible &amp; scalable</h3><p>Spin capacity up or down by project phase.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg><h3>Backed by the full bench</h3><p>Consulting &amp; engineering teams behind every placement.</p></div>
-    </div>
-  </div></section>
-
-  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Roles we commonly fill</span></div>
-    <div class="chips">
-      <span class="chip">Cloud &amp; infrastructure engineers</span><span class="chip">Security &amp; compliance specialists</span>
-      <span class="chip">Network &amp; connectivity engineers</span><span class="chip">Solution architects</span>
-      <span class="chip">Project &amp; transformation leads</span><span class="chip">Service desk &amp; support</span>
-    </div>
-  </div></section>
-
-  <section><div class="wrap"><div class="quotes" style="grid-template-columns:1fr;max-width:640px;margin:0 auto">
-    <div class="quote"><div class="mark">&ldquo;</div><p>ITSN acts as a true extension of our team — focused on outcomes, not just delivery.</p><div class="who"><span class="avatar">CIO</span>CIO · Manufacturing group</div></div>
-  </div></div></section>
-
-  <section class="convert"><div class="wrap center">
-    <h2 style="font-size:clamp(28px,4vw,42px)">Add the expertise your roadmap needs.</h2>
-    <p class="muted" style="margin:14px 0 28px">Without the hiring risk.</p>
-    <button class="btn btn--green" data-go="contact">Talk to an Expert</button>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">◆ FAQ</span></div>
-    <div class="faq" data-faq="staffaug"></div></div></section>
-</div>
-
-<!-- ==================== SECURITY ==================== -->
-<div class="page" id="page-security">
-  <section class="page-hero page-hero--security"><div class="wrap">
-    <span class="eyebrow">◆ Security Service</span>
-    <p class="hero-tagline">Protect &middot; Monitor &middot; Respond</p>
-    <h1>Security that protects patients, data, and production — and stands up to auditors.</h1>
-    <p>End-to-end security and compliance: assessment, architecture, monitoring, and response — all vendor-neutral.</p>
-    <div class="hero-cta"><button class="btn btn--primary" data-go="contact">Start Assessment</button><button class="btn btn--ghost" data-go="contact">Talk to an Expert</button></div>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap prose-block">
-    <p>In regulated environments, a breach isn’t just a cost — it’s patient safety, downtime, and trust. ITSN builds layered, zero-trust security around the systems that matter most and keeps it continuously tuned. We assess where you’re exposed, close the gaps with best-fit technology, and give you the evidence and monitoring to satisfy regulators and your board.</p>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Why ITSN security</span></div>
-    <div class="tiles">
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l2 2 4-4M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6z"/></svg><h3>Compliance-first</h3><p>Built around the frameworks you answer to.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg><h3>Vendor-neutral architecture</h3><p>Right defense for your risk profile, proven to work.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-6.2-8.6"/><path d="M21 4v5h-5"/></svg><h3>Continuous optimization</h3><p>We monitor, report, and improve as threats evolve.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M5 12a7 7 0 0 1 14 0M5 12a7 7 0 0 0 14 0"/></svg><h3>Operational, not theoretical</h3><p>Strong protection that fits clinical &amp; production reality.</p></div>
-    </div>
-  </div></section>
-
-  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Capabilities</span><h2>What we deliver</h2><p style="color:var(--muted-2);font-size:14px">Powered by hundreds of trusted partners (like Cisco and Microsoft).</p></div>
-    <div class="caps">
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Security assessments &amp; gap analysis</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Zero-trust &amp; network security</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Identity &amp; access management</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Compliance readiness &amp; documentation</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Continuous monitoring &amp; threat detection</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Incident response planning</span></div>
-    </div>
-  </div></section>
-
-  <section><div class="wrap"><div class="quotes" style="grid-template-columns:1fr;max-width:640px;margin:0 auto">
-    <div class="quote"><div class="mark">&ldquo;</div><p>We improved patient access and engagement while reducing operational costs significantly.</p><div class="who"><span class="avatar">COO</span>COO · Health tech provider</div></div>
-  </div></div></section>
-
-  <section class="convert"><div class="wrap center">
-    <h2 style="font-size:clamp(28px,4vw,42px)">Know exactly where you stand.</h2>
-    <p class="muted" style="margin:14px 0 28px">Start with a security and compliance assessment.</p>
-    <button class="btn btn--primary" data-go="contact">Start Assessment</button>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">◆ FAQ</span></div>
-    <div class="faq" data-faq="security"></div></div></section>
-</div>
-
-<!-- ==================== VOICE & DATA ==================== -->
-<div class="page" id="page-voicedata">
-  <section class="page-hero page-hero--voicedata"><div class="wrap">
-    <span class="eyebrow">◆ Voice &amp; Data</span>
-    <p class="hero-tagline">Connect &middot; Communicate &middot; Engage</p>
-    <h1>Connectivity and communication that just works — for staff, patients, and operations.</h1>
-    <p>One reliable, optimized layer — from the network up to the patient conversation.</p>
-    <div class="hero-cta"><button class="btn btn--primary" data-go="contact">Start Assessment</button><button class="btn btn--ghost" data-go="contact">Talk to an Expert</button></div>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap prose-block">
-    <p>Disconnected networks and bolt-on tools create dead zones, dropped handoffs, and frustrated patients and staff. ITSN designs and runs the connectivity and communication backbone as a single, optimized system: resilient networks, modern voice, and the engagement platforms that reach people where they are. The result is fewer outages, smoother experiences, and a lower total cost.</p>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Why ITSN for voice &amp; data</span></div>
-    <div class="tiles">
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><h3>Unified, not fragmented</h3><p>One coordinated layer, not disconnected parts.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><h3>Experience-led</h3><p>Better access for patients, clearer collaboration for teams.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg><h3>Vendor-neutral best-fit</h3><p>Proven platforms chosen for you, not our margin.</p></div>
-      <div class="tile"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><h3>Optimized cost</h3><p>Right-sized connectivity and consolidated contracts.</p></div>
-    </div>
-  </div></section>
-
-  <section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">◆ Capabilities</span><h2>What we deliver</h2></div>
-    <div class="caps">
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Network design &amp; connectivity</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Unified communications &amp; voice</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Messaging &amp; CPaaS</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Clinical voice &amp; documentation</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Patient communication &amp; access</span></div>
-      <div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Monitoring &amp; ongoing optimization</span></div>
-    </div>
-  </div></section>
-
-  <section><div class="wrap"><div class="quotes" style="grid-template-columns:1fr;max-width:640px;margin:0 auto">
-    <div class="quote"><div class="mark">&ldquo;</div><p>We improved patient access and engagement while reducing operational costs significantly.</p><div class="who"><span class="avatar">COO</span>COO · Health tech provider</div></div>
-  </div></div></section>
-
-  <section class="convert"><div class="wrap center">
-    <h2 style="font-size:clamp(28px,4vw,42px)">Connectivity they can count on.</h2>
-    <p class="muted" style="margin:14px 0 28px">For your people and your patients.</p>
-    <button class="btn btn--green" data-go="contact">Talk to an Expert</button>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">◆ FAQ</span></div>
-    <div class="faq" data-faq="voicedata"></div></div></section>
-</div>
-
-<!-- ==================== CONTACT ==================== -->
-<div class="page" id="page-contact">
-  <section class="page-hero page-hero--contact"><div class="wrap">
-    <span class="eyebrow">◆ Contact</span>
-    <p class="hero-tagline">Talk &middot; Plan &middot; Start</p>
-    <h1>Let’s simplify your IT — starting with a conversation.</h1>
-    <p>Tell us where you’re stuck. We’ll show you the clearest, lowest-risk path to better performance, experience, and cost.</p>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap">
-    <div class="contact-grid">
-      <form class="form-card" data-form="Request Assessment" style="margin:0;max-width:none">
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-        <div class="field"><label>Full name</label><input type="text" name="name" placeholder="Your name" required></div>
-        <div class="field"><label>Work email</label><input type="email" name="email" placeholder="you@organization.com" required></div>
-        <div class="field"><label>Organization</label><input type="text" name="organization" placeholder="Company / institution" required></div>
-        <div class="field"><label>Industry</label>
-          <select name="industry"><option>Healthcare</option><option>Health Tech</option><option>Manufacturing</option><option>Other</option></select></div>
-        <div class="field"><label>Phone (optional)</label><input type="tel" name="phone" placeholder="+1 (___) ___-____"></div>
-        <div class="field"><label>How can we help?</label><textarea name="message" placeholder="A few details about your challenge" required></textarea></div>
-        <button class="btn btn--primary" type="submit">Request My Assessment</button>
-        <p class="form-note" role="status" aria-live="polite">Thanks — an ITSN expert will be in touch shortly.</p>
-      </form>
-
-      <aside class="contact-side">
-        <h3>Other ways to reach us</h3>
-        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><div class="k">Call</div><div class="v"><a href="tel:+17472226157">(747) 222-6157</a></div></div></div>
-        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><div class="k">Email</div><div class="v"><a href="mailto:info@itsecuritynow.com">info@itsecuritynow.com</a></div></div></div>
-        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><div class="k">Office</div><div class="v">Tampa, FL</div></div></div>
-        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><div class="k">Hours</div><div class="v">8am – 6pm</div></div></div>
-      </aside>
-    </div>
-
-    <div class="reassure"><span>Zero-risk model</span><span>Shared success</span><span>Vendor-neutral</span><span>Healthcare &amp; Enterprise-focused</span></div>
-  </div></section>
-
-  <section style="padding-top:0"><div class="wrap"><div class="section-head"><span class="eyebrow">◆ FAQ</span></div>
-    <div class="faq" data-faq="contact"></div></div></section>
-</div>
-
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -632,28 +273,28 @@ gtag('config','G-4NRDP2X7Q0');
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="brand" data-go="home">
+        <a class="brand" href="/">
           <img class="brand-logo" src="assets/logos/svg/itsn-logo-linear-white.svg" alt="IT Security Now" width="792" height="151">
-        </div>
+        </a>
         <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
       </div>
       <div>
         <h3>Services</h3>
         <ul>
-          <li><a data-go="consulting" href="#consulting">Consulting Service</a></li>
-          <li><a data-go="var" href="#var">Value Added Reseller (VAR)</a></li>
-          <li><a data-go="staffaug" href="#staffaug">Staff Augmentation</a></li>
-          <li><a data-go="security" href="#security">Security Service</a></li>
-          <li><a data-go="voicedata" href="#voicedata">Voice &amp; Data</a></li>
+          <li><a href="/consulting/">Consulting Service</a></li>
+          <li><a href="/healthcare-var/">Value Added Reseller (VAR)</a></li>
+          <li><a href="/staff-augmentation/">Staff Augmentation</a></li>
+          <li><a href="/security/">Security Service</a></li>
+          <li><a href="/voice-data/">Voice &amp; Data</a></li>
         </ul>
       </div>
       <div>
         <h3>Company</h3>
         <ul>
           <li><a href="/blog/">Blog</a></li>
-          <li><a data-go="contact" href="#contact">Contact</a></li>
-          <li><a data-go="contact" href="#contact">Start Assessment</a></li>
-          <li><a data-go="contact" href="#contact">Talk to an Expert</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/contact/">Start Assessment</a></li>
+          <li><a href="/contact/">Talk to an Expert</a></li>
         </ul>
       </div>
     </div>
