@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Managed Security Services: What to Expect From an MSSP — ITSN Blog</title>
+<meta name="description" content="How healthcare managed security services work, what a SOC monitors, how they support HIPAA compliance, and how to choose the right partner.">
+<link rel="canonical" href="https://itsecuritynow.com/blog/healthcare-managed-security-services/">
+<meta name="theme-color" content="#0a1526">
+<meta name="google-site-verification" content="ad7PQXWMNEEGkjTGOML4ZclIOk3AJ6ymcZn1l1d2bYY">
+<meta name="google-site-verification" content="79mfcSNkLrEv2N64Ms3ijmbt0zzdlX3jOVIeYQbFWq4">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="IT Security Now (ITSN)">
+<meta property="og:title" content="Healthcare Managed Security Services: Why More Healthcare Organizations Are Turning to Security Experts">
+<meta property="og:description" content="What healthcare managed security services include, what a SOC actually does, how they support HIPAA compliance, and how to choose the right partner.">
+<meta property="og:url" content="https://itsecuritynow.com/blog/healthcare-managed-security-services/">
+<meta property="og:image" content="https://itsecuritynow.com/assets/blog/healthcare-managed-security-services/mss-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:section" content="Security">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Healthcare Managed Security Services: Why More Healthcare Organizations Are Turning to Security Experts">
+<meta name="twitter:description" content="What healthcare managed security services include, what a SOC actually does, how they support HIPAA compliance, and how to choose the right partner.">
+<meta name="twitter:image" content="https://itsecuritynow.com/assets/blog/healthcare-managed-security-services/mss-og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/svg+xml" href="../../assets/logos/svg/itsn-icon-teal.svg">
+<link rel="apple-touch-icon" href="../../assets/logos/png/itsn-icon-square-teal-bg.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Healthcare Managed Security Services: Why More Healthcare Organizations Are Turning to Security Experts",
+  "description": "How healthcare managed security services work, what a SOC monitors, how they support HIPAA compliance, and how to choose the right partner.",
+  "image": "https://itsecuritynow.com/assets/blog/healthcare-managed-security-services/mss-og.jpg",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "author": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "publisher": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "mainEntityOfPage": "https://itsecuritynow.com/blog/healthcare-managed-security-services/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What are Healthcare Managed Security Services?","acceptedAnswer":{"@type":"Answer","text":"Healthcare Managed Security Services provide ongoing cybersecurity monitoring, threat detection, incident response, and security management specifically designed for healthcare organizations."}},
+    {"@type":"Question","name":"How are Managed Security Services different from Managed IT Services?","acceptedAnswer":{"@type":"Answer","text":"Managed IT focuses on maintaining and supporting technology systems, while Managed Security focuses on protecting those systems from cyber threats and security risks."}},
+    {"@type":"Question","name":"Do Managed Security Services help with HIPAA compliance?","acceptedAnswer":{"@type":"Answer","text":"Yes. While they do not automatically make an organization compliant, they help strengthen many of the security controls required to protect electronic protected health information (ePHI)."}},
+    {"@type":"Question","name":"Are Managed Security Services suitable for smaller healthcare practices?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many smaller organizations use managed security services to gain access to enterprise-grade cybersecurity expertise without the cost of maintaining a full internal security team."}},
+    {"@type":"Question","name":"Can Managed Security Services help prevent ransomware attacks?","acceptedAnswer":{"@type":"Answer","text":"While no security solution can guarantee prevention, managed security services can reduce risk through monitoring, threat detection, vulnerability management, and rapid response capabilities."}}
+  ]
+}
+</script>
+<!-- Google Analytics (GA4). Only counts visits on the live domain, not the Vercel preview or local testing. -->
+<script>if(!/(^|\.)itsecuritynow\.com$/.test(location.hostname))window['ga-disable-G-4NRDP2X7Q0']=true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4NRDP2X7Q0"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-4NRDP2X7Q0');
+</script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="IT Security Now home">
+      <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-teal.svg" alt="IT Security Now" width="792" height="151">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/consulting/">Consulting</a>
+      <a href="/healthcare-var/">VAR</a>
+      <a href="/staff-augmentation/">Staff Augmentation</a>
+      <a href="/security/">Security</a>
+      <a href="/voice-data/">Voice &amp; Data</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/contact/">Start Assessment</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn--primary btn--sm" href="/contact/">Start Assessment</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--managed-security"><div class="wrap">
+    <span class="eyebrow">◆ Security</span>
+    <h1 style="max-width:24ch">Healthcare Managed Security Services: Why More Healthcare Organizations Are Turning to Security Experts</h1>
+    <div class="article-meta"><span>November 12, 2026</span><span>7 min read</span></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="article-body">
+      <a class="back-link" href="/blog/">&larr; Back to all articles</a>
+
+      <p>Most healthcare organizations don't struggle because they lack security tools.</p>
+      <p>They struggle because managing cybersecurity has become incredibly complex.</p>
+      <p>New threats emerge daily. Compliance requirements continue to evolve. Technology environments are expanding. And internal IT teams are often expected to do more with fewer resources.</p>
+      <p>At the same time, patients expect their information to remain secure, leadership expects systems to stay online, and cybercriminals continue searching for opportunities to exploit vulnerabilities.</p>
+      <p>That's a lot of pressure.</p>
+      <p>For many healthcare organizations, the solution isn't necessarily hiring more people or buying another security product.</p>
+      <p>Instead, they're turning to Healthcare Managed Security Services to gain access to experienced cybersecurity professionals, advanced monitoring capabilities, and around-the-clock protection without building a full-scale security department internally.</p>
+
+      <h2>What Are Healthcare Managed Security Services?</h2>
+      <p>Healthcare Managed Security Services provide ongoing cybersecurity management, monitoring, threat detection, and response support from a specialized security partner.</p>
+      <p>Think of it as adding an entire cybersecurity team to your organization without having to recruit, train, and retain security specialists yourself.</p>
+      <p>Rather than responding to threats only after they occur, managed security services focus on continuously identifying and addressing risks before they become serious problems.</p>
+      <p>These services often include:</p>
+      <ul>
+        <li>24/7 security monitoring</li>
+        <li>Threat detection and analysis</li>
+        <li>Security Operations Center (SOC) services</li>
+        <li>Vulnerability management</li>
+        <li>Endpoint protection</li>
+        <li>Incident response support</li>
+        <li>Compliance monitoring</li>
+        <li>Security reporting</li>
+        <li>Healthcare network security management</li>
+      </ul>
+      <p>The goal is simple: reduce risk while allowing healthcare teams to focus on delivering excellent patient care.</p>
+
+      <h2>Why Healthcare Organizations Are Choosing Managed Security Services</h2>
+      <p>Healthcare has become one of the most heavily targeted industries for cyberattacks. Hacking and IT incidents made up 81% of the large breaches (those affecting 500 or more people) that occurred in 2024, according to <a href="https://www.hhs.gov/sites/default/files/breach-report-to-congress-2024.pdf" target="_blank" rel="noopener">HHS's latest annual breach report to Congress</a>. The <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener">FBI's 2025 Internet Crime Report</a> lists healthcare and public health among the critical infrastructure sectors most affected by the top ransomware variants.</p>
+      <p>Unfortunately, cybercriminals understand something healthcare organizations know all too well:</p>
+      <p>Healthcare operations can't stop.</p>
+      <p>When systems become unavailable, clinical workflows slow down. Patient care is disrupted. Revenue is affected. Trust is put at risk.</p>
+      <p>Healthcare leaders recognize that cybersecurity is no longer just an IT issue.</p>
+      <p>It's a business issue.</p>
+      <p>It's a <a href="/blog/cybersecurity-services-for-healthcare/">patient safety issue</a>.</p>
+      <p>And increasingly, it's a board-level discussion.</p>
+      <p>Managed security services help organizations address those challenges through proactive protection and expert guidance.</p>
+
+      <h2>The Challenge of Building an Internal Security Team</h2>
+      <p>Let's be honest.</p>
+      <p>Finding qualified cybersecurity professionals is difficult. In <a href="https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study" target="_blank" rel="noopener">ISC2's 2025 Cybersecurity Workforce Study</a>, a survey of more than 16,000 security professionals, the most pressing concern for security teams wasn't headcount. It was skills.</p>
+      <p>Keeping them is even harder.</p>
+      <p>Many healthcare organizations face challenges such as:</p>
+      <ul>
+        <li>Limited cybersecurity staffing</li>
+        <li>Competing budget priorities</li>
+        <li>Growing compliance obligations</li>
+        <li>Increasing cyber insurance requirements</li>
+        <li>Expanding cloud environments</li>
+        <li>Rising ransomware concerns</li>
+      </ul>
+      <p>Even organizations with strong IT departments often find themselves stretched thin.</p>
+      <p>Your IT team may be responsible for:</p>
+      <ul>
+        <li>End-user support</li>
+        <li>Infrastructure management</li>
+        <li>Cloud administration</li>
+        <li>EHR systems</li>
+        <li>Medical devices</li>
+        <li>Vendor management</li>
+        <li>Strategic technology initiatives</li>
+      </ul>
+      <p>Adding full-time cybersecurity monitoring on top of those responsibilities isn't always realistic.</p>
+      <p>That's why more organizations are embracing a managed security model.</p>
+
+      <h2>What Does a Healthcare Security Operations Center (SOC) Actually Do?</h2>
+      <p>One of the most valuable components of Healthcare Managed Security Services is access to a Security Operations Center, commonly referred to as a SOC.</p>
+      <p>A SOC functions as a dedicated team of security professionals who continuously monitor your environment for suspicious activity.</p>
+      <p>They're looking for things most organizations would never notice on their own.</p>
+      <p>For example:</p>
+      <ul>
+        <li>Unusual login activity</li>
+        <li>Potential ransomware indicators</li>
+        <li>Failed authentication attempts</li>
+        <li>Suspicious network traffic</li>
+        <li>Compromised user accounts</li>
+        <li>Malware infections</li>
+        <li>Data exfiltration attempts</li>
+      </ul>
+      <figure class="article-figure">
+        <img src="../../assets/blog/healthcare-managed-security-services/fig-soc-watchlist.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Diagram of a 24-hour clock with a shield at the center. Business hours are shaded light teal and nights, weekends and holidays are shaded amber. Around the clock are the seven things a SOC watches for: unusual login activity, potential ransomware indicators, failed authentication attempts, suspicious network traffic, compromised user accounts, malware infections and data exfiltration attempts.">
+        <figcaption>Most of the week falls outside business hours. A SOC watches for the same warning signs at 3 a.m. as at 3 p.m.</figcaption>
+      </figure>
+      <p>The earlier threats are identified, the faster they can be contained.</p>
+      <p>And in cybersecurity, time matters.</p>
+      <p>A threat discovered within minutes is often much easier to manage than one discovered weeks later. <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener">IBM's 2026 Cost of a Data Breach Report</a> found that organizations took an average of 247 days to identify and contain a breach, and that breaches contained in under 200 days cost about $1.3 million less on average ($4.32 million vs. $5.65 million).</p>
+
+      <h2>Healthcare Network Security Is More Complex Than Ever</h2>
+      <p>Years ago, <a href="/blog/healthcare-network-security-best-practices/">healthcare network security</a> primarily focused on protecting servers, workstations, and internal applications.</p>
+      <p>Today's environment looks very different.</p>
+      <p>Most healthcare organizations now rely on a combination of:</p>
+      <ul>
+        <li>Cloud applications</li>
+        <li>Hybrid infrastructure</li>
+        <li>Remote employees</li>
+        <li>Patient portals</li>
+        <li>Mobile devices</li>
+        <li>Connected medical equipment</li>
+        <li>Third-party software vendors</li>
+      </ul>
+      <p>Every new connection creates an opportunity for productivity and innovation.</p>
+      <p>It can also create potential security risks.</p>
+      <p>Managed security providers help healthcare organizations maintain visibility across these complex environments while reducing vulnerabilities and improving security resilience.</p>
+
+      <h2>Managed Security Services and HIPAA Compliance</h2>
+      <p>A common misconception is that hiring a Managed Security Service Provider automatically makes an organization HIPAA compliant.</p>
+      <p>Unfortunately, compliance doesn't work that way.</p>
+      <p>However, Healthcare Managed Security Services play an important role in supporting HIPAA requirements.</p>
+      <p>Many managed security programs help organizations strengthen:</p>
+      <ul>
+        <li>Risk management practices</li>
+        <li>Security monitoring</li>
+        <li>Access controls</li>
+        <li>Incident response capabilities</li>
+        <li>Security documentation</li>
+        <li>Audit readiness</li>
+      </ul>
+      <p>These services often complement a formal <a href="https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html" target="_blank" rel="noopener">HIPAA Security Assessment</a>, helping organizations address identified risks and maintain stronger security controls over time.</p>
+      <p>In many ways, the assessment identifies the gaps.</p>
+      <p>Managed security services help monitor and manage them.</p>
+      <figure class="article-figure">
+        <img src="../../assets/blog/healthcare-managed-security-services/fig-assessment-loop.webp" width="1440" height="560" loading="lazy" decoding="async" alt="Three-step loop. Step 1, Assess: a HIPAA security risk assessment identifies the gaps. Step 2, Fix: prioritize and close the highest-risk gaps first. Step 3, Monitor and manage: managed security watches those controls every day. A dashed arrow returns to step 1, labeled: reassess when your environment changes.">
+        <figcaption>The assessment finds the gaps. Managed security keeps watch on them between assessments.</figcaption>
+      </figure>
+
+      <h2>The Real Value of Continuous Monitoring</h2>
+      <p>One of the biggest advantages of managed security services is continuous visibility.</p>
+      <p>Many organizations only gain insight into their security posture during annual assessments or after an incident occurs.</p>
+      <p>That's a risky approach.</p>
+      <p>Cyber threats evolve every day.</p>
+      <p>Continuous monitoring, a core category of the Detect function in the <a href="https://doi.org/10.6028/NIST.CSWP.29" target="_blank" rel="noopener">NIST Cybersecurity Framework 2.0</a>, helps healthcare organizations:</p>
+      <ul>
+        <li>Detect threats sooner</li>
+        <li>Reduce response times</li>
+        <li>Improve operational awareness</li>
+        <li>Validate security controls</li>
+        <li>Identify vulnerabilities faster</li>
+        <li>Strengthen compliance efforts</li>
+      </ul>
+      <p>It's similar to monitoring a patient's vital signs.</p>
+      <p>You wouldn't want to check them only once a year and hope everything remains stable in between.</p>
+      <p>Cybersecurity requires ongoing attention as well.</p>
+
+      <h2>Signs Your Organization May Benefit from Managed Security Services</h2>
+      <p>Every healthcare environment is different, but several indicators commonly suggest the need for additional cybersecurity support.</p>
+      <h3>You're Concerned About Ransomware</h3>
+      <p>Healthcare remains a major target for ransomware attacks, making proactive monitoring increasingly important.</p>
+      <h3>Your IT Team Is Overwhelmed</h3>
+      <p>When internal resources are stretched thin, security monitoring often becomes reactive rather than strategic.</p>
+      <h3>You're Preparing for a HIPAA Security Assessment</h3>
+      <p>Managed security services can help strengthen controls and improve visibility before and after an assessment.</p>
+      <h3>You're Expanding Your Technology Environment</h3>
+      <p>Cloud adoption, AI initiatives, telehealth platforms, and digital transformation projects all introduce additional security considerations.</p>
+      <h3>Leadership Wants Better Visibility</h3>
+      <p>Executives increasingly want clear reporting and insights into organizational cybersecurity risk.</p>
+      <p>Managed security services can help provide that visibility.</p>
+
+      <h2>Healthcare Managed IT and Managed Security: Better Together</h2>
+      <p>One of the strongest technology strategies combines Healthcare Managed IT with Healthcare Managed Security Services.</p>
+      <p>The two functions complement one another.</p>
+      <p>Managed IT supports:</p>
+      <ul>
+        <li>Infrastructure</li>
+        <li>User support</li>
+        <li>System maintenance</li>
+        <li>Backups</li>
+        <li>Patch management</li>
+      </ul>
+      <p>Managed Security focuses on:</p>
+      <ul>
+        <li>Threat detection</li>
+        <li>Incident response</li>
+        <li>Security monitoring</li>
+        <li>Vulnerability management</li>
+        <li>Compliance support</li>
+      </ul>
+      <p>Together, they create a stronger, more resilient technology environment.</p>
+      <p>Think of Managed IT as keeping the engine running smoothly.</p>
+      <p>Managed Security helps ensure no one is trying to steal the car.</p>
+      <figure class="article-figure">
+        <img src="../../assets/blog/healthcare-managed-security-services/fig-managed-it-vs-security.webp" width="1440" height="600" loading="lazy" decoding="async" alt="Two side-by-side panels. Managed IT keeps the engine running: infrastructure, user support, system maintenance, backups and patch management. Managed Security makes sure no one steals the car: threat detection, incident response, security monitoring, vulnerability management and compliance support.">
+        <figcaption>Managed IT and managed security do different jobs. Strong programs plan them together.</figcaption>
+      </figure>
+
+      <h2>How to Choose the Right Healthcare Managed Security Partner</h2>
+      <p>Not all security providers understand healthcare.</p>
+      <p>When evaluating potential partners, consider the following:</p>
+      <h3>Healthcare Expertise</h3>
+      <p>Look for experience working with healthcare organizations and understanding healthcare-specific regulatory requirements.</p>
+      <h3>24/7 Monitoring</h3>
+      <p>Cyber threats don't follow business hours.</p>
+      <p>Your security monitoring shouldn't either.</p>
+      <h3>Compliance Knowledge</h3>
+      <p>The right provider should understand HIPAA, risk assessments, security controls, and <a href="/blog/soc-2-vs-hipaa-compliance/">healthcare compliance frameworks</a>.</p>
+      <h3>Scalability</h3>
+      <p>Your security strategy should be able to grow alongside your organization.</p>
+      <h3>Strategic Guidance</h3>
+      <p>Great providers don't simply respond to alerts.</p>
+      <p>They help align cybersecurity with broader organizational goals.</p>
+
+      <h2>The Bottom Line</h2>
+      <p>Cybersecurity has become too important, and too complex, to be treated as an occasional IT project.</p>
+      <p>Healthcare organizations need continuous visibility, proactive threat detection, compliance support, and access to specialized expertise.</p>
+      <p>Healthcare Managed Security Services provide a practical way to strengthen cybersecurity defenses while allowing internal teams to focus on patient care, operational excellence, and long-term growth.</p>
+      <p>Because at the end of the day, effective cybersecurity isn't just about protecting technology.</p>
+      <p>It's about protecting the people who depend on it.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details><summary>What are Healthcare Managed Security Services?<span class="pm"></span></summary><p>Healthcare Managed Security Services provide ongoing cybersecurity monitoring, threat detection, incident response, and security management specifically designed for healthcare organizations.</p></details>
+        <details><summary>How are Managed Security Services different from Managed IT Services?<span class="pm"></span></summary><p>Managed IT focuses on maintaining and supporting technology systems, while Managed Security focuses on protecting those systems from cyber threats and security risks.</p></details>
+        <details><summary>Do Managed Security Services help with HIPAA compliance?<span class="pm"></span></summary><p>Yes. While they do not automatically make an organization compliant, they help strengthen many of the security controls required to protect electronic protected health information (ePHI).</p></details>
+        <details><summary>Are Managed Security Services suitable for smaller healthcare practices?<span class="pm"></span></summary><p>Yes. Many smaller organizations use managed security services to gain access to enterprise-grade cybersecurity expertise without the cost of maintaining a full internal security team.</p></details>
+        <details><summary>Can Managed Security Services help prevent ransomware attacks?<span class="pm"></span></summary><p>While no security solution can guarantee prevention, managed security services can reduce risk through monitoring, threat detection, vulnerability management, and rapid response capabilities.</p></details>
+      </div>
+
+      <div class="article-callout article-disclaimer"><strong>Disclaimer:</strong> This article is for general information only. It is not legal, regulatory, compliance or professional advice, and reading it does not create a client relationship with ITSN. Figures and events are reported as published by the sources listed below on their stated dates and may since have changed; check the original source before relying on them. Companies and organizations are named only to describe publicly reported events, and no wrongdoing is implied. ITSN is not affiliated with HHS, the FBI, NIST, IBM or ISC2.</div>
+
+      <h2 id="references">References</h2>
+      <p class="refs-note">Sources are linked where they are cited in the article. Statistics are attributed to the original publisher wherever one exists; where a figure is only available through a news report, that report is cited.</p>
+      <ol class="article-refs">
+          <li>Federal Bureau of Investigation, Internet Crime Complaint Center. (2026, April). <em>2025 Internet crime report</em>. <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener">https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf</a></li>
+          <li>IBM. (2026, July). <em>Cost of a data breach report 2026</em>. <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener">https://www.ibm.com/reports/data-breach</a></li>
+          <li>ISC2. (2025, December 4). <em>ISC2 publishes 2025 cybersecurity workforce study</em> [Press release]. <a href="https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study" target="_blank" rel="noopener">https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study</a></li>
+          <li>National Institute of Standards and Technology. (2024, February 26). <em>The NIST Cybersecurity Framework (CSF) 2.0</em> (NIST CSWP 29). <a href="https://doi.org/10.6028/NIST.CSWP.29" target="_blank" rel="noopener">https://doi.org/10.6028/NIST.CSWP.29</a></li>
+          <li>U.S. Department of Health and Human Services, Office for Civil Rights. (n.d.). <em>Annual report to Congress on breaches of unsecured protected health information for calendar year 2024</em>. <a href="https://www.hhs.gov/sites/default/files/breach-report-to-congress-2024.pdf" target="_blank" rel="noopener">https://www.hhs.gov/sites/default/files/breach-report-to-congress-2024.pdf</a></li>
+          <li>U.S. Department of Health and Human Services, Office for Civil Rights. (2010, July 14). <em>Guidance on risk analysis requirements under the HIPAA Security Rule</em>. <a href="https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html" target="_blank" rel="noopener">https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html</a></li>
+      </ol>
+    </div>
+  </div></section>
+
+  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
+    <h2 style="font-size:clamp(28px,4vw,42px)">Is Your Healthcare Organization Protected Around the Clock?</h2>
+    <p class="muted" style="margin:14px auto 12px;max-width:60ch">Cyber threats don't wait for business hours, and neither should your cybersecurity strategy.</p>
+    <p class="muted" style="margin:0 auto 28px;max-width:60ch">Whether you're looking to improve security visibility, strengthen compliance efforts, reduce ransomware risk, or support your internal IT team, our healthcare-focused security experts can help. Schedule a consultation to learn how Healthcare Managed Security Services can help protect your patients, data, and operations while giving your team greater confidence and peace of mind.</p>
+    <a class="btn btn--primary" href="/contact/">Schedule a Consultation</a>
+  </div></section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-white.svg" alt="IT Security Now" width="792" height="151">
+        </a>
+        <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/consulting/">Consulting Service</a></li>
+          <li><a href="/healthcare-var/">Value Added Reseller (VAR)</a></li>
+          <li><a href="/staff-augmentation/">Staff Augmentation</a></li>
+          <li><a href="/security/">Security Service</a></li>
+          <li><a href="/voice-data/">Voice &amp; Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/contact/">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ITSN — IT Security Now. All rights reserved.</span>
+      <span>Zero-risk · Shared success · Vendor-neutral</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>

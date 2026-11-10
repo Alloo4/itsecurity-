@@ -176,6 +176,11 @@ section{padding:var(--space) 0}
     linear-gradient(180deg,rgba(10,21,38,.74) 0%,rgba(10,21,38,.94) 62%,var(--bg) 100%),
     url("https://images.unsplash.com/photo-1766299892683-d50398e31823?fm=jpg&q=70&w=1920&auto=format&fit=crop")}
 
+.page-hero--managed-security::before{background-image:
+    radial-gradient(560px 300px at 50% -10%,rgba(73,163,199,.24),transparent 70%),
+    linear-gradient(180deg,rgba(10,21,38,.70) 0%,rgba(10,21,38,.93) 62%,var(--bg) 100%),
+    url("assets/blog/healthcare-managed-security-services/mss-hero.webp")}
+
 .page-hero--var::before{background-image:
     radial-gradient(560px 300px at 50% -10%,rgba(73,163,199,.24),transparent 70%),
     linear-gradient(180deg,rgba(10,21,38,.76) 0%,rgba(10,21,38,.94) 62%,var(--bg) 100%),
@@ -415,6 +420,10 @@ section{padding:var(--space) 0}
 .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--teal-light);font-size:14.5px;font-weight:600;margin-bottom:28px}
 .back-link:hover{color:var(--text)}
 
+.article-figure{margin:8px 0 30px}
+.article-figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line-strong)}
+.article-figure figcaption{color:var(--muted-2);font-size:14px;line-height:1.5;margin-top:10px;text-align:center}
+
 /* ---------- footer ---------- */
 .site-footer{position:relative;border-top:1px solid var(--line);background:var(--bg-2);padding:64px 0 32px}
 .site-footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;
@@ -455,3 +464,11 @@ section{padding:var(--space) 0}
   .tile,.step,.quote{padding:24px 22px}
   .footer-bottom{flex-direction:column;gap:8px}
 }
+
+/* Citations: links inside callouts/tables and the References list */
+.article-body .article-callout a,.article-body td a{color:var(--teal-light);text-decoration:underline;text-underline-offset:3px}
+.article-body .article-callout a:hover,.article-body td a:hover{color:var(--text)}
+.article-body .refs-note{font-size:15px}
+.article-body ol.article-refs{font-size:14.5px;gap:10px;line-height:1.55}
+.article-body ol.article-refs li{overflow-wrap:anywhere}
+.article-body ol.article-refs a{color:var(--teal-light);text-decoration:underline;text-underline-offset:2px}
