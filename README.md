@@ -68,11 +68,11 @@ Article helpers in `styles.css`:
 - A second verification tag (`ad7PQXWM…`) is from the old vercel.app property. It's harmless and can be removed once that property is deleted from Search Console.
 - Every page has a canonical URL, Open Graph and Twitter tags, and JSON-LD structured data.
 - **Titles and descriptions:** keep titles to 60 characters or fewer with the search term first, and descriptions to 155 or fewer.
-- **Structured data:** Organization + WebSite (home), Service + BreadcrumbList + FAQPage (service pages), BlogPosting + FAQPage + BreadcrumbList (articles). FAQs are written directly in each page's HTML; if you edit a question or answer, edit the matching FAQPage block in that page's  too.
-- **Share image:**  (1200×630) is the default ; articles use their own.
+- **Structured data:** Organization + WebSite (home), Service + BreadcrumbList + FAQPage (service pages), BlogPosting + FAQPage + BreadcrumbList (articles). FAQs are written directly in each page's HTML; if you edit a question or answer, edit the matching FAQPage block in that page's `<head>` too.
+- **Share image:** `assets/og/itsn-share.png` (1200×630) is the default `og:image`; articles use their own.
 - **Internal links:** each service page ends with related services and three related articles; each article ends with two related articles.
-- **Sitemap:** every URL has a ; update it when that page changes.
-- **Redirects:**  sends the old site's URLs (, , ) to current pages. Add any other old URLs found in Search Console's Pages report there.
+- **Sitemap:** every URL has a `lastmod`; update it when that page changes.
+- **Redirects:** `.htaccess` sends the old site's URLs (`/security-validation`, `/partners-&-vendors`, `sitemap.website.xml`) to current pages. Add any other old URLs found in Search Console's Pages report there.
 
 ## Analytics
 Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added directly in each page's `<head>`; new articles copied from an existing one inherit it).
