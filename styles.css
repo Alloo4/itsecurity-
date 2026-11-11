@@ -424,7 +424,16 @@ section{padding:var(--space) 0}
 .article-figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line-strong)}
 .article-figure figcaption{color:var(--muted-2);font-size:14px;line-height:1.5;margin-top:10px;text-align:center}
 
+/* ---------- related links ---------- */
+.related-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:-24px 0 36px}
+.related-links a{font-family:var(--display);font-size:14px;font-weight:600;padding:10px 18px;border-radius:999px;
+  border:1px solid var(--line-strong);background:var(--surface);color:var(--text);transition:border-color .2s,color .2s}
+.related-links a:hover{border-color:var(--teal-light);color:var(--teal-light)}
+.blog-grid--related{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),340px));justify-content:center}
+
 /* ---------- footer ---------- */
+.footer-brand .footer-contact{font-size:13.5px;margin-top:12px;max-width:none}
+.footer-contact a:hover{color:var(--text)}
 .site-footer{position:relative;border-top:1px solid var(--line);background:var(--bg-2);padding:64px 0 32px}
 .site-footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,var(--blue),var(--teal-light),var(--green-soft),transparent)}

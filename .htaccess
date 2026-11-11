@@ -2,3 +2,8 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.itsecuritynow\.com$ [NC]
 RewriteRule ^ https://itsecuritynow.com%{REQUEST_URI} [L,R=301]
+
+# Old website's addresses that Google still shows -> closest current page
+RewriteRule ^security-validation/?$ /security/ [L,R=301]
+RewriteRule ^partners-&-vendors/?$ /healthcare-var/ [L,R=301]
+RewriteRule ^sitemap\.website\.xml$ /sitemap.xml [L,R=301]

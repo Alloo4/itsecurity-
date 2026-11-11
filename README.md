@@ -17,7 +17,7 @@ No build step and no dependencies (fonts load from Google Fonts).
 | `index.html` | Home page |
 | `<service>/index.html` | One folder per service page (`consulting/`, `healthcare-var/`, `staff-augmentation/`, `security/`, `voice-data/`, `contact/`). Each repeats the header and footer, so a menu change must be made in every page, including the blog pages |
 | `styles.css` | All styling and responsive rules (shared by the blog) |
-| `script.js` | FAQ content and accordions, old-link forwarding, mobile menu, contact form submission, Analytics events (used by the home and service pages) |
+| `script.js` | Old-link forwarding, mobile menu, contact form submission, Analytics events (used by the home and service pages) |
 | `blog/index.html` | Blog listing page |
 | `blog/<slug>/index.html` | One folder per article |
 | `assets/logos/` | Official logo files (SVG + PNG) — see [assets/logos/README.md](assets/logos/README.md) |
@@ -67,6 +67,12 @@ Article helpers in `styles.css`:
 - All canonical URLs, Open Graph tags, structured data, `sitemap.xml` and `robots.txt` use `https://itsecuritynow.com`.
 - A second verification tag (`ad7PQXWM…`) is from the old vercel.app property. It's harmless and can be removed once that property is deleted from Search Console.
 - Every page has a canonical URL, Open Graph and Twitter tags, and JSON-LD structured data.
+- **Titles and descriptions:** keep titles to 60 characters or fewer with the search term first, and descriptions to 155 or fewer.
+- **Structured data:** Organization + WebSite (home), Service + BreadcrumbList + FAQPage (service pages), BlogPosting + FAQPage + BreadcrumbList (articles). FAQs are written directly in each page's HTML; if you edit a question or answer, edit the matching FAQPage block in that page's  too.
+- **Share image:**  (1200×630) is the default ; articles use their own.
+- **Internal links:** each service page ends with related services and three related articles; each article ends with two related articles.
+- **Sitemap:** every URL has a ; update it when that page changes.
+- **Redirects:**  sends the old site's URLs (, , ) to current pages. Add any other old URLs found in Search Console's Pages report there.
 
 ## Analytics
 Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added directly in each page's `<head>`; new articles copied from an existing one inherit it).
