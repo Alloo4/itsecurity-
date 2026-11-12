@@ -45,6 +45,8 @@ Current articles:
 2. `soc-2-vs-hipaa-compliance/` — Oct 9, 2026 (Compliance)
 3. `manufacturing-cybersecurity-production-downtime/` — Oct 16, 2026 (Security)
 4. `healthcare-network-security-best-practices/` — Oct 21, 2026 (Security)
+5. `healthcare-managed-security-services/` — Nov 12, 2026 (Security)
+6. `ai-in-healthcare-applications/` — Nov 12, 2026 (AI). Add links to the shadow AI article in section 6 and the HIPAA FAQ once that article is live.
 
 ### Adding a new article
 1. Copy an existing article folder to `blog/<new-slug>/` and replace the content. Update:

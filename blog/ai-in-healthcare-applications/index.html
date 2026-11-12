@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI in Healthcare: 15 Real-World Applications (2026 Guide)</title>
+<meta name="description" content="Where AI is helping hospitals today, from ambient documentation to sepsis alerts, what the evidence shows, and how leaders can decide where to start.">
+<meta name="author" content="Dan Drees">
+<link rel="canonical" href="https://itsecuritynow.com/blog/ai-in-healthcare-applications/">
+<meta name="theme-color" content="#0a1526">
+<meta name="google-site-verification" content="ad7PQXWMNEEGkjTGOML4ZclIOk3AJ6ymcZn1l1d2bYY">
+<meta name="google-site-verification" content="79mfcSNkLrEv2N64Ms3ijmbt0zzdlX3jOVIeYQbFWq4">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="IT Security Now (ITSN)">
+<meta property="og:title" content="AI in Healthcare: An Executive's Guide to 15 Real-World Applications">
+<meta property="og:description" content="Where AI is helping hospitals today, from ambient documentation to sepsis alerts, what the evidence shows, and how leaders can decide where to start.">
+<meta property="og:url" content="https://itsecuritynow.com/blog/ai-in-healthcare-applications/">
+<meta property="og:image" content="https://itsecuritynow.com/assets/blog/ai-in-healthcare-applications/ai-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:section" content="AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI in Healthcare: An Executive's Guide to 15 Real-World Applications">
+<meta name="twitter:description" content="Where AI is helping hospitals today, from ambient documentation to sepsis alerts, what the evidence shows, and how leaders can decide where to start.">
+<meta name="twitter:image" content="https://itsecuritynow.com/assets/blog/ai-in-healthcare-applications/ai-og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/svg+xml" href="../../assets/logos/svg/itsn-icon-teal.svg">
+<link rel="apple-touch-icon" href="../../assets/logos/png/itsn-icon-square-teal-bg.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI in Healthcare: An Executive's Guide to 15 Real-World Applications",
+  "description": "Where AI is helping hospitals today, from ambient documentation to sepsis alerts, what the evidence shows, and how leaders can decide where to start.",
+  "image": "https://itsecuritynow.com/assets/blog/ai-in-healthcare-applications/ai-og.jpg",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "author": { "@type": "Person", "@id": "https://itsecuritynow.com/authors/dan-drees/#person", "name": "Dan Drees", "jobTitle": "Founder", "url": "https://itsecuritynow.com/authors/dan-drees/", "sameAs": "https://www.linkedin.com/in/dandrees/", "worksFor": { "@type": "Organization", "name": "IT Security Now (ITSN)" } },
+  "publisher": { "@type": "Organization", "name": "IT Security Now (ITSN)" },
+  "mainEntityOfPage": "https://itsecuritynow.com/blog/ai-in-healthcare-applications/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What are the most common uses of AI in healthcare today?","acceptedAnswer":{"@type":"Answer","text":"Among physicians, the most common uses are summarizing medical research and standards of care, and clinical documentation, according to the AMA's 2026 survey. At the organizational level, common uses include ambient documentation, revenue cycle and prior authorization automation, scheduling and patient communication."}},
+    {"@type":"Question","name":"Will AI replace doctors or nurses?","acceptedAnswer":{"@type":"Answer","text":"Our view: no. Current tools are designed to support clinicians, not replace them. The AMA uses the term \"augmented intelligence\" to stress that AI should enhance human judgment rather than substitute for it."}},
+    {"@type":"Question","name":"Is using AI in healthcare HIPAA compliant?","acceptedAnswer":{"@type":"Answer","text":"It depends on the tool and how it's used. A vendor that handles PHI on your behalf generally needs a business associate agreement, and many free consumer AI tools don't offer one. Involve your privacy officer and counsel."}},
+    {"@type":"Question","name":"How should a hospital start with AI?","acceptedAnswer":{"@type":"Answer","text":"Start with one measurable constraint, such as documentation time or no-show rates. Inventory the AI already in use, set a baseline, validate the tool locally, put governance and security in place, and involve clinicians from the start."}},
+    {"@type":"Question","name":"What are the biggest risks of AI in healthcare?","acceptedAnswer":{"@type":"Answer","text":"The main risks are inaccurate outputs, models that perform worse on your patients than in published results, alert fatigue, PHI exposure through unapproved tools, and new security gaps from added vendors and data flows. Each can be managed with local validation, governance and security controls."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://itsecuritynow.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://itsecuritynow.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI in Healthcare: An Executive's Guide to 15 Real-World Applications",
+      "item": "https://itsecuritynow.com/blog/ai-in-healthcare-applications/"
+    }
+  ]
+}
+</script>
+<!-- Google Analytics (GA4). Only counts visits on the live domain, not the Vercel preview or local testing. -->
+<script>if(!/(^|\.)itsecuritynow\.com$/.test(location.hostname))window['ga-disable-G-4NRDP2X7Q0']=true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4NRDP2X7Q0"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-4NRDP2X7Q0');
+</script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="IT Security Now home">
+      <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-teal.svg" alt="IT Security Now" width="792" height="151">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/consulting/">Consulting</a>
+      <a href="/staff-augmentation/">Staff Augmentation</a>
+      <a href="/security/">Security</a>
+      <a href="/voice-data/">Voice &amp; Data</a>
+      <a href="/about/">About</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn btn--primary nav-cta" href="/contact/">Start Assessment</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn--primary btn--sm" href="/contact/">Start Assessment</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero page-hero--ai-healthcare"><div class="wrap">
+    <span class="eyebrow">◆ AI</span>
+    <h1 style="max-width:24ch">AI in Healthcare: An Executive's Guide to 15 Real-World Applications</h1>
+    <div class="article-meta"><span>By <a href="/authors/dan-drees/">Dan Drees</a></span><span>November 2026</span><span>11 min read</span></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="article-body">
+      <a class="back-link" href="/blog/">&larr; Back to all articles</a>
+
+      <h2>Healthcare's AI question is really about capacity</h2>
+      <p>Healthcare leaders are managing rising demand, staffing gaps in nearly every clinical discipline, growing administrative work and more cyber risk. At the same time, their organizations produce more data than any team can review by hand.</p>
+      <p>Incremental fixes don't close that gap. That's why AI is on the executive agenda: not because it's new, but because it's one of the few ways to create capacity at scale.</p>
+      <p>Physicians are already using it. In the <a href="https://www.ama-assn.org/system/files/physician-ai-sentiment-report.pdf" target="_blank" rel="noopener">American Medical Association's 2026 Physician Survey on Augmented Intelligence</a>, 81% of physicians said they use AI professionally, up from 38% in 2023. In the <a href="https://www.ama-assn.org/press-center/ama-press-releases/ama-ai-usage-among-doctors-doubles-confidence-technology-grows" target="_blank" rel="noopener">AMA's announcement of the results</a>, AMA CEO John Whyte, MD, MPH, described both the promise and the condition attached to it:</p>
+      <blockquote class="article-quote">
+        <p>"AI has quickly become part of everyday medical practice. Physicians see real promise in its ability to support clinical decisions and cut down on administrative burden. But as this technology advances, it is critical that augmented intelligence be designed to enhance—not replace—physicians."</p>
+        <cite>— John Whyte, MD, MPH, CEO, American Medical Association, March 12, 2026</cite>
+      </blockquote>
+      <p>That's the right frame for executives. The value isn't AI itself. It's the time and attention AI gives back to clinicians and staff.</p>
+
+      <h2>AI in healthcare by the numbers</h2>
+      <p>According to the <a href="https://www.ama-assn.org/press-center/ama-press-releases/ama-ai-usage-among-doctors-doubles-confidence-technology-grows" target="_blank" rel="noopener">AMA's 2026 physician survey</a> of nearly 1,700 physicians, fielded in January and February 2026:</p>
+      <ul>
+        <li><strong>81%</strong> of physicians use AI professionally, compared with 38% in 2023.</li>
+        <li>Physicians report an average of <strong>2.3 AI use cases</strong>, up from 1.1 in 2023.</li>
+        <li><strong>More than three-quarters</strong> believe AI improves their ability to care for patients, up from 65% in 2023.</li>
+        <li><strong>70%</strong> see AI as a way to automate tasks that contribute to burnout.</li>
+        <li><strong>85%</strong> want to be consulted on, or directly involved in, decisions about adopting AI.</li>
+      </ul>
+      <p>On the organizational side, McKinsey &amp; Company's <a href="https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook" target="_blank" rel="noopener">April 2026 report on generative AI in healthcare</a>, based on a fall 2025 survey of 150 U.S. payer, provider and health-tech leaders, found that:</p>
+      <ul>
+        <li><strong>Half</strong> of leaders say their organizations have already implemented generative AI.</li>
+        <li><strong>More than 80%</strong> have deployed their first generative AI use cases to end users.</li>
+      </ul>
+      <p>McKinsey's authors note that over the past two years, leaders have moved from asking whether gen AI is relevant to asking how to use it responsibly and at scale.</p>
+      <p><strong>Our view:</strong> for most organizations, the question is no longer whether to use AI. It's where to apply it first, and how to govern it once it's running.</p>
+
+      <h2>The most valuable applications are often the least visible</h2>
+      <p>Robotic surgery and futuristic diagnostics get the headlines. Much of the practical value is quieter: less time spent on documentation, faster access for patients, smoother handoffs, less manual administrative work, better-informed decisions and a stronger security posture.</p>
+      <p>Here are 15 applications worth understanding, what each one does and what to check before you invest.</p>
+
+      <h3>1. Early disease detection</h3>
+      <p><strong>From reactive to predictive care.</strong> AI tools can review imaging, lab results, clinical indicators and historical patient data to flag risk earlier than routine review might. When it works, the payoff is earlier intervention, lower treatment costs and stronger population health performance.</p>
+      <p>The key question is whether a tool has been validated on patients like yours. A model trained on one population can perform differently on another.</p>
+      <p><em>Question for leaders: What would it mean for your organization to identify high-risk patients months sooner?</em></p>
+
+      <h3>2. AI-assisted medical imaging</h3>
+      <p><strong>Extending scarce expertise.</strong> Imaging is the most mature category of clinical AI. Radiology tools make up most of the devices on the <a href="https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices" target="_blank" rel="noopener">FDA's list of AI-enabled medical devices</a>. Typically they flag possible findings and help prioritize worklists, with a radiologist making the final read.</p>
+      <p><strong>Our view:</strong> treat imaging AI as a way to multiply expertise, not to reduce headcount. That's a different investment case, and it's usually easier to win clinician support for.</p>
+
+      <h3>3. Predicting patient deterioration</h3>
+      <p><strong>Acting before an emergency.</strong> Models can watch vital signs, lab values, medications and documentation for patterns that come before a patient declines. The goal is earlier rapid-response calls, fewer unplanned ICU transfers and shorter stays.</p>
+      <p>Alert design matters as much as the model. If clinicians get too many false alarms, they stop responding.</p>
+
+      <h3>4. Reducing hospital readmissions</h3>
+      <p><strong>Turning data into targeting.</strong> Readmission models combine clinical, behavioral and social factors to flag the patients most likely to return. Care teams usually know what helps. What they often lack is a ranked list of who needs it most.</p>
+      <p>For organizations in value-based contracts, that targeting is where the return comes from.</p>
+
+      <h3>5. Personalized treatment recommendations</h3>
+      <p><strong>Making precision medicine more practical.</strong> AI can help clinicians weigh genomic data, research findings, outcomes in similar patients and past treatment response. It makes parts of precision medicine more practical at scale, but results depend on the quality of the underlying data and on specialist review.</p>
+      <p>Patients increasingly expect care plans built around them, not around the average patient.</p>
+
+      <h3>6. Clinical documentation assistance</h3>
+      <p><strong>A workforce issue, not just an efficiency project.</strong> Staffing and retention get most of the attention. Less attention goes to how much clinician time documentation consumes, and burnout is one of healthcare's most expensive workforce problems.</p>
+      <p>Ambient documentation tools listen to the visit, with the patient's consent, and draft a note for the clinician to review and sign. The early evidence is encouraging. In a <a href="https://pubmed.ncbi.nlm.nih.gov/41037268/" target="_blank" rel="noopener">JAMA Network Open study across six U.S. health systems</a>, the share of clinicians reporting burnout fell from 51.9% to 38.8% after 30 days of using an ambient AI scribe. It was a before-and-after quality improvement study, not a randomized trial.</p>
+      <p>Organizations that reduce documentation burden may see better clinician satisfaction and retention, more patient-facing time and faster chart completion. Before rollout, settle patient consent, where audio and notes are stored, whether the vendor will sign a business associate agreement and how clinicians correct errors.</p>
+      <p><em>Question for leaders: If each clinician got back one hour a day, what would you do with that capacity?</em></p>
+
+      <h3>7. Virtual health assistants</h3>
+      <p><strong>Meeting consumer expectations.</strong> Patients don't only compare your organization with other providers. They compare it with their bank, their airline and every other digital service they use.</p>
+      <p>AI assistants can handle appointment scheduling, medication reminders, patient education, follow-up instructions and referral coordination. That improves responsiveness and takes load off front-desk teams. Build in a clear handoff to a person for anything clinical.</p>
+
+      <h3>8. Intelligent scheduling</h3>
+      <p><strong>Access as a competitive advantage.</strong> Patients can't benefit from care they can't get. Long waits, unfilled slots and no-shows hurt both outcomes and revenue.</p>
+      <p>AI scheduling tools predict cancellations and no-shows, fill gaps and match provider capacity to demand. For many organizations, scheduling becomes both a patient experience project and a growth project.</p>
+      <p><em>Question for leaders: Do you know your current no-show rate and time to third available appointment? Those are your baselines.</em></p>
+
+      <h3>9. Medication safety</h3>
+      <p><strong>Better visibility as regimens get more complex.</strong> Patients often see several providers across several settings while managing complicated medication lists. AI can flag possible drug interactions, duplicate therapies, allergy conflicts, dosing concerns and adherence problems.</p>
+      <p>The value isn't making decisions for clinicians. It's helping them make safer ones. As with deterioration alerts, tune the thresholds so the warnings that matter don't get lost in noise.</p>
+
+      <h3>10. Population health management</h3>
+      <p><strong>Thinking beyond the individual visit.</strong> AI can analyze large datasets to find high-risk groups, care gaps, preventive care opportunities, chronic disease trends and social risk factors. That matters more as organizations move into value-based models that pay for outcomes rather than volume.</p>
+      <p><em>Question for leaders: Is your organization managing patient encounters, or managing population health?</em></p>
+
+      <h3>11. Sepsis detection</h3>
+      <p><strong>Why local validation matters.</strong> Few conditions show the value of early action as clearly as sepsis. Clinical teams know how to treat it. The challenge is recognizing it early enough.</p>
+      <p>The evidence cuts both ways, which makes sepsis a useful lesson for any AI investment:</p>
+      <ul>
+        <li>In a <a href="https://doi.org/10.1038/s41591-022-01894-0" target="_blank" rel="noopener">prospective study across five hospitals published in Nature Medicine</a>, patients whose AI sepsis alert was confirmed by a provider within three hours had lower in-hospital mortality than those whose alert wasn't, with an adjusted absolute reduction of 3.3 percentage points. The researchers reported this as an association, not proof of cause.</li>
+        <li>An <a href="https://doi.org/10.1001/jamainternmed.2021.2626" target="_blank" rel="noopener">independent validation of a widely deployed proprietary sepsis model, published in JAMA Internal Medicine</a>, found it missed about two-thirds of sepsis cases while generating alerts on 18% of hospitalized patients.</li>
+      </ul>
+      <p>The takeaway: test a model on your own patients before relying on it, and measure whether clinicians act on the alerts, not just whether the model is accurate.</p>
+
+      <h3>12. Healthcare workflow automation</h3>
+      <p><strong>Removing administrative friction.</strong> Not every challenge is clinical. Prior authorizations, insurance verification, claims, revenue cycle work, referral management and patient outreach consume a large share of staff time.</p>
+      <p>Automation can take repetitive steps out of these processes so staff can focus on work that needs judgment. The usual benefits are lower administrative cost, faster turnaround and less frustration for staff.</p>
+      <p><em>Question for leaders: Which administrative process causes the most rework or delay today? Start there.</em></p>
+
+      <h3>13. Remote patient monitoring</h3>
+      <p><strong>Care beyond the hospital walls.</strong> The traditional care model was built around visits. Remote monitoring extends visibility into patients' daily lives, for chronic disease, post-discharge care, hypertension, diabetes, cardiac care and COPD.</p>
+      <p>Without AI, the volume of patient-generated data can overwhelm care teams. AI helps sort readings so clinicians focus on the patients who need attention. Benefits can include better engagement, earlier intervention and fewer avoidable hospitalizations.</p>
+
+      <h3>14. Healthcare cybersecurity</h3>
+      <p><strong>Every AI strategy is also a trust strategy.</strong> Every AI initiative depends on data, and every data initiative depends on trust. New AI tools add new data flows, vendors and accounts, so AI and cybersecurity can't be separate conversations.</p>
+      <p>AI-assisted security tools can help detect phishing, insider threats, ransomware indicators, unauthorized access and unusual network activity. They support a security program; they don't replace one. For the foundations, see our guides to <a href="/blog/cybersecurity-services-for-healthcare/">cybersecurity services for healthcare</a> and <a href="/blog/healthcare-network-security-best-practices/">healthcare network security best practices</a>.</p>
+      <p><em>Question for leaders: Can you scale AI while keeping patient trust, security and regulatory compliance intact?</em></p>
+
+      <h3>15. Clinical decision support</h3>
+      <p><strong>Augmenting decisions, not replacing them.</strong> Clinicians face more information than anyone can process: guidelines, research, protocols, patient histories and population data. Decision support tools help them pull together what's relevant, faster.</p>
+      <p>This is already where physicians lean on AI most. The <a href="https://www.ama-assn.org/practice-management/digital-health/more-80-physicians-use-ai-professionally-ama-survey" target="_blank" rel="noopener">AMA reports</a> that summarizing medical research and standards of care is physicians' most common use of AI. The aim is more consistent, better-informed decisions, with the clinician still in charge.</p>
+
+      <h2>Where to start: practical recommendations</h2>
+      <ol>
+        <li><strong>Start with a constraint, not a tool.</strong> Name the problem first: clinician time, patient access, throughput, revenue cycle delays or risk. Then look for the AI that addresses it.</li>
+        <li><strong>Inventory the AI you already have.</strong> Staff are often using AI tools that IT never approved, and many vendors have added AI features to software you already own.</li>
+        <li><strong>Set a baseline before you buy.</strong> After-hours charting time, no-show rate and prior authorization turnaround are all measurable. Without a baseline, you can't show a return.</li>
+        <li><strong>Validate on your own patients.</strong> As the sepsis example shows, published performance doesn't guarantee local performance.</li>
+        <li><strong>Build governance and security in from day one.</strong> That means a business associate agreement where PHI is involved, mapped data flows, access controls, ongoing model monitoring and a named owner for each tool.</li>
+        <li><strong>Involve clinicians early.</strong> The AMA found most physicians want a say in AI adoption. Tools chosen without them tend to go unused.</li>
+        <li><strong>Review and decide.</strong> After a set period, scale what works, fix what's close and stop what isn't delivering.</li>
+      </ol>
+
+      <h2>What this means for IT leaders</h2>
+      <p>A <a href="https://www.himss.org/resources/2026-healthcare-ai-trends-report/" target="_blank" rel="noopener">2026 Healthcare AI Trends Report from Guidehouse and HIMSS</a>, based on a survey of 50 provider decision-makers, describes "execution paralysis": limited organizational readiness and weak internal alignment are slowing implementation and threatening return on investment.</p>
+      <p>For CIOs, CISOs and IT directors, that's familiar ground. The hard part of AI is rarely the model. It's integration with the EHR, identity and access, data quality, vendor risk and security. Those are IT leadership problems, and they decide whether a pilot becomes a program.</p>
+      <p><strong>Our view:</strong> the organizations getting the most from AI aren't the ones deploying the most tools. They're the ones applying AI to their most important constraints and running it like any other enterprise system, with owners, metrics and controls.</p>
+
+      <h2>Where ITSN fits</h2>
+      <p>ITSN works with healthcare and health-tech organizations as a <a href="/consulting/">vendor-neutral partner</a>. Three of our practices meet here: AI &amp; Automation, <a href="/security/">Security &amp; Compliance</a>, and Cloud &amp; Infrastructure. We help organizations identify where AI fits, evaluate options without a product to push, and put the security and governance in place so AI can scale safely.</p>
+
+      <h2>Conclusion</h2>
+      <p>AI in healthcare has moved past the experiment stage for many organizations. The physicians are using it, and leaders are being asked to show results.</p>
+      <p>The organizations that benefit most won't be the ones with the longest list of AI tools. They'll be the ones that pick the right problems, measure the results and protect the data that makes it all work.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>What are the most common uses of AI in healthcare today?<span class="pm"></span></summary><p>Among physicians, the most common uses are summarizing medical research and standards of care, and clinical documentation, according to the AMA's 2026 survey. At the organizational level, common uses include ambient documentation, revenue cycle and prior authorization automation, scheduling and patient communication.</p></details>
+        <details><summary>Will AI replace doctors or nurses?<span class="pm"></span></summary><p>Our view: no. Current tools are designed to support clinicians, not replace them. The AMA uses the term "augmented intelligence" to stress that AI should enhance human judgment rather than substitute for it.</p></details>
+        <details><summary>Is using AI in healthcare HIPAA compliant?<span class="pm"></span></summary><p>It depends on the tool and how it's used. A vendor that handles PHI on your behalf generally needs a business associate agreement, and many free consumer AI tools don't offer one. Involve your privacy officer and counsel.</p></details>
+        <details><summary>How should a hospital start with AI?<span class="pm"></span></summary><p>Start with one measurable constraint, such as documentation time or no-show rates. Inventory the AI already in use, set a baseline, validate the tool locally, put governance and security in place, and involve clinicians from the start.</p></details>
+        <details><summary>What are the biggest risks of AI in healthcare?<span class="pm"></span></summary><p>The main risks are inaccurate outputs, models that perform worse on your patients than in published results, alert fatigue, PHI exposure through unapproved tools, and new security gaps from added vendors and data flows. Each can be managed with local validation, governance and security controls.</p></details>
+      </div>
+
+      <div class="article-callout article-disclaimer"><strong>Disclaimer:</strong> This article is for general information only. It is not legal, regulatory, compliance or professional advice, and reading it does not create a client relationship with ITSN. Figures and events are reported as published by the sources listed below on their stated dates and may since have changed; check the original source before relying on them. Companies and organizations are named only to describe publicly reported events, and no wrongdoing is implied.</div>
+
+      <h2 id="references">References</h2>
+      <p class="refs-note">Sources are linked where they are cited in the article. Statistics are attributed to the original publisher wherever one exists; where a figure is only available through a news report, that report is cited.</p>
+      <ol class="article-refs">
+          <li>Adams, R., Henry, K. E., Sridharan, A., Soleimani, H., Zhan, A., Rawat, N., Johnson, L., Hager, D. N., Cosgrove, S. E., Markowski, A., Klein, E. Y., Chen, E. S., Saheed, M. O., Henley, M., Miranda, S., Houston, K., Linton, R. C., Ahluwalia, A. R., Wu, A. W., &amp; Saria, S. (2022). Prospective, multi-site study of patient outcomes after implementation of the TREWS machine learning-based early warning system for sepsis. <em>Nature Medicine, 28</em>(7), 1455–1460. <a href="https://doi.org/10.1038/s41591-022-01894-0" target="_blank" rel="noopener">https://doi.org/10.1038/s41591-022-01894-0</a></li>
+          <li>American Medical Association. (2026, March 12). <em>AMA: AI usage among doctors doubles as confidence in technology grows</em> [Press release]. <a href="https://www.ama-assn.org/press-center/ama-press-releases/ama-ai-usage-among-doctors-doubles-confidence-technology-grows" target="_blank" rel="noopener">https://www.ama-assn.org/press-center/ama-press-releases/ama-ai-usage-among-doctors-doubles-confidence-technology-grows</a></li>
+          <li>American Medical Association Center for Digital Health and AI. (2026, March). <em>2026 physician survey on augmented intelligence</em>. American Medical Association. <a href="https://www.ama-assn.org/system/files/physician-ai-sentiment-report.pdf" target="_blank" rel="noopener">https://www.ama-assn.org/system/files/physician-ai-sentiment-report.pdf</a></li>
+          <li>Guidehouse &amp; HIMSS. (2026). <em>2026 healthcare AI trends report</em>. HIMSS. <a href="https://www.himss.org/resources/2026-healthcare-ai-trends-report/" target="_blank" rel="noopener">https://www.himss.org/resources/2026-healthcare-ai-trends-report/</a></li>
+          <li>Lamb, J., Dahab, A., &amp; Jones, J. (2026, April 16). <em>Generative AI in healthcare: Adoption matures as agentic AI emerges</em>. McKinsey &amp; Company. <a href="https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook" target="_blank" rel="noopener">https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook</a></li>
+          <li>O'Reilly, K. B. (2026, March 12). <em>More than 80% of physicians use AI professionally: AMA survey</em>. American Medical Association. <a href="https://www.ama-assn.org/practice-management/digital-health/more-80-physicians-use-ai-professionally-ama-survey" target="_blank" rel="noopener">https://www.ama-assn.org/practice-management/digital-health/more-80-physicians-use-ai-professionally-ama-survey</a></li>
+          <li>Olson, K. D., Meeker, D., Troup, M., Barker, T. D., Nguyen, V. H., Manders, J. B., Stults, C. D., Jones, V. G., Shah, S. D., Shah, T., &amp; Schwamm, L. H. (2025). Use of ambient AI scribes to reduce administrative burden and professional burnout. <em>JAMA Network Open, 8</em>(10), Article e2534976. <a href="https://doi.org/10.1001/jamanetworkopen.2025.34976" target="_blank" rel="noopener">https://doi.org/10.1001/jamanetworkopen.2025.34976</a></li>
+          <li>U.S. Food and Drug Administration. (n.d.). <em>List of artificial intelligence-enabled medical devices</em>. <a href="https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices" target="_blank" rel="noopener">https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices</a></li>
+          <li>Wong, A., Otles, E., Donnelly, J. P., Krumm, A., McCullough, J., DeTroyer-Cooley, O., Pestrue, J., Phillips, M., Konye, J., Penoza, C., Ghous, M., &amp; Singh, K. (2021). External validation of a widely implemented proprietary sepsis prediction model in hospitalized patients. <em>JAMA Internal Medicine, 181</em>(8), 1065–1070. <a href="https://doi.org/10.1001/jamainternmed.2021.2626" target="_blank" rel="noopener">https://doi.org/10.1001/jamainternmed.2021.2626</a></li>
+      </ol>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">◆ Keep reading</span><h2>Related articles</h2></div>
+    <div class="blog-grid blog-grid--related">
+      <a class="blog-card" href="/blog/healthcare-managed-security-services/">
+        <div class="blog-card-img" style="background-image:url('/assets/blog/healthcare-managed-security-services/mss-hero.webp')"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Security</span>
+          <h3>Healthcare Managed Security Services: Why More Healthcare Organizations Are Turning to Security Experts</h3>
+          <p>What managed security services include, what a SOC actually watches for, how they support HIPAA compliance, and how to choose the right partner.</p>
+          <div class="blog-card-meta">November 2026 · 7 min read</div>
+        </div>
+      </a>
+      <a class="blog-card" href="/blog/cybersecurity-services-for-healthcare/">
+        <div class="blog-card-img" style="background-image:url('https://images.unsplash.com/photo-1774901128302-e2bbd154da44?fm=jpg&amp;q=70&amp;w=800&amp;auto=format&amp;fit=crop')"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Security</span>
+          <h3>Cybersecurity Services for Healthcare: Protecting Patients Starts with Protecting Data</h3>
+          <p>Patient records, medical devices, and connected systems have transformed care delivery — and introduced cybersecurity risks that are now a patient-safety issue.</p>
+          <div class="blog-card-meta">September 2026 · 7 min read</div>
+        </div>
+      </a>
+    </div>
+  </div></section>
+
+  <section class="convert" style="padding-bottom:var(--space)"><div class="wrap center">
+    <h2 style="font-size:clamp(28px,4vw,42px)">Talk to an IT expert</h2>
+    <p class="muted" style="margin:14px auto 28px;max-width:60ch"><strong>Not sure where AI would make the biggest difference in your organization?</strong> Talk to an ITSN expert about your priorities, your current environment and where to start.</p>
+    <a class="btn btn--primary" href="/contact/">Talk to an IT Expert</a>
+  </div></section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="../../assets/logos/svg/itsn-logo-linear-white.svg" alt="IT Security Now" width="792" height="151">
+        </a>
+        <p>Simplify IT. Reduce risk. Deliver better experiences — with a zero-risk partnership built for healthcare, health tech, and manufacturing.</p>
+        <p class="footer-contact">Tampa, FL · <a href="tel:+17472226157">(747) 222-6157</a> · <a href="mailto:info@itsecuritynow.com">info@itsecuritynow.com</a></p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/consulting/">Consulting Service</a></li>
+          <li><a href="/staff-augmentation/">Staff Augmentation</a></li>
+          <li><a href="/security/">Security Service</a></li>
+          <li><a href="/voice-data/">Voice &amp; Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/it-security-now/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="/contact/">Start Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ITSN — IT Security Now. All rights reserved.</span>
+      <span>Zero-risk · Shared success · Vendor-neutral</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>

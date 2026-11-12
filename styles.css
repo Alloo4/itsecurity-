@@ -186,6 +186,11 @@ section{padding:var(--space) 0}
     linear-gradient(180deg,rgba(10,21,38,.70) 0%,rgba(10,21,38,.93) 62%,var(--bg) 100%),
     url("assets/blog/healthcare-managed-security-services/mss-hero.webp")}
 
+.page-hero--ai-healthcare::before{background-image:
+    radial-gradient(560px 300px at 50% -10%,rgba(73,163,199,.24),transparent 70%),
+    linear-gradient(180deg,rgba(10,21,38,.62) 0%,rgba(10,21,38,.90) 62%,var(--bg) 100%),
+    url("assets/blog/ai-in-healthcare-applications/ai-hero.webp")}
+
 .page-hero--var::before{background-image:
     radial-gradient(560px 300px at 50% -10%,rgba(73,163,199,.24),transparent 70%),
     linear-gradient(180deg,rgba(10,21,38,.76) 0%,rgba(10,21,38,.94) 62%,var(--bg) 100%),
@@ -425,6 +430,9 @@ section{padding:var(--space) 0}
 .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--teal-light);font-size:14.5px;font-weight:600;margin-bottom:28px}
 .back-link:hover{color:var(--text)}
 
+.article-body blockquote.article-quote{margin:4px 0 26px;padding:20px 24px;background:var(--surface);border-left:3px solid var(--teal-light);border-radius:0 12px 12px 0}
+.article-body blockquote.article-quote p{color:var(--text);font-size:18px;line-height:1.6;margin-bottom:12px}
+.article-body blockquote.article-quote cite{color:var(--muted-2);font-size:14.5px;font-style:normal}
 .article-figure{margin:8px 0 30px}
 .article-figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line-strong)}
 .article-figure figcaption{color:var(--muted-2);font-size:14px;line-height:1.5;margin-top:10px;text-align:center}
