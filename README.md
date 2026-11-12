@@ -38,6 +38,8 @@ Both forms (Home "Start Your Transformation" and the Contact page) send submissi
 - A hidden `_honey` field filters most spam bots.
 
 ## Blog
+All articles are bylined to **Dan Drees** (Founder). His author page is `authors/dan-drees/index.html`; new articles need the same byline in the article header, the `author` meta tag and the BlogPosting data, and a card on the author page.
+
 Current articles:
 1. `cybersecurity-services-for-healthcare/` — Sep 17, 2026 (Security)
 2. `soc-2-vs-hipaa-compliance/` — Oct 9, 2026 (Compliance)
@@ -71,6 +73,8 @@ Article helpers in `styles.css`:
 - **Structured data:** Organization + WebSite (home), Service + BreadcrumbList + FAQPage (service pages), BlogPosting + FAQPage + BreadcrumbList (articles). FAQs are written directly in each page's HTML; if you edit a question or answer, edit the matching FAQPage block in that page's `<head>` too.
 - **Share image:** `assets/og/itsn-share.png` (1200×630) is the default `og:image`; articles use their own.
 - **Internal links:** each service page ends with related services and three related articles; each article ends with two related articles.
+- **Headlines:** each service page's H1 names the service (the search term); the brand slogan sits directly beneath it as `.hero-slogan`.
+- **Profiles:** the Organization data links the LinkedIn company page, and the footer links to it on every page.
 - **Sitemap:** every URL has a `lastmod`; update it when that page changes.
 - **Redirects:** `.htaccess` sends the old site's URLs (`/security-validation`, `/partners-&-vendors`, `sitemap.website.xml`) to current pages. Add any other old URLs found in Search Console's Pages report there.
 
