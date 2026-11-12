@@ -5,5 +5,8 @@ RewriteRule ^ https://itsecuritynow.com%{REQUEST_URI} [L,R=301]
 
 # Old website's addresses that Google still shows -> closest current page
 RewriteRule ^security-validation/?$ /security/ [L,R=301]
-RewriteRule ^partners-&-vendors/?$ /healthcare-var/ [L,R=301]
+RewriteRule ^partners-&-vendors/?$ /about/ [L,R=301]
 RewriteRule ^sitemap\.website\.xml$ /sitemap.xml [L,R=301]
+
+# The VAR page became the About Us page
+RewriteRule ^healthcare-var/?$ /about/ [L,R=301]

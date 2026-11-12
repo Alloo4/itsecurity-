@@ -486,3 +486,8 @@ section{padding:var(--space) 0}
 .article-body ol.article-refs{font-size:14.5px;gap:10px;line-height:1.55}
 .article-body ol.article-refs li{overflow-wrap:anywhere}
 .article-body ol.article-refs a{color:var(--teal-light);text-decoration:underline;text-underline-offset:2px}
+
+/* ---------- about page ---------- */
+.text-link{color:var(--teal-light);font-weight:600}
+.text-link:hover{color:var(--text)}
+.prose-block a{color:var(--teal-light);text-decoration:underline;text-underline-offset:3px}

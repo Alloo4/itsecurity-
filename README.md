@@ -5,7 +5,7 @@ Static marketing site for IT Security Now, live at **https://itsecuritynow.com/*
 A preview copy also runs on Vercel at https://itsecurity-five.vercel.app/. Its pages point search engines to itsecuritynow.com, so Google treats itsecuritynow.com as the real site.
 
 - **Main site:** seven real pages, each with its own URL, title, description and canonical tag:
-  `/` (Home), `/consulting/`, `/healthcare-var/`, `/staff-augmentation/`, `/security/`, `/voice-data/`, `/contact/`.
+  `/` (Home), `/consulting/`, `/staff-augmentation/`, `/security/`, `/voice-data/`, `/about/`, `/contact/`.
   Old one-page links such as `/#security` forward to the matching page (`ROUTES` in `script.js`).
 - **Blog:** separate static pages under `/blog/`.
 
@@ -15,7 +15,7 @@ No build step and no dependencies (fonts load from Google Fonts).
 | Path | What it is |
 |---|---|
 | `index.html` | Home page |
-| `<service>/index.html` | One folder per service page (`consulting/`, `healthcare-var/`, `staff-augmentation/`, `security/`, `voice-data/`, `contact/`). Each repeats the header and footer, so a menu change must be made in every page, including the blog pages |
+| `<service>/index.html` | One folder per service page (`consulting/`, `about/`, `staff-augmentation/`, `security/`, `voice-data/`, `contact/`). Each repeats the header and footer, so a menu change must be made in every page, including the blog pages |
 | `styles.css` | All styling and responsive rules (shared by the blog) |
 | `script.js` | Old-link forwarding, mobile menu, contact form submission, Analytics events (used by the home and service pages) |
 | `blog/index.html` | Blog listing page |
@@ -76,7 +76,7 @@ Article helpers in `styles.css`:
 - **Headlines:** each service page's H1 names the service (the search term); the brand slogan sits directly beneath it as `.hero-slogan`.
 - **Profiles:** the Organization data links the LinkedIn company page, and the footer links to it on every page.
 - **Sitemap:** every URL has a `lastmod`; update it when that page changes.
-- **Redirects:** `.htaccess` sends the old site's URLs (`/security-validation`, `/partners-&-vendors`, `sitemap.website.xml`) to current pages. Add any other old URLs found in Search Console's Pages report there.
+- **Redirects:** `.htaccess` sends the old site's URLs (`/security-validation`, `/partners-&-vendors`, `sitemap.website.xml`) and the former VAR page (`/healthcare-var/` now redirects to `/about/`) to current pages. Add any other old URLs found in Search Console's Pages report there.
 
 ## Analytics
 Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added directly in each page's `<head>`; new articles copied from an existing one inherit it).
