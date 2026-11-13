@@ -10,3 +10,6 @@ RewriteRule ^sitemap\.website\.xml$ /sitemap.xml [L,R=301]
 
 # The VAR page became the About Us page
 RewriteRule ^healthcare-var/?$ /about/ [L,R=301]
+
+# The Consulting page was removed
+RewriteRule ^consulting/?$ /about/ [L,R=301]

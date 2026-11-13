@@ -1,6 +1,6 @@
 // ---------- page links ----------
 // Each service has its own page. Old one-page links (/#security etc.) forward to the new page.
-const ROUTES={"home":"/","consulting":"/consulting/","var":"/about/","about":"/about/","staffaug":"/staff-augmentation/","security":"/security/","voicedata":"/voice-data/","contact":"/contact/"};
+const ROUTES={"home":"/","consulting":"/about/","var":"/about/","about":"/about/","staffaug":"/staff-augmentation/","security":"/security/","voicedata":"/voice-data/","contact":"/contact/"};
 const legacy=location.hash.slice(1);
 if(legacy!=='home'&&ROUTES[legacy]&&/(^\/$|\/index\.html$)/.test(location.pathname))location.replace(ROUTES[legacy]);
 function track(name,params){if(window.gtag)window.gtag('event',name,params);}
