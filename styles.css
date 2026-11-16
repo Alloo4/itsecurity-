@@ -507,3 +507,11 @@ section{padding:var(--space) 0}
 
 /* Safety net: no image may ever be wider than its container */
 img{max-width:100%}
+
+/* Article diagrams on phones: shown at a readable size inside a sideways-scroll box; tapping opens the full image */
+.article-figure .figure-zoom{display:block;border-radius:14px}
+@media(max-width:640px){
+  .article-figure .figure-zoom{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line-strong)}
+  .article-figure .figure-zoom img{width:720px;max-width:none;border:0;border-radius:0}
+  .article-figure figcaption::after{content:" Swipe sideways to see the whole diagram, or tap it to open full size.";display:block;margin-top:6px;color:var(--teal-light)}
+}
