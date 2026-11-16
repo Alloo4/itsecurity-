@@ -22,7 +22,7 @@ No build step and no dependencies (fonts load from Google Fonts).
 | `blog/<slug>/index.html` | One folder per article |
 | `assets/logos/` | Official logo files (SVG + PNG) — see [assets/logos/README.md](assets/logos/README.md) |
 | `sitemap.xml`, `robots.txt` | For search engines |
-| `.htaccess` | Redirects `www.itsecuritynow.com` to `itsecuritynow.com` (used by the live host; ignored by Vercel) |
+| `.htaccess` | Live-host settings: `www` redirect, old-address redirects and the security headers (ignored by Vercel). If you add an outside service such as a booking tool, chat widget or video, add its address to the `Content-Security-Policy` line or the browser will block it |
 
 ## Branding
 - **Header:** teal linear logo (`itsn-logo-linear-teal.svg`)

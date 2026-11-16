@@ -13,3 +13,26 @@ RewriteRule ^healthcare-var/?$ /about/ [L,R=301]
 
 # The Consulting page was removed
 RewriteRule ^consulting/?$ /about/ [L,R=301]
+
+# ---------- Security ----------
+# No access to project files that are not part of the website
+RewriteRule (^|/)\.(?!well-known/) - [F]
+RewriteRule (^|/)README\.md$ - [F,NC]
+
+<IfModule mod_headers.c>
+  # Always use HTTPS for the next year
+  Header always set Strict-Transport-Security "max-age=31536000"
+  # Browsers must not guess file types
+  Header always set X-Content-Type-Options "nosniff"
+  # The site may not be shown inside another site's frame (stops clickjacking)
+  Header always set X-Frame-Options "DENY"
+  # Send only the site address, not the full page address, to other sites
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # The site never needs the camera, microphone or location
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  # Only load scripts, styles, fonts and images from the places this site really uses.
+  # If a new outside service is added (a booking tool, a chat widget, a video), add its address here or it will be blocked.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+  # Do not advertise server software
+  Header always unset X-Powered-By
+</IfModule>
