@@ -77,6 +77,7 @@ Article helpers in `styles.css`:
 - **Internal links:** each service page ends with related services and three related articles; each article ends with two related articles.
 - **Headlines:** each service page's H1 names the service (the search term); the brand slogan sits directly beneath it as `.hero-slogan`.
 - **Profiles:** the Organization data links the LinkedIn company page, and the footer links to it on every page.
+- **Cache version:** the host tells browsers to keep `styles.css` and `script.js` for a year, so every page loads them as `styles.css?v=DATE`. After editing either file, change that `?v=` value in every page (for example to today's date) or phones keep showing the old styling.
 - **Sitemap:** every URL has a `lastmod`; update it when that page changes.
 - **Redirects:** `.htaccess` sends the old site's URLs (`/security-validation`, `/partners-&-vendors`, `sitemap.website.xml`) and the former VAR page and the removed Consulting page (`/healthcare-var/` and `/consulting/` now redirect to `/about/`) to current pages. Add any other old URLs found in Search Console's Pages report there.
 

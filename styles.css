@@ -499,3 +499,11 @@ section{padding:var(--space) 0}
 .text-link{color:var(--teal-light);font-weight:600}
 .text-link:hover{color:var(--text)}
 .prose-block a{color:var(--teal-light);text-decoration:underline;text-underline-offset:3px}
+
+/* About page: lists shown as plain lines, without bullet markers */
+#page-about ul{list-style:none;padding-left:0}
+#page-about ul li{padding-left:0}
+#page-about ul li::before{content:none}
+
+/* Safety net: no image may ever be wider than its container */
+img{max-width:100%}
