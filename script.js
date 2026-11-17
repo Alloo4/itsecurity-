@@ -4,7 +4,16 @@ const ROUTES={"home":"/","consulting":"/about/","var":"/about/","about":"/about/
 const legacy=location.hash.slice(1);
 if(legacy!=='home'&&ROUTES[legacy]&&/(^\/$|\/index\.html$)/.test(location.pathname))location.replace(ROUTES[legacy]);
 function track(name,params){if(window.gtag)window.gtag('event',name,params);}
+// Remember the first page of this visit and where the visitor came from, so a lead can be traced to its article or search
+let LANDING={page:location.pathname,from:document.referrer?new URL(document.referrer).hostname:'direct'};
+try{const saved=sessionStorage.getItem('itsn_landing');if(saved)LANDING=JSON.parse(saved);else sessionStorage.setItem('itsn_landing',JSON.stringify(LANDING));}catch(e){}
 document.querySelectorAll('a.btn').forEach(a=>a.addEventListener('click',()=>track('cta_click',{cta_label:a.textContent.trim(),cta_target:a.getAttribute('href')})));
+// Phone and email links anywhere on the page (header, footer, contact page)
+document.addEventListener('click',e=>{
+  const a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');if(!a)return;
+  const tel=a.getAttribute('href').startsWith('tel:');
+  track(tel?'phone_click':'email_click',{link_location:a.closest('footer')?'footer':a.closest('header')?'header':'page'});
+});
 
 // ---------- mobile menu ----------
 const nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn');
@@ -17,8 +26,11 @@ menuBtn.addEventListener('click',()=>{
 // ---------- forms (emailed to info@itsecuritynow.com via FormSubmit) ----------
 const FORM_ENDPOINT='https://formsubmit.co/ajax/info@itsecuritynow.com';
 document.querySelectorAll('[data-form]').forEach(f=>{
+  // Someone started typing in the form: lets Analytics show how many start but don't send
+  f.addEventListener('focusin',()=>{if(f.dataset.started)return;f.dataset.started='1';track('form_start',{form_name:f.dataset.form||'unknown'});});
   f.addEventListener('submit',async e=>{
     e.preventDefault();
+    if(f.querySelector('[name="_honey"]').value)return; // spam bot
     const note=f.querySelector('.form-note');
     const btn=f.querySelector('button[type="submit"]');
     const label=btn.textContent;
@@ -26,6 +38,7 @@ document.querySelectorAll('[data-form]').forEach(f=>{
     data._subject='New website enquiry: '+(f.dataset.form||'Contact form')+' — '+(data.name||'');
     data._template='table';
     data._replyto=data.email;
+    data.landing_page=LANDING.page;data.came_from=LANDING.from;
     btn.disabled=true;btn.textContent='Sending…';
     note.classList.remove('show','error');
     try{
@@ -34,10 +47,11 @@ document.querySelectorAll('[data-form]').forEach(f=>{
       if(!res.ok||out.success===false||out.success==='false')throw new Error(out.message||res.status);
       note.textContent='Thanks — an ITSN expert will be in touch shortly.';
       note.classList.add('show');
-      track('generate_lead',{form_name:f.dataset.form||'unknown'});
+      track('generate_lead',{form_name:f.dataset.form||'unknown',landing_page:LANDING.page,came_from:LANDING.from});
       f.reset();
     }catch(err){
       note.textContent='Sorry, your message didn’t send. Please try again or email info@itsecuritynow.com.';
+      track('form_error',{form_name:f.dataset.form||'unknown'});
       note.classList.add('show','error');
     }finally{
       btn.disabled=false;btn.textContent=label;
@@ -47,7 +61,7 @@ document.querySelectorAll('[data-form]').forEach(f=>{
 
 // ---------- scroll reveal ----------
 document.querySelectorAll('section').forEach(s=>{
-  if(s.classList.contains('hero')||s.classList.contains('page-hero'))return;
+  if(s.classList.contains('hero')||s.classList.contains('page-hero')||document.querySelector('.article-body'))return;
   s.classList.add('reveal');
 });
 if('IntersectionObserver' in window){

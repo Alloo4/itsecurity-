@@ -85,7 +85,8 @@ Article helpers in `styles.css`:
 Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added directly in each page's `<head>`; new articles copied from an existing one inherit it).
 
 - It only counts visits on itsecuritynow.com. The Vercel preview and local testing are switched off by the `ga-disable` line in the same snippet.
-- `script.js` sends two custom events through `track()`: `cta_click` (buttons that lead to a page section) and `generate_lead` (a contact form that sent successfully, with the form's name only). Names, emails and messages are never sent to Analytics.
+- `script.js` (loaded on every page, including the blog) sends these events through `track()`: `cta_click` (buttons), `phone_click` and `email_click` (any phone or email link, with where it was: header, page or footer), `form_start` (someone began typing in a form), `generate_lead` (a form sent successfully) and `form_error` (a form failed to send). `generate_lead` also carries `landing_page` and `came_from`: the first page of that visit and the site the visitor arrived from. Those two also appear in the lead email. Names, emails and messages are never sent to Analytics.
+- **Security policy and Analytics:** Analytics reports to several Google addresses. If the `Content-Security-Policy` line in `.htaccess` is changed, check Analytics → Realtime afterwards; a blocked address means nothing is recorded.
 - Every service is a real page, so Analytics counts each one as its own page view with no extra setup. `cta_click` now records the button's destination URL.
 
 ## Preview locally in VS Code
