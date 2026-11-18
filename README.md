@@ -30,12 +30,16 @@ No build step and no dependencies (fonts load from Google Fonts).
 - **Browser tab icon:** `itsn-icon-teal.svg`; Apple touch icon `itsn-icon-square-teal-bg.png`
 - **Brand teal:** `#13566f`
 
-## Contact forms
-Both forms (Home "Start Your Transformation" and the Contact page) send submissions to **info@itsecuritynow.com** through [FormSubmit](https://formsubmit.co) — see `FORM_ENDPOINT` in `script.js`.
+## Contact forms and leads
+Both forms (Home "Start Your Transformation" and the Contact page) post to **`/contact.php`** on the live host (SiteGround). Each enquiry is **saved first** as a numbered lead (ITSN-0001, ITSN-0002 …), then emailed to **info@itsecuritynow.com** with the lead ID in the subject. Reply answers the visitor.
 
-- The form is activated. If the destination email ever changes, the new address must be activated once: submit the form, then click **Activate Form** in the email FormSubmit sends.
-- Each email's subject names the form it came from, and pressing Reply answers the visitor.
-- A hidden `_honey` field filters most spam bots.
+- **Dashboard:** https://itsecuritynow.com/leads.php (password protected). Shows every lead, its status (New → Contacted → Qualified → Proposal sent → Won / Lost, plus Spam and Test), notes, where it came from, CSV export and a **System check** with a "Send a test lead" button.
+- **Files:** `contact.php` and `leads.php` sit in `public_html`. The shared code and settings sit in a private `itsn-leads` folder **beside** `public_html` (never inside it). In this repo that folder is `server/itsn-leads/`. It is left out of the upload zip and must be uploaded separately; the live `config.php` holds the dashboard password line, so don't overwrite it from the repo copy.
+- **Records:** `itsn-leads/data/leads.csv` (with `leads.csv.bak`), created on the first submission.
+- **Spam:** a hidden `_honey` field drops bots; messages stuffed with links are saved as Spam without an email; each visitor can send 5 messages per 10 minutes; only this website's pages are accepted.
+- **Email delivery:** SiteGround sends the emails as website@itsecuritynow.com. The domain's SPF record (DNS at GoDaddy) must include `include:_spf.mailspamprotection.com`, or the emails land in Junk. The dashboard's System check shows whether it does.
+- **Vercel preview:** PHP doesn't run there (`.vercelignore`), so the forms only work on itsecuritynow.com.
+- **Without JavaScript:** the forms still post to `/contact.php` and show a plain thank-you page.
 
 ## Blog
 All articles are bylined to **Dan Drees** (Founder). His author page is `authors/dan-drees/index.html`; new articles need the same byline in the article header, the `author` meta tag and the BlogPosting data, and a card on the author page.
@@ -85,7 +89,7 @@ Article helpers in `styles.css`:
 Google Analytics 4 runs on every page (Measurement ID `G-4NRDP2X7Q0`, added directly in each page's `<head>`; new articles copied from an existing one inherit it).
 
 - It only counts visits on itsecuritynow.com. The Vercel preview and local testing are switched off by the `ga-disable` line in the same snippet.
-- `script.js` (loaded on every page, including the blog) sends these events through `track()`: `cta_click` (buttons), `phone_click` and `email_click` (any phone or email link, with where it was: header, page or footer), `form_start` (someone began typing in a form), `generate_lead` (a form sent successfully) and `form_error` (a form failed to send). `generate_lead` also carries `landing_page` and `came_from`: the first page of that visit and the site the visitor arrived from. Those two also appear in the lead email. Names, emails and messages are never sent to Analytics.
+- `script.js` (loaded on every page, including the blog) sends these events through `track()`: `cta_click` (buttons), `phone_click` and `email_click` (any phone or email link, with where it was: header, page or footer), `form_start` (someone began typing in a form), `generate_lead` (a form sent successfully) and `form_error` (a form failed to send). `generate_lead` also carries `lead_id`, `lead_source`, `landing_page` and `came_from`: the first page of that visit and the site the visitor arrived from. Those two also appear in the lead email. Names, emails and messages are never sent to Analytics.
 - **Security policy and Analytics:** Analytics reports to several Google addresses. If the `Content-Security-Policy` line in `.htaccess` is changed, check Analytics → Realtime afterwards; a blocked address means nothing is recorded.
 - Every service is a real page, so Analytics counts each one as its own page view with no extra setup. `cta_click` now records the button's destination URL.
 

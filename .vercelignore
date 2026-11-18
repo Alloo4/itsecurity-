@@ -1,0 +1,3 @@
+# The preview on Vercel is static: PHP files and the private server folder are not published there
+*.php
+server/
