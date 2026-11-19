@@ -29,6 +29,7 @@ No build step and no dependencies (fonts load from Google Fonts).
 - **Footer:** white linear logo (`itsn-logo-linear-white.svg`)
 - **Browser tab icon:** `itsn-icon-teal.svg`; Apple touch icon `itsn-icon-square-teal-bg.png`
 - **Brand teal:** `#13566f`
+- **Partner logos (home page strip):** `assets/partners/*.png` are light single-colour versions made for the dark background; the supplied full-colour files are in `assets/partners/original/`. To add or remove a partner, edit both copies of the list inside `.marquee-track` in `index.html` (the second copy keeps the scroll seamless).
 
 ## Contact forms
 Both forms (Home "Start Your Transformation" and the Contact page) send submissions to **info@itsecuritynow.com** through [FormSubmit](https://formsubmit.co) — see `FORM_ENDPOINT` in `script.js`.

@@ -251,6 +251,10 @@ section{padding:var(--space) 0}
 .wordmark{font-family:var(--display);font-weight:600;font-size:24px;color:var(--muted);
   opacity:.62;letter-spacing:.01em;transition:opacity .2s,color .2s}
 .wordmark:hover{opacity:1;color:var(--text)}
+.marquee-track{align-items:center}
+.partner-logo{width:auto;max-width:none;flex:none;opacity:.6;transition:opacity .2s}
+.partner-logo:hover{opacity:1}
+@media(max-width:560px){.partner-logo{transform:scale(.85)}}
 
 /* ---------- stats ---------- */
 .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
