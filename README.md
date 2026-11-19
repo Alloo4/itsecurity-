@@ -47,6 +47,7 @@ Current articles:
 4. `healthcare-network-security-best-practices/` — October 2026 (Security)
 5. `healthcare-managed-security-services/` — November 2026 (Security)
 6. `ai-in-healthcare-applications/` — November 2026 (AI). Add links to the shadow AI article in section 6 and the HIPAA FAQ once that article is live.
+7. `healthcare-analytics-and-ai/` — November 2026 (AI). Hero/OG images are original graphics; the hero background is set in a small `<style>` block in the page head, not in `styles.css`.
 
 ### Adding a new article
 1. Copy an existing article folder to `blog/<new-slug>/` and replace the content. Update:
