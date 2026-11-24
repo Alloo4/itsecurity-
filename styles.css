@@ -515,3 +515,7 @@ img{max-width:100%}
 /* Article diagrams: phones get a tall version of each diagram (see <picture> in the article); tapping opens the image */
 .article-figure .figure-zoom{display:block;border-radius:14px}
 .article-figure picture{display:block}
+
+/* footer notice link (Privacy Policy) */
+.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.footer-bottom a:hover{color:var(--text)}
