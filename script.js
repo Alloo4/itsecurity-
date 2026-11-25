@@ -25,6 +25,9 @@ menuBtn.addEventListener('click',()=>{
 
 // ---------- forms (emailed to info@itsecuritynow.com via FormSubmit) ----------
 const FORM_ENDPOINT='https://formsubmit.co/ajax/info@itsecuritynow.com';
+// If Cloudflare's check breaks (outage, address not allowed in the widget settings), let real people still send the form.
+// Only set-up (1xxxxx) and loading (200xxx) errors count; failed bot checks (300xxx, 600xxx) stay blocked.
+window.itsnTurnstileError=code=>{if(/^(1\d{5}|200\d{3})$/.test(String(code)))window.itsnTurnstileFailed=true;return true;};
 document.querySelectorAll('[data-form]').forEach(f=>{
   // Someone started typing in the form: lets Analytics show how many start but don't send
   f.addEventListener('focusin',()=>{if(f.dataset.started)return;f.dataset.started='1';track('form_start',{form_name:f.dataset.form||'unknown'});});
@@ -35,6 +38,15 @@ document.querySelectorAll('[data-form]').forEach(f=>{
     const btn=f.querySelector('button[type="submit"]');
     const label=btn.textContent;
     const data=Object.fromEntries(new FormData(f));
+    // Cloudflare Turnstile spam check. If Cloudflare's check could not load at all, the form still sends so no lead is lost.
+    const ts=f.querySelector('.cf-turnstile');
+    const tsReset=()=>{try{if(ts&&window.turnstile)window.turnstile.reset(ts);}catch(_){}};
+    if(ts&&window.turnstile&&!window.itsnTurnstileFailed&&!data['cf-turnstile-response']){
+      note.textContent='Please wait for the security check above the button to finish, then try again.';
+      note.classList.add('show','error');
+      return;
+    }
+    delete data['cf-turnstile-response'];
     data._subject='New website enquiry: '+(f.dataset.form||'Contact form')+' — '+(data.name||'');
     data._template='table';
     data._replyto=data.email;
@@ -54,6 +66,7 @@ document.querySelectorAll('[data-form]').forEach(f=>{
       track('form_error',{form_name:f.dataset.form||'unknown'});
       note.classList.add('show','error');
     }finally{
+      tsReset(); // each check can be used once
       btn.disabled=false;btn.textContent=label;
     }
   });

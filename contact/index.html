@@ -27,7 +27,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
-<link rel="stylesheet" href="../styles.css?v=20261124">
+<link rel="stylesheet" href="../styles.css?v=20261125">
 <link rel="icon" type="image/svg+xml" href="../assets/logos/svg/itsn-icon-teal.svg">
 <link rel="apple-touch-icon" href="../assets/logos/png/itsn-icon-square-teal-bg.png">
 <script type="application/ld+json">
@@ -90,6 +90,8 @@
   ]
 }
 </script>
+<!-- Cloudflare Turnstile: spam check on the form -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <!-- Google Analytics (GA4). Only counts visits on the live domain, not the Vercel preview or local testing. -->
 <script>if(!/(^|\.)itsecuritynow\.com$/.test(location.hostname))window['ga-disable-G-4NRDP2X7Q0']=true;</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4NRDP2X7Q0"></script>
@@ -145,6 +147,7 @@ gtag('config','G-4NRDP2X7Q0');
         <div class="field"><label>Full name</label><input type="text" name="name" placeholder="Your name" required></div>
         <div class="field"><label>Work email</label><input type="email" name="email" placeholder="you@organization.com" required></div>
         <div class="field"><label>What's your biggest IT or security challenge?</label><textarea name="message" placeholder="A sentence or two is plenty" required></textarea></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAGQ41gwK6dD5k2Ru" data-theme="dark" data-size="flexible" data-error-callback="itsnTurnstileError"></div>
         <button class="btn btn--primary" type="submit">Request My Assessment</button>
         <p class="form-note" role="status" aria-live="polite">Thanks — an ITSN expert will be in touch shortly.</p>
       </form>
@@ -211,6 +214,6 @@ gtag('config','G-4NRDP2X7Q0');
   </div>
 </footer>
 
-<script src="../script.js?v=20261124" defer></script>
+<script src="../script.js?v=20261125" defer></script>
 </body>
 </html>

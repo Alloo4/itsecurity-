@@ -519,3 +519,5 @@ img{max-width:100%}
 /* footer notice link (Privacy Policy) */
 .footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .footer-bottom a:hover{color:var(--text)}
+.cf-turnstile{margin:4px 0 12px;min-height:65px;overflow:hidden}
+@media(max-width:340px){.cf-turnstile>div,.cf-turnstile iframe{transform:scale(.94);transform-origin:left center}}

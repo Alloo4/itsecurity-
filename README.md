@@ -35,6 +35,7 @@ No build step and no dependencies (fonts load from Google Fonts).
 ## Contact forms
 Both forms (Home "Start Your Transformation" and the Contact page) send submissions to **info@itsecuritynow.com** through [FormSubmit](https://formsubmit.co) — see `FORM_ENDPOINT` in `script.js`.
 
+- **Spam check:** both forms show a Cloudflare Turnstile widget (site key `0x4AAAAAAGQ41gwK6dD5k2Ru`, in `index.html` and `contact/index.html`). A visitor can't send until it passes. If Cloudflare's check fails to load or errors, the form still sends so no lead is lost. The widget's hostname list in Cloudflare must include `itsecuritynow.com` (and `itsecurity-five.vercel.app` to test the preview). The **secret key** must never go in this repository.
 - The form is activated. If the destination email ever changes, the new address must be activated once: submit the form, then click **Activate Form** in the email FormSubmit sends.
 - Each email's subject names the form it came from, and pressing Reply answers the visitor.
 - A hidden `_honey` field filters most spam bots.
