@@ -4,8 +4,10 @@ Static marketing site for IT Security Now, live at **https://itsecuritynow.com/*
 
 A preview copy also runs on Vercel at https://itsecurity-five.vercel.app/. Its pages point search engines to itsecuritynow.com, so Google treats itsecuritynow.com as the real site.
 
-- **Main site:** six real pages, each with its own URL, title, description and canonical tag:
-  `/` (Home), `/staff-augmentation/`, `/security/`, `/voice-data/`, `/about/`, `/contact/`.
+- **Main site:** real pages, each with its own URL, title, description and canonical tag:
+  `/` (Home), `/staff-augmentation/`, `/security/`, `/voice-data/`, `/about/`, `/contact/`, `/privacy/`,
+  plus two security service pages linked from `/security/` and every footer: `/hipaa-risk-assessment/` and
+  `/healthcare-managed-security-services/` (the service page; the blog guide of the same name lives under `/blog/` and links to it).
   Old one-page links such as `/#security` forward to the matching page (`ROUTES` in `script.js`).
 - **Blog:** separate static pages under `/blog/`.
 

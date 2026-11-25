@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Healthcare Network Security: 7 Best Practices | ITSN</title>
+<title>Healthcare Network Security: 7 Best Practices + Staff Tips</title>
 <meta name="description" content="A flat network forces hospitals to shut everything down. Seven healthcare network security best practices that let you contain an incident to one zone.">
 <meta name="author" content="Dan Drees">
 <link rel="canonical" href="https://itsecuritynow.com/blog/healthcare-network-security-best-practices/">
@@ -28,7 +28,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=optional"></noscript>
-<link rel="stylesheet" href="../../styles.css?v=20261125">
+<link rel="stylesheet" href="../../styles.css?v=20261125b">
 <link rel="icon" type="image/svg+xml" href="../../assets/logos/svg/itsn-icon-teal.svg">
 <link rel="apple-touch-icon" href="../../assets/logos/png/itsn-icon-square-teal-bg.png">
 <script type="application/ld+json">
@@ -54,7 +54,8 @@
     {"@type":"Question","name":"Does HIPAA require network segmentation?","acceptedAnswer":{"@type":"Answer","text":"The current Security Rule doesn't name segmentation explicitly. It requires a risk analysis and appropriate safeguards, and segmentation is a common way to meet those requirements. HHS's proposed update, published in January 2025, would make segmentation an explicit requirement. It has not been finalized."}},
     {"@type":"Question","name":"How do you secure medical devices that can't be patched?","acceptedAnswer":{"@type":"Answer","text":"Put them in a dedicated segment, allow only the connections they need, block internet access unless it's required, and monitor their traffic. Work with the manufacturer, using the MDS2 form, to understand each device's network needs."}},
     {"@type":"Question","name":"What's the difference between segmentation and microsegmentation?","acceptedAnswer":{"@type":"Answer","text":"Segmentation divides a network into zones, such as clinical, guest and devices. Microsegmentation applies narrower rules to individual workloads or device groups, which further limits how far an attacker can move."}},
-    {"@type":"Question","name":"How often should healthcare network security be tested?","acceptedAnswer":{"@type":"Answer","text":"The proposed HIPAA update would require vulnerability scanning every six months and penetration testing every year. Many organizations already use that schedule as a baseline."}}
+    {"@type":"Question","name":"How often should healthcare network security be tested?","acceptedAnswer":{"@type":"Answer","text":"The proposed HIPAA update would require vulnerability scanning every six months and penetration testing every year. Many organizations already use that schedule as a baseline."}},
+    {"@type":"Question","name":"What are the most important network security tips for healthcare workers?","acceptedAnswer":{"@type":"Answer","text":"Use multi-factor authentication, lock your screen when you step away, use only approved Wi-Fi or a VPN, keep personal devices off clinical equipment, send patient information only through approved tools, report phishing, install updates promptly, and call IT right away if something seems wrong."}}
   ]
 }
 </script>
@@ -137,6 +138,8 @@ gtag('config','G-4NRDP2X7Q0');
       <p>In many hospitals, the honest answer is "everything." The network was never built to be divided. Clinical applications, imaging, connected medical devices, guest Wi-Fi, vendor connections and back-office systems can all reach each other. When there's no smaller boundary to close, containment means taking down the patient portal, the EHR interfaces and the phones along with the problem.</p>
       <p>This article covers why that happens, what current federal guidance says, and seven practical steps that let a healthcare organization contain an incident to one area instead of the whole enterprise.</p>
 
+      <p><strong>Quick answer:</strong> Map every system first, split the network into isolation zones by care impact, put medical devices on their own allow-listed segments, narrow vendor remote access, protect the management plane, monitor traffic between zones, and rehearse isolating a zone before you need to. Done together, these steps let you contain an incident to one zone instead of shutting down the hospital.</p>
+
       <h2>The Problem: A Security Incident Is Now a Care-Continuity Incident</h2>
       <p>The pressure on healthcare networks hasn't eased this year.</p>
       <ul>
@@ -186,6 +189,19 @@ gtag('config','G-4NRDP2X7Q0');
       </ol>
       <div class="article-callout"><strong>Phase the work.</strong> Start with the highest-risk boundaries, which are usually guest and internet, vendor access, and medical devices. Run new rules in monitor-only mode before enforcing them, and schedule changes in clinically approved maintenance windows.</div>
 
+      <h2>Network security tips for healthcare staff</h2>
+      <p>Most incidents start with a person, not a firewall. Share these eight habits with clinical, front-desk and remote staff:</p>
+      <ol>
+        <li><strong>Use multi-factor authentication</strong> on email, the EHR and remote access, and never approve a sign-in prompt you didn't start.</li>
+        <li><strong>Lock your screen</strong> every time you step away from a workstation, even for a minute.</li>
+        <li><strong>Use only approved Wi-Fi.</strong> On public or guest networks, connect through your organization's VPN.</li>
+        <li><strong>Keep personal devices off clinical equipment.</strong> Don't plug phones, USB drives or chargers into workstations or medical devices.</li>
+        <li><strong>Send patient information only through approved tools</strong>, never personal email or text messages.</li>
+        <li><strong>Report suspicious emails</strong> with the report-phishing button instead of just deleting them.</li>
+        <li><strong>Restart for updates when IT asks.</strong> Delayed patches are a common way in.</li>
+        <li><strong>Call IT right away if something seems off.</strong> Fast reporting is what keeps an incident to one zone.</li>
+      </ol>
+
       <h2>The IT Leadership Perspective</h2>
       <p><strong>Our view:</strong> segmentation is a care-continuity investment, not a firewall project. That means its progress should be reported in terms executives and clinical leaders recognize:</p>
       <ul>
@@ -204,6 +220,12 @@ gtag('config','G-4NRDP2X7Q0');
       <p>No organization can promise that an attacker will never get in. What you can decide in advance is how far an attacker can move once inside, and how much of the hospital you would need to shut off to stop them.</p>
       <p>A network built in sections gives your team options during an incident. A flat network leaves them one option: shut everything down.</p>
 
+      <div class="convert article-cta">
+        <h3>How much of your network would you have to shut off?</h3>
+        <p class="muted">A HIPAA security risk assessment maps your zones, medical devices and vendor connections, and shows which gaps to close first.</p>
+        <a class="btn btn--primary" href="/hipaa-risk-assessment/">Book a Free Scoping Call</a>
+      </div>
+
       <h2>Frequently Asked Questions</h2>
       <div class="faq">
         <details><summary>What is healthcare network security?<span class="pm"></span></summary><p>It's the set of controls that protect a healthcare organization's network and everything connected to it, including EHR systems, medical devices, imaging, vendor connections and guest access. The goal is to prevent unauthorized access and to contain incidents when they happen.</p></details>
@@ -211,6 +233,7 @@ gtag('config','G-4NRDP2X7Q0');
         <details><summary>How do you secure medical devices that can't be patched?<span class="pm"></span></summary><p>Put them in a dedicated segment, allow only the connections they need, block internet access unless it's required, and monitor their traffic. Work with the manufacturer, using the MDS2 form, to understand each device's network needs.</p></details>
         <details><summary>What's the difference between segmentation and microsegmentation?<span class="pm"></span></summary><p>Segmentation divides a network into zones, such as clinical, guest and devices. Microsegmentation applies narrower rules to individual workloads or device groups, which further limits how far an attacker can move.</p></details>
         <details><summary>How often should healthcare network security be tested?<span class="pm"></span></summary><p>The proposed HIPAA update would require vulnerability scanning every six months and penetration testing every year. Many organizations already use that schedule as a baseline.</p></details>
+        <details><summary>What are the most important network security tips for healthcare workers?<span class="pm"></span></summary><p>Use multi-factor authentication, lock your screen when you step away, use only approved Wi-Fi or a VPN, keep personal devices off clinical equipment, send patient information only through approved tools, report phishing, install updates promptly, and call IT right away if something seems wrong.</p></details>
       </div>
 
       <div class="article-callout article-disclaimer"><strong>Disclaimer:</strong> This article is for general information only. It is not legal, regulatory, compliance or professional advice, and reading it does not create a client relationship with ITSN. Figures and events are reported as published by the sources listed below on their stated dates and may since have changed; check the original source before relying on them. Companies and organizations are named only to describe publicly reported events, and no wrongdoing is implied.</div>
@@ -283,6 +306,8 @@ gtag('config','G-4NRDP2X7Q0');
         <ul>
           <li><a href="/staff-augmentation/">Staff Augmentation</a></li>
           <li><a href="/security/">Security Service</a></li>
+          <li><a href="/hipaa-risk-assessment/">HIPAA Risk Assessment</a></li>
+          <li><a href="/healthcare-managed-security-services/">Managed Security</a></li>
           <li><a href="/voice-data/">Voice &amp; Data</a></li>
         </ul>
       </div>
@@ -305,6 +330,6 @@ gtag('config','G-4NRDP2X7Q0');
   </div>
 </footer>
 
-<script src="../../script.js?v=20261125"></script>
+<script src="../../script.js?v=20261125b"></script>
 </body>
 </html>

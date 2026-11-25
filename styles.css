@@ -521,3 +521,8 @@ img{max-width:100%}
 .footer-bottom a:hover{color:var(--text)}
 .cf-turnstile{margin:4px 0 12px;min-height:65px;overflow:hidden}
 @media(max-width:340px){.cf-turnstile>div,.cf-turnstile iframe{transform:scale(.94);transform-origin:left center}}
+/* Call-to-action box inside an article */
+.article-cta{margin:32px 0;padding:28px;border:1px solid var(--line);border-radius:12px}
+.article-cta h3{margin-top:0}
+.article-cta .btn{margin-top:8px;white-space:normal;text-align:center;max-width:100%}
+@media(max-width:560px){.article-cta{padding:22px 18px}}
